@@ -74,10 +74,10 @@ namespace TestFramework
         private IWebElement cardExpireYear_Dropdown() { return driver.FindElement(By.Id("PaymentCardDetails_AddPaymentCard_ExpireYear")); }
         private IWebElement saveCard_CheckBox() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div[3]/label")); }
 
-        private IWebElement cardHolderNameError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_"+Settings.Default.CurrentVIN+"']/div/div[1]/div[1]/span")); }
-        private IWebElement cardNummberError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div[1]/div[3]/span")); }
-        private IWebElement cardCVVError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div[1]/div[4]/span")); }
-        private IWebElement cardExpireMonthError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div[2]/div/ul/li[1]/span")); }
+        private IWebElement cardHolderNameError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_"+Settings.Default.CurrentVIN+"']/div/div/div[1]/div[1]/span")); }
+        private IWebElement cardNummberError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div/div[1]/div[3]/span")); }
+        private IWebElement cardCVVError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div/div[1]/div[4]/span")); }
+        private IWebElement cardExpireMonthError_Span() { return driver.FindElement(By.XPath("//*[@id='new-credit-card-form_" + Settings.Default.CurrentVIN + "']/div/div/div[2]/div/ul/li[1]/span")); }
         private IWebElement cardTooManyAttempts_Button() { return driver.FindElement(By.Id("close-error-button")); }
         private IWebElement cardTooManyAttemptsWarning_Span() { return driver.FindElement(By.XPath("//*[@id='errors-summary']/ul/li")); }
 

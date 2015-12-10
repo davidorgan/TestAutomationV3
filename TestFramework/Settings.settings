@@ -158,7 +158,7 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">Server=cubicqaserver.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
     </Setting>
     <Setting Name="SoftwareVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0.2.1.27</Value>
+      <Value Profile="(Default)">0.2.1.28</Value>
     </Setting>
     <Setting Name="CurrentCreditCardString" Type="System.String" Scope="User">
       <Value Profile="(Default)">Visa **** **** **** 0281 expiring on 01/19</Value>
@@ -222,16 +222,16 @@ Your new Data Inside password has been set. You can now access your account, top
       <Value Profile="(Default)">Your password has been updated successfully. Use the button below to go back to the dashboard.</Value>
     </Setting>
     <Setting Name="ContactNameError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Name field is required</Value>
+      <Value Profile="(Default)">Name is required</Value>
     </Setting>
     <Setting Name="ContactEmailError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Email field is required</Value>
+      <Value Profile="(Default)">Email is required</Value>
     </Setting>
     <Setting Name="ContactPhoneError" Type="System.String" Scope="User">
       <Value Profile="(Default)">Phone number is required</Value>
     </Setting>
     <Setting Name="ContactMessageError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Message field is required</Value>
+      <Value Profile="(Default)">Message is required</Value>
     </Setting>
     <Setting Name="Driver" Type="System.String" Scope="User">
       <Value Profile="(Default)">Chrome</Value>

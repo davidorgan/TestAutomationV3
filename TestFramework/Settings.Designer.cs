@@ -639,7 +639,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.27")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.28")]
         public string SoftwareVersion {
             get {
                 return ((string)(this["SoftwareVersion"]));
@@ -894,7 +894,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Name field is required")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Name is required")]
         public string ContactNameError {
             get {
                 return ((string)(this["ContactNameError"]));
@@ -906,7 +906,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Email field is required")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Email is required")]
         public string ContactEmailError {
             get {
                 return ((string)(this["ContactEmailError"]));
@@ -930,7 +930,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Message field is required")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Message is required")]
         public string ContactMessageError {
             get {
                 return ((string)(this["ContactMessageError"]));
