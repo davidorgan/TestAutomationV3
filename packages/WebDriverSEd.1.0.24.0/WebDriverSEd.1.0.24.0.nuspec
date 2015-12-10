@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>WebDriverSEd</id>
+    <version>1.0.24.0</version>
+    <title>Selenium WebDriverSEd</title>
+    <authors>Bradford Foxworth-Hill</authors>
+    <owners>Bradford Foxworth-Hill</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/Assiance/Selenium2-WebDriverSEd/wiki</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# extension that vastly improves upon the WebDriver. It includes functions for tables, selectlists and much more. It is great for converting Watin tests to Selenium because the syntax is very simliar. For more Info and Examples go to https://github.com/Assiance/Selenium2-WebDriverSEd/wiki</description>
+    <releaseNotes>Upgrading WebDriver Support Version to 2.34.0</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>Selenium Webdriver WebDriverSEd browser automation</tags>
+    <dependencies>
+      <dependency id="NUnit" version="2.6.2" />
+      <dependency id="Selenium.Support" version="2.34.0" />
+    </dependencies>
+  </metadata>
+</package>

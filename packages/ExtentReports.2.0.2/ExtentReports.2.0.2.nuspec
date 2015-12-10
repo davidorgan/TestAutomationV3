@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ExtentReports</id>
+    <version>2.0.2</version>
+    <title>ExtentReports for Selenium</title>
+    <authors>Anshoo Arora</authors>
+    <owners>Anshoo Arora</owners>
+    <licenseUrl>http://relevantcodes.com/extentreports-for-selenium/</licenseUrl>
+    <projectUrl>http://relevantcodes.com/extentreports-for-selenium/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ExtentReports (by Anshoo Arora) is a HTML reporting library for .NET and Java which is extremely easy to use and creates beautiful execution reports. It shows test and step summary, test steps and status in a toggle view for quick analysis. View Sample:  http://relevantcodes.com/Tools/ExtentReports2/Extent.Net.html</description>
+    <summary>ExtentReports (by Anshoo Arora) is a HTML reporting library for .NET and Java which is extremely easy to use and creates beautiful execution reports. It shows test and step summary, test steps and status in a toggle view for quick analysis. View Sample:  http://relevantcodes.com/Tools/ExtentReports2/Extent.Net.html</summary>
+    <releaseNotes>(#5, #15) You can now add child tests using appendChild method
+		(#29) Hierarchical display of results - any number of child nodes are now allowed. Child nodes can also use the appendChild method to add nodes
+		(#36) Fixed issue Filtering on details is broken
+		(#41) The category view will now display the number of tests Passed, Failed and Others
+		(#42) Added support for Cyrillic characters
+		(#44) Show Child test's step counts in Quick Test Summary
+		(#45) In Quick Test Summary, only the headers that have at least 1 event-type will be displayed, all others will be hidden
+		Added controls to quickly expand and collapse all tests</releaseNotes>
+    <copyright>Anshoo Arora (Relevant Codes) Copyright 2015</copyright>
+    <tags>Extent Reports Logger Reporting Selenium WebDriver</tags>
+  </metadata>
+</package>

@@ -1,0 +1,294 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestFramework" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Settings</Value>
+    </Setting>
+    <Setting Name="BaseURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://auto-qa.cubictelecom.com/</Value>
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">david.organ@cubictelecom.com</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cubic!!04</Value>
+    </Setting>
+    <Setting Name="CurrentDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2015-09-18</Value>
+    </Setting>
+    <Setting Name="DevBaseURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://auto-dev.cubictelecom.com/</Value>
+    </Setting>
+    <Setting Name="ChromeLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\ChromeDriver</Value>
+    </Setting>
+    <Setting Name="CurrentDateString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">01/01/2015</Value>
+    </Setting>
+    <Setting Name="FutureDateToString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">01/01/2016</Value>
+    </Setting>
+    <Setting Name="FutureDateFromString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">01/01/2016</Value>
+    </Setting>
+    <Setting Name="VIN1QA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5FNRL189X2B074795</Value>
+    </Setting>
+    <Setting Name="VIN2QA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1D4GP45R65B450999</Value>
+    </Setting>
+    <Setting Name="VIN1DEV" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1JTHX63P2JT177903</Value>
+    </Setting>
+    <Setting Name="ScreenshotPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\Screenshots\</Value>
+    </Setting>
+    <Setting Name="VIN3QA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1J4NF4FB0AD501866</Value>
+    </Setting>
+    <Setting Name="TitleDashboard" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Dashboard</Value>
+    </Setting>
+    <Setting Name="TitleDelete" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Delete Account</Value>
+    </Setting>
+    <Setting Name="TitleUsageHistory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Usage History</Value>
+    </Setting>
+    <Setting Name="TitlePurchaseHistory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Purchase History</Value>
+    </Setting>
+    <Setting Name="TitleCreditCard" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - My Credit Cards</Value>
+    </Setting>
+    <Setting Name="TitleAccountDetails" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Account Details</Value>
+    </Setting>
+    <Setting Name="TitleFAQ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Faq</Value>
+    </Setting>
+    <Setting Name="TitleContactUs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Contact Us</Value>
+    </Setting>
+    <Setting Name="FAQ1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside is a comprehensive global mobile communications service provided by Cubic Telecom. The Data Inside service was developed to remove the complexity and high-cost of mobile communications when you travel. Data Inside ensures that these familiar tools can be used in the normal way while travelling without the fear of extortionate mobile bills. Data Inside delivers the following key benefits:</Value>
+    </Setting>
+    <Setting Name="FAQ2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A range of great value local and international data plans can be purchased from as little as €8.99 per month. See our Rates page for further details.</Value>
+    </Setting>
+    <Setting Name="FAQ3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside can be used in the following destinations providing the correct bundle has been applied:</Value>
+    </Setting>
+    <Setting Name="FAQ4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside currently comes preinstalled in the new A4, A5, Q7, Q5, A3, Q1 (2016 models)</Value>
+    </Setting>
+    <Setting Name="FAQ5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You can register your Data Inside account by following the steps below:</Value>
+    </Setting>
+    <Setting Name="FAQ6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">There are four different types of account:</Value>
+    </Setting>
+    <Setting Name="FAQ7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">This feature will be available through the HMI of your vehicle providing the Sim owner of the vehicle has activated the “In-Car Top up” feature. All users in the vehicle can top up via the HMI and all payment will be deducted from the payment card linked to the vehicle by the Sim owner. This card can be changed via the Sim owner’s account, by visiting the “Manage In-Car Top up” section on the dashboard and selecting an alternative saved card. If there is only one saved card on the account, another credit card will need to be saved before the current card can be changed. A purchase will need to be made in order to save any credit card. You can set a maximum top up limit per 7 days for In-Car Top ups.</Value>
+    </Setting>
+    <Setting Name="FAQ8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">To purchase a data plan please follow the steps below:</Value>
+    </Setting>
+    <Setting Name="FAQ9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You can choose to purchase a range of local or European plans depending on your needs. Local bundles are available for use in local countries only or Roaming bundles can be purchased which will allow activity in selected countries. See our Rates page for a list of data plans and country coverage.</Value>
+    </Setting>
+    <Setting Name="FAQ10" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Depending on the bundle being purchased, the expiration can be 7 days, 1 month or 365 days. There is no carry-over of unused data from period to period.</Value>
+    </Setting>
+    <Setting Name="FAQ11" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Depending on the bundle being purchased, the expiration can be 7 days, 1 month or 365 days or until the allocated data is exhausted.</Value>
+    </Setting>
+    <Setting Name="FAQ12" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pending plans are plans that have been purchased but are not currently being used. They become active when the current plan becomes exhausted or expires or when the vehicle travels to a different country. Should two local plans be added to the same vehicle, the expiration of the second local bundle will not begin until the first has been exhausted or expired. Should a local bundle and a European Plan (Small European or Large European) be added to the same vehicle, the local bundle will activate when using data in the local country, however once the vehicle travels to a roaming country, the roaming bundle will activate.</Value>
+    </Setting>
+    <Setting Name="FAQ13" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CubicTelecom will not charge you for a failed transaction. There may be an authorization request that appears on your bank statement, however this will not be completed and the money remains in your account. The authorization will be removed by your bank</Value>
+    </Setting>
+    <Setting Name="FAQ14" Type="System.String" Scope="User">
+      <Value Profile="(Default)">We currently accept:</Value>
+    </Setting>
+    <Setting Name="FAQ15" Type="System.String" Scope="User">
+      <Value Profile="(Default)">If you are SIM owner for a car, the currency used will be the currency applied when topping up that car (which is the currency used in the country you chose at registration). If you are a standard user for a car the currency used when topping up that car will be the currency used in the SIM owner's country of registration.</Value>
+    </Setting>
+    <Setting Name="FAQ16" Type="System.String" Scope="User">
+      <Value Profile="(Default)">This can be done by visiting your customer account, selecting the account details option and then selecting “Credit Card Management” option. From here you can select your favourite card to be used or delete any saved credit cards on the account.</Value>
+    </Setting>
+    <Setting Name="FAQ17" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You can log into your account using your username and password on www.datainside.com. Once logged in, you can purchase data plans, check your usage in real time and manage your personal information.</Value>
+    </Setting>
+    <Setting Name="FAQ18" Type="System.String" Scope="User">
+      <Value Profile="(Default)">At each purchase you will be asked if you would like to use a previously saved credit card or if you would like to use a new one. You have the option to save your last used credit card details. To remove a credit card from your account please visit the “Credit Card Management” section on your customer account.</Value>
+    </Setting>
+    <Setting Name="FAQ19" Type="System.String" Scope="User">
+      <Value Profile="(Default)">In exceptional circumstances, such as a country relocation, you may change the home country where you would like data plans to be available for purchase. This can be done by contacting us at info@datainside.com</Value>
+    </Setting>
+    <Setting Name="FAQ20" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the Liable user account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as Liable user when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the HMI of the vehicle by selecting the “Data Package” option from the menu and selecting the Delete SIM owner option.</Value>
+    </Setting>
+    <Setting Name="FAQ21" Type="System.String" Scope="User">
+      <Value Profile="(Default)">For full details and support on using your HMI please contact myaudi.com</Value>
+    </Setting>
+    <Setting Name="FAQ22" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data plans are live as soon as they are purchased. Subsequent plans purchased for the same geographical region will be queued and marked as ‘pending’ until the current plan is fully consumed, or expires. A pending plan will then become the current plan, with no noticeable changeover to the user.
+If a user has two or more plans for different geographical regions, these plans will run concurrently and depending on the users location, the appropriate plan will be marked as current and consumed from.
+For example, if a user, living in Germany, has a local German plan and a European Border plan, both will be live but whilst in Germany, data will be consumed from the German plan and the European Border plan will be deactivated. If the user crosses the border to Austria, data will now be consumed from the European Border plan and the German plan will now be deactivated.
+</Value>
+    </Setting>
+    <Setting Name="ContactThankYou" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thank You
+We appreciate your taking the time to contact us.
+Your message was successfully sent to the Cubic Telecom support team. If your message requires a response, we will get back to you as soon as we can. We do our best to answer emails within 1-2 business days (Monday-Friday).
+Occasionally we receive a very large number of messages, and your response may take a little longer. If this occurs, we appreciate your patience, and we assure you that you will receive a response.
+Have A Great Day,
+Cubic Telecom Support Team</Value>
+    </Setting>
+    <Setting Name="ForgotPWMailSent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You will receive an email from us with instructions for resetting your password.</Value>
+    </Setting>
+    <Setting Name="CreateAccountConfirmed" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thank You for registering with Data Inside. Before you can start using our service you need to confirm your email. We have sent an email to the address provided during your registration, please follow the steps in your email.</Value>
+    </Setting>
+    <Setting Name="DBConnectionStringQa" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=cubicqaserver.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
+    </Setting>
+    <Setting Name="SoftwareVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.2.1.27</Value>
+    </Setting>
+    <Setting Name="CurrentCreditCardString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Visa **** **** **** 0281 expiring on 01/19</Value>
+    </Setting>
+    <Setting Name="NoCardString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You don't currently have any stored credit cards.</Value>
+    </Setting>
+    <Setting Name="StandardUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">standard@testuser.com</Value>
+    </Setting>
+    <Setting Name="TitleAddVin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Vehicle - Add</Value>
+    </Setting>
+    <Setting Name="TitleHome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Inside - Home</Value>
+    </Setting>
+    <Setting Name="ActivateAccountSubURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Account/ActivateAccount?accounttoken=</Value>
+    </Setting>
+    <Setting Name="FromDateErrorPurchaseHistory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The date must be before today</Value>
+    </Setting>
+    <Setting Name="ToDateErrorPurchaseHistory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The date must be after the from date and before today.</Value>
+    </Setting>
+    <Setting Name="FromDateErrorUsageHistory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The date must be before today</Value>
+    </Setting>
+    <Setting Name="ToDateErrorUsageHistory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The date must be after the from date and before today.</Value>
+    </Setting>
+    <Setting Name="DisposableMail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@davidocubic.33mail.com</Value>
+    </Setting>
+    <Setting Name="NewMailCounter" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="PasswordChangedSuccessMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password Successfully Changed
+Your new Data Inside password has been set. You can now access your account, top-up or view your usage history.</Value>
+    </Setting>
+    <Setting Name="ResetPasswordSubURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Account/ResetPassword?resetToken=</Value>
+    </Setting>
+    <Setting Name="AccountUpdatedSuccessMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Your account has been updated successfully. Use the button below to go back to the dashboard.</Value>
+    </Setting>
+    <Setting Name="CurrentVIN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5FNRL189X2B074795</Value>
+    </Setting>
+    <Setting Name="AddedVIN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1D4GP45R65B450999</Value>
+    </Setting>
+    <Setting Name="PlanPurchaseSuccessLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thank you for purchasing the Germany 1 Day 50MB plan.</Value>
+    </Setting>
+    <Setting Name="AltPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cubic1234!</Value>
+    </Setting>
+    <Setting Name="PasswordUpdateSuccess" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Your password has been updated successfully. Use the button below to go back to the dashboard.</Value>
+    </Setting>
+    <Setting Name="ContactNameError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Name field is required</Value>
+    </Setting>
+    <Setting Name="ContactEmailError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Email field is required</Value>
+    </Setting>
+    <Setting Name="ContactPhoneError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Phone number is required</Value>
+    </Setting>
+    <Setting Name="ContactMessageError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Message field is required</Value>
+    </Setting>
+    <Setting Name="Driver" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Chrome</Value>
+    </Setting>
+    <Setting Name="RegisterdCarAlert" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The vehicle identification number specified has already been added to the dashboard.
+Please verify that the number is correct and try again.
+×</Value>
+    </Setting>
+    <Setting Name="AddEmptyVINMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Vehicle Identification Number field is required</Value>
+    </Setting>
+    <Setting Name="InvalidVINErrorMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The VIN number entered was not found, please retry or contact support if you continue to see this message.</Value>
+    </Setting>
+    <Setting Name="DeleteCardSponsorWarning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The credit card you are deleting is being used for in car top up. You need to turn off in car top up for the following vehicles before deleting this credit card:
+5FNRL189X2B074795</Value>
+    </Setting>
+    <Setting Name="DBConnectionStringUAT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=auto-uat-web-01.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
+    </Setting>
+    <Setting Name="IELocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\IEDriver</Value>
+    </Setting>
+    <Setting Name="CreditCardEmptyNameError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The Name field is required.</Value>
+    </Setting>
+    <Setting Name="CreditCardEmptyNumberError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The Card Number field is required.</Value>
+    </Setting>
+    <Setting Name="CreditCardEmptyCVVError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The CVV field is required.</Value>
+    </Setting>
+    <Setting Name="CreditCardInvalidError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The value is not a valid credit card number.</Value>
+    </Setting>
+    <Setting Name="CreditCardExpireMonthError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The credit card is out of date.</Value>
+    </Setting>
+    <Setting Name="CreditCardInvalidCVVError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The field CVV must be a string with a minimum length of 3 and a maximum length of 4.</Value>
+    </Setting>
+    <Setting Name="CreditCardInvalidNameError" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The Name field requires at least 2 words</Value>
+    </Setting>
+    <Setting Name="AccountLocale" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Germany</Value>
+    </Setting>
+    <Setting Name="FooterCopyrightText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">© 2015. Cubic Telecom Ltd. All rights reserved</Value>
+    </Setting>
+    <Setting Name="PlanPurchaseSuccessEuropeRoaming" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thank you for purchasing the EU Roaming 1 Day 50MB plan.</Value>
+    </Setting>
+    <Setting Name="PlanPurchaseSuccessEuropeBorder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thank you for purchasing the Europe Border 1 Day 50MB plan.</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
