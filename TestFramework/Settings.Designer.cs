@@ -37,7 +37,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-uat.cubictelecom.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-qa.cubictelecom.com/")]
         public string BaseURL {
             get {
                 return ((string)(this["BaseURL"]));

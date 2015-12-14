@@ -112,41 +112,18 @@ namespace TestFramework
             }
         }
 
-        public bool checkAnswer(IList<IWebElement> answers, int id)
+        private bool checkAnswer(IList<IWebElement> answers, int id)
         {
-            //int[] allText = new int[answers.Count];
-            int checkIndex = id;
             try
             {
-                int i;
-                for (i = 0; i < answers.Count; i++)
+                string inner = answers[id].Text;
+
+                if (inner.Contains(allAnswers[id]))
                 {
-                    if (i == checkIndex)
-                    {
-                        string inner = answers[i].Text;
-                        // Set a variable to the My Documents path.
-                        string mydocpath =
-                            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-                        // Write the string array to a new file named "WriteLines.txt".
-                        using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\WriteLines.txt"))
-                        {
-                                outputFile.WriteLine(inner+";");
-                                outputFile.WriteLine(allAnswers[checkIndex]+";");
-                        }
-                        
-                        if (inner.Contains(allAnswers[checkIndex]))
-                        {
-                            return true;
-                        }
-
-                        throw new Exception(inner + " does not equal " + allAnswers[checkIndex] + ". i");
-                    }
-                    else if (checkIndex > answers.Count)
-                    {
-                        throw new Exception("Question with Id = " + id + " was not found");
-                    }
+                    return true;
                 }
+                return false;
+
             }
             catch (Exception e)
             {

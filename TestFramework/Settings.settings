@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Settings</Value>
     </Setting>
     <Setting Name="BaseURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://auto-uat.cubictelecom.com/</Value>
+      <Value Profile="(Default)">https://auto-qa.cubictelecom.com/</Value>
     </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
       <Value Profile="(Default)">david.organ@cubictelecom.com</Value>
