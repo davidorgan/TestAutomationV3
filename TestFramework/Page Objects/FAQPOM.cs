@@ -1,7 +1,7 @@
 ﻿using System;
-using System.IO;
 using OpenQA.Selenium;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace TestFramework
@@ -159,16 +159,10 @@ namespace TestFramework
 
         public bool assertAllAnswers()
         {
-            for (int i = 0; i < QandAMatch.Count; i++)
-            {
-                if (QandAMatch[i] == false)
-                {
-                    Console.WriteLine("There was a mismatch");
-                    throw new Exception("There was a mismatch");
-                }
-            }
-            return true;
+            if (QandAMatch.All(t => t)) return true;
+            throw new Exception("There was a mismatch");
         }
+
         //Nav Menu "GoTo" links
         public void goToFAQ()
         {
