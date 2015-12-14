@@ -104,42 +104,10 @@ namespace TestFramework
                  IList<IWebElement> allQuestions = FAQPage.getAllQuestions();
                  IList<IWebElement> allPageAnswers = FAQPage.getAllAnswers();
                  FAQPage.clickALLQuestions(allQuestions, allPageAnswers);
-                 
-                 /*List<bool> QandAMatch = new List<bool>();
-                 bool isAnswer = false;
-                 int qNum = 0;
-
-                 for (int i = 0; i < allQuestions.Count; i++)
-                 {
-                     System.Threading.Thread.Sleep(500);
-                     FAQPage.clickQuestion(allQuestions, i);
-                     System.Threading.Thread.Sleep(500);
-                     isAnswer = FAQPage.checkAnswer(allPageAnswers, i);
-                     QandAMatch.Add(isAnswer);
-
-                     if (isAnswer == false)
-                     {
-                         qNum = i + 1;
-                         outputText = "<br />There was a mismatch for question "+qNum+": "+allQuestions[i].Text;
-                         outputText += "<br />Actual answer was : " + allPageAnswers[i].Text;
-                         outputText += "<br />Expected answer should contain : " + FAQPage.allAnswers[i];
-                         outputText += "<br />------------------------------------------------------------------";
-                         Console.WriteLine(outputText);
-                     }
-                     FAQPage.clickQuestion(allQuestions, i);
-
-                 }
-                 */
+                
                 //Any assertions if requried
                  FAQPage.assertAllAnswers();
-                 /*for (int i = 0; i < QandAMatch.Count; i++)
-                 {
-                     if (QandAMatch[i] == false)
-                     {
-                         Console.WriteLine("There was a mismatch");
-                         throw new Exception("There was a mismatch");
-                     }
-                 }*/
+
                  outputText = "The FAQ questions and answers displayed as expected.";
                  Console.WriteLine(outputText);
                  //Take screenshot after Test
@@ -151,7 +119,7 @@ namespace TestFramework
              {
                  Console.WriteLine(e.Message);
                  FAQPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "FAQError.png");
-                 test.Log(LogStatus.Fail, "Fail: " + e.Message + outputText+"<br />Screenshot below: " + test.AddScreenCapture("Screenshots/FAQError.png"));
+                 test.Log(LogStatus.Fail, outputText +"<br />Fail: " + e.Message + outputText+"<br />Screenshot below: " + test.AddScreenCapture("Screenshots/FAQError.png"));
                  throw;
              }
          }

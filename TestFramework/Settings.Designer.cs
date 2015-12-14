@@ -37,7 +37,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-qa.cubictelecom.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-uat.cubictelecom.com/")]
         public string BaseURL {
             get {
                 return ((string)(this["BaseURL"]));
@@ -301,7 +301,39 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"Data Inside is a comprehensive global mobile communications service provided by Cubic Telecom. The Data Inside service was developed to remove the complexity and high-cost of mobile communications when you travel. Data Inside ensures that these familiar tools can be used in the normal way while travelling without the fear of extortionate mobile bills. Data Inside delivers the following key benefits:")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Inside is a comprehensive global mobile communications service provided by C" +
+            "ubic Telecom. The Data Inside service was developed to remove the complexity and" +
+            " high-cost of mobile communications when you travel. Data Inside ensures that th" +
+            "ese familiar tools can be used in the normal way while traveling without the fea" +
+            "r of extortionate mobile bills. Data Inside delivers the following key benefits:" +
+            "\r\n\r\nValue: You too can benefit from greatly reduced prices when you make access " +
+            "the internet from anywhere in the world. The Data Inside service is borderless w" +
+            "ith one low set of prices across 43 European countries. We also offer special bu" +
+            "ndles which are tailored for your needs and offer even greater savings. We have " +
+            "low cost plan bundles for surfing the internet. \r\n\r\nTransparency: No contracts, " +
+            "no bills, no shocks. The Data Inside service is designed to take the mystery out" +
+            " of mobile communications costs when you travel worldwide. There are no minimum " +
+            "connection charges, no minimum daily bundles or multi-tiered prices. There are n" +
+            "o hidden extra charges - Data Inside is a completely transparent service. Our st" +
+            "raight forward low prices are easy to understand and our user friendly on line c" +
+            "all records let you see exactly how much you are spending as you use the service" +
+            ". You can check what you spend every day. You can be sure there will be no nasty" +
+            " bills waiting for you when you get home.\r\n\r\nConvenience: The Data Inside servic" +
+            "e is designed so that mobile internet works in the same familiar way when you tr" +
+            "avel. No need to worry about special commands or new menus, you just surf the we" +
+            "b as you would normally. When you register you are given a Data Inside wallet wh" +
+            "ich stores your prepaid credit. You can easily check your balance, see your usag" +
+            "e online call records, add credit and credit bundles to your account and set up " +
+            "auto top-up so you never run out of credit.\r\n\r\nReliability: The Data Inside serv" +
+            "ice is implemented on an advanced platform which has been built using world-clas" +
+            "s 3G technologies and established 3G standards. The Data Inside SIM card connect" +
+            "s seamlessly and reliably to the best quality 3G networks in 180+ countries worl" +
+            "d-wide, ensuring the best call quality and the highest speeds when accessing the" +
+            " internet.\r\n\r\nData Inside is a global service that is not confined to one countr" +
+            "y or market. Getting started with Data Inside is straightforward. You simply reg" +
+            "ister your account on the Data Inside web site before you travel and your initia" +
+            "l credit can be ordered in-car or on-line via simple menus. Additional credit is" +
+            " purchased both in-car or on-line as you require it.")]
         public string FAQ1 {
             get {
                 return ((string)(this["FAQ1"]));
@@ -339,8 +371,8 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Inside currently comes preinstalled in the new A4, A5, Q7, Q5, A3, Q1 (2016 " +
-            "models)")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Inside currently comes pre-installed in the new A4, A5, Q7, Q5, A3, Q1 (2016" +
+            " models)")]
         public string FAQ4 {
             get {
                 return ((string)(this["FAQ4"]));
@@ -364,7 +396,10 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("There are four different types of account:")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"There are three different types of account:
+• Pending SIM owner: This user status suggests the user has registered as a SIM owner however has not made a purchase to complete this process. At this stage another user can register and become a pending SIM owner, SIM owner only become fully liable once a purchase is made. This will leave the pending SIM owner as a standard user.
+• SIM owner: This user is the user legally responsible for the data usage across all accounts registered to the vehicle. A SIM owner can view all purchases made across all accounts and can view usage history. A SIM owner can also activate the feature “In-Car Top up” from their dashboard.
+• Standard user: A standard user can view purchases made through their own account, view data usage and also purchase plans. They are unable to view purchases made on other accounts registered to the vehicle nor are they able to activate “In-Car Top up”.")]
         public string FAQ6 {
             get {
                 return ((string)(this["FAQ6"]));
@@ -376,7 +411,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"This feature will be available through the HMI of your vehicle providing the Sim owner of the vehicle has activated the “In-Car Top up” feature. All users in the vehicle can top up via the HMI and all payment will be deducted from the payment card linked to the vehicle by the Sim owner. This card can be changed via the Sim owner’s account, by visiting the “Manage In-Car Top up” section on the dashboard and selecting an alternative saved card. If there is only one saved card on the account, another credit card will need to be saved before the current card can be changed. A purchase will need to be made in order to save any credit card. You can set a maximum top up limit per 7 days for In-Car Top ups.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"This feature will be available through the Audi connect service ""Data plans"" of your vehicle providing the SIM owner of the vehicle has activated the “In-Car Top up” feature. All users in the vehicle can top up via the Audi connect service and all payment will be deducted from the payment card linked to the vehicle by the SIM owner. This card can be changed via the SIM owner’s account, by visiting the “Manage In-Car Top up” section on the dashboard and selecting an alternative saved card. If there is only one saved card on the account, another credit card will need to be saved before the current card can be changed. A purchase will need to be made in order to save any credit card. You can set a maximum top up limit per 7 days for In-Car Top ups.")]
         public string FAQ7 {
             get {
                 return ((string)(this["FAQ7"]));
@@ -544,7 +579,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the Liable user account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as Liable user when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the HMI of the vehicle by selecting the “Data Package” option from the menu and selecting the Delete SIM owner option.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the SIM owner account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as SIM owner when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the MMI of the vehicle by selecting the “Data plans” option from the Audi connect menu and selecting the ""Delete SIM owner"" option.")]
         public string FAQ20 {
             get {
                 return ((string)(this["FAQ20"]));
@@ -556,7 +591,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("For full details and support on using your HMI please contact myaudi.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("For full details and support on using your MMI please contact myaudi.com")]
         public string FAQ21 {
             get {
                 return ((string)(this["FAQ21"]));
@@ -570,8 +605,7 @@ namespace TestFramework {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(@"Data plans are live as soon as they are purchased. Subsequent plans purchased for the same geographical region will be queued and marked as ‘pending’ until the current plan is fully consumed, or expires. A pending plan will then become the current plan, with no noticeable changeover to the user.
 If a user has two or more plans for different geographical regions, these plans will run concurrently and depending on the users location, the appropriate plan will be marked as current and consumed from.
-For example, if a user, living in Germany, has a local German plan and a European Border plan, both will be live but whilst in Germany, data will be consumed from the German plan and the European Border plan will be deactivated. If the user crosses the border to Austria, data will now be consumed from the European Border plan and the German plan will now be deactivated.
-")]
+For example, if a user, living in Germany, has a local German plan and a European Border plan, both will be live but whilst in Germany, data will be consumed from the German plan and the European Border plan will be deactivated. If the user crosses the border to Austria, data will now be consumed from the European Border plan and the German plan will now be deactivated.")]
         public string FAQ22 {
             get {
                 return ((string)(this["FAQ22"]));

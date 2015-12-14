@@ -155,6 +155,7 @@ namespace TestFramework
             return false;
         }
 
+
         public void clickALLQuestions(IList<IWebElement> allQuestions, IList<IWebElement> allPageAnswers)
         {
             for (int i = 0; i < allQuestions.Count; i++)
@@ -168,10 +169,10 @@ namespace TestFramework
                 if (isAnswer == false)
                 {
                     int qNum = i + 1;
-                    outputText = "<br />There was a mismatch for question " + qNum + ": " + allQuestions[i].Text;
-                    outputText += "<br />Actual answer was : " + allPageAnswers[i].Text;
-                    outputText += "<br />Expected answer should contain : " + allAnswers[i];
-                    outputText += "<br />------------------------------------------------------------------";
+                    outputText = "\n<br />There was a mismatch for question " + qNum + ": " + allQuestions[i].Text;
+                    outputText += "\n<br />Actual answer was : " + allPageAnswers[i].Text;
+                    outputText += "\n<br />Expected answer should contain : " + allAnswers[i];
+                    outputText += "\n<br />------------------------------------------------------------------";
                     Console.WriteLine(outputText);
                 }
                 clickQuestion(allQuestions, i);
