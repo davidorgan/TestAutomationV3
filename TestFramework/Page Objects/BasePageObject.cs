@@ -14,6 +14,7 @@ using OpenQA.Selenium.Interactions;
 using System.Text;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using OpenQA.Selenium.Remote;
 
 
 namespace TestFramework
@@ -194,20 +195,33 @@ namespace TestFramework
             return IEdriver;
         }
 
-        /*public IWebDriver useAndroid()
+        public IWebDriver useBrowserStack(string browser, string browser_version, string os, string os_version, string resolution)
         {
-            IWebDriver AndroidDriver;
+            IWebDriver BrowserStackDriver;
             try
             {
-                //AndroidDriver = new AndroidDriver();
+                DesiredCapabilities capability = new DesiredCapabilities();
+                capability.SetCapability("browserstack.user", "cubictelecom1");
+                capability.SetCapability("browserstack.key", "c79ymuRgRUPWiEU9xr1H");
+                capability.SetCapability("browser", browser);
+                capability.SetCapability("browser_version", browser_version);
+                capability.SetCapability("os", os);
+                capability.SetCapability("os_version", os_version);
+                capability.SetCapability("resolution", resolution);
+                capability.SetCapability("browserstack.debug", "true");
+
+
+                BrowserStackDriver = new RemoteWebDriver(
+                  new Uri("http://hub.browserstack.com/wd/hub/"), capability
+                );
             }
             catch (Exception e)
             {
                 throw new Exception("There was an issue creating Android Driver:" +
                                     " " + e.Message);
             }
-            return AndroidDriver;
-        }*/
+            return BrowserStackDriver;
+        }
 
         /// <summary>
         /// Maximizes the window.

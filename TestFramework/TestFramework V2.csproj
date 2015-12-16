@@ -141,6 +141,7 @@
     <Compile Include="Test Cases\FavouriteCar.cs" />
     <Compile Include="Test Cases\FooterLinks.cs" />
     <Compile Include="Test Cases\ForgotPassword.cs" />
+    <Compile Include="Test Cases\IE11_DeviceTests.cs" />
     <Compile Include="Test Cases\ManageInCarTopUp.cs" />
     <Compile Include="Test Cases\PurchasePlan.cs" />
     <Compile Include="Test Cases\PurchaseHistoryDashboard.cs" />

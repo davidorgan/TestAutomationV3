@@ -37,7 +37,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-qa.cubictelecom.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-uat.cubictelecom.com/")]
         public string BaseURL {
             get {
                 return ((string)(this["BaseURL"]));
@@ -673,7 +673,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.28")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.29")]
         public string SoftwareVersion {
             get {
                 return ((string)(this["SoftwareVersion"]));

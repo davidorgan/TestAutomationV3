@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Settings</Value>
     </Setting>
     <Setting Name="BaseURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://auto-qa.cubictelecom.com/</Value>
+      <Value Profile="(Default)">https://auto-uat.cubictelecom.com/</Value>
     </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
       <Value Profile="(Default)">david.organ@cubictelecom.com</Value>
@@ -170,7 +170,7 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">Server=cubicqaserver.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
     </Setting>
     <Setting Name="SoftwareVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0.2.1.28</Value>
+      <Value Profile="(Default)">0.2.1.29</Value>
     </Setting>
     <Setting Name="CurrentCreditCardString" Type="System.String" Scope="User">
       <Value Profile="(Default)">Visa **** **** **** 0281 expiring on 01/19</Value>
