@@ -51,7 +51,7 @@ namespace TestFramework
             try
             {
                 //Create array of all questions on page
-                qElement = driver.FindElement(By.Id("accordion"));
+                qElement = driver.FindElement(By.Id("faq-accordion"));
                 allQuestionElements = qElement.FindElements(By.TagName("strong"));
                 log = allQuestionElements.ToString();
                 if (allQuestionElements.Equals(null))
@@ -74,7 +74,7 @@ namespace TestFramework
             try
             {
                 //Create array of all questions on page
-                qElement = driver.FindElement(By.Id("accordion"));
+                qElement = driver.FindElement(By.Id("faq-accordion"));
                 allanswerElements = qElement.FindElements(By.TagName("p"));
                 if (allanswerElements == null)
                 {

@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Settings</Value>
     </Setting>
     <Setting Name="BaseURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://auto-uat.cubictelecom.com/</Value>
+      <Value Profile="(Default)">https://auto-qa.cubictelecom.com/</Value>
     </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
       <Value Profile="(Default)">david.organ@cubictelecom.com</Value>
@@ -72,17 +72,7 @@
       <Value Profile="(Default)">Data Inside - Contact Us</Value>
     </Setting>
     <Setting Name="FAQ1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Inside is a comprehensive global mobile communications service provided by Cubic Telecom. The Data Inside service was developed to remove the complexity and high-cost of mobile communications when you travel. Data Inside ensures that these familiar tools can be used in the normal way while traveling without the fear of extortionate mobile bills. Data Inside delivers the following key benefits:
-
-Value: You too can benefit from greatly reduced prices when you make access the internet from anywhere in the world. The Data Inside service is borderless with one low set of prices across 43 European countries. We also offer special bundles which are tailored for your needs and offer even greater savings. We have low cost plan bundles for surfing the internet. 
-
-Transparency: No contracts, no bills, no shocks. The Data Inside service is designed to take the mystery out of mobile communications costs when you travel worldwide. There are no minimum connection charges, no minimum daily bundles or multi-tiered prices. There are no hidden extra charges - Data Inside is a completely transparent service. Our straight forward low prices are easy to understand and our user friendly on line call records let you see exactly how much you are spending as you use the service. You can check what you spend every day. You can be sure there will be no nasty bills waiting for you when you get home.
-
-Convenience: The Data Inside service is designed so that mobile internet works in the same familiar way when you travel. No need to worry about special commands or new menus, you just surf the web as you would normally. When you register you are given a Data Inside wallet which stores your prepaid credit. You can easily check your balance, see your usage online call records, add credit and credit bundles to your account and set up auto top-up so you never run out of credit.
-
-Reliability: The Data Inside service is implemented on an advanced platform which has been built using world-class 3G technologies and established 3G standards. The Data Inside SIM card connects seamlessly and reliably to the best quality 3G networks in 180+ countries world-wide, ensuring the best call quality and the highest speeds when accessing the internet.
-
-Data Inside is a global service that is not confined to one country or market. Getting started with Data Inside is straightforward. You simply register your account on the Data Inside web site before you travel and your initial credit can be ordered in-car or on-line via simple menus. Additional credit is purchased both in-car or on-line as you require it.</Value>
+      <Value Profile="(Default)">Data Inside is a comprehensive global mobile communications service provided by Cubic Telecom. The Data Inside service was developed to remove the complexity and high-cost of mobile communications when you travel. Data Inside ensures that these familiar tools can be used in the normal way while traveling without the fear of extortionate mobile bills. Data Inside delivers the following key benefits:</Value>
     </Setting>
     <Setting Name="FAQ2" Type="System.String" Scope="User">
       <Value Profile="(Default)">A range of great value local and international data plans can be purchased from as little as €8.99 per month. See our Rates page for further details.</Value>

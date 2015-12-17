@@ -37,7 +37,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-uat.cubictelecom.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-qa.cubictelecom.com/")]
         public string BaseURL {
             get {
                 return ((string)(this["BaseURL"]));
@@ -301,39 +301,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Inside is a comprehensive global mobile communications service provided by C" +
-            "ubic Telecom. The Data Inside service was developed to remove the complexity and" +
-            " high-cost of mobile communications when you travel. Data Inside ensures that th" +
-            "ese familiar tools can be used in the normal way while traveling without the fea" +
-            "r of extortionate mobile bills. Data Inside delivers the following key benefits:" +
-            "\r\n\r\nValue: You too can benefit from greatly reduced prices when you make access " +
-            "the internet from anywhere in the world. The Data Inside service is borderless w" +
-            "ith one low set of prices across 43 European countries. We also offer special bu" +
-            "ndles which are tailored for your needs and offer even greater savings. We have " +
-            "low cost plan bundles for surfing the internet. \r\n\r\nTransparency: No contracts, " +
-            "no bills, no shocks. The Data Inside service is designed to take the mystery out" +
-            " of mobile communications costs when you travel worldwide. There are no minimum " +
-            "connection charges, no minimum daily bundles or multi-tiered prices. There are n" +
-            "o hidden extra charges - Data Inside is a completely transparent service. Our st" +
-            "raight forward low prices are easy to understand and our user friendly on line c" +
-            "all records let you see exactly how much you are spending as you use the service" +
-            ". You can check what you spend every day. You can be sure there will be no nasty" +
-            " bills waiting for you when you get home.\r\n\r\nConvenience: The Data Inside servic" +
-            "e is designed so that mobile internet works in the same familiar way when you tr" +
-            "avel. No need to worry about special commands or new menus, you just surf the we" +
-            "b as you would normally. When you register you are given a Data Inside wallet wh" +
-            "ich stores your prepaid credit. You can easily check your balance, see your usag" +
-            "e online call records, add credit and credit bundles to your account and set up " +
-            "auto top-up so you never run out of credit.\r\n\r\nReliability: The Data Inside serv" +
-            "ice is implemented on an advanced platform which has been built using world-clas" +
-            "s 3G technologies and established 3G standards. The Data Inside SIM card connect" +
-            "s seamlessly and reliably to the best quality 3G networks in 180+ countries worl" +
-            "d-wide, ensuring the best call quality and the highest speeds when accessing the" +
-            " internet.\r\n\r\nData Inside is a global service that is not confined to one countr" +
-            "y or market. Getting started with Data Inside is straightforward. You simply reg" +
-            "ister your account on the Data Inside web site before you travel and your initia" +
-            "l credit can be ordered in-car or on-line via simple menus. Additional credit is" +
-            " purchased both in-car or on-line as you require it.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Data Inside is a comprehensive global mobile communications service provided by Cubic Telecom. The Data Inside service was developed to remove the complexity and high-cost of mobile communications when you travel. Data Inside ensures that these familiar tools can be used in the normal way while traveling without the fear of extortionate mobile bills. Data Inside delivers the following key benefits:")]
         public string FAQ1 {
             get {
                 return ((string)(this["FAQ1"]));

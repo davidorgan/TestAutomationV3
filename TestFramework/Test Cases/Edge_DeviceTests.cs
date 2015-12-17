@@ -8,9 +8,9 @@ using OpenQA.Selenium.Remote;
 namespace TestFramework
 {
     [TestFixture, Explicit]
-    public class IE11_DeviceTests : DashboardPOM
+    public partial class Edge_DeviceTests : DashboardPOM
     {
-        public DashboardPOM Ie11DeviceTestPage;
+        public DashboardPOM EdgeDeviceTestPage;
 
         [SetUp]
         public void SetupTest()
@@ -30,21 +30,22 @@ namespace TestFramework
               new Uri("http://hub.browserstack.com/wd/hub/"), capability
             );*/
 
-            driver = useBrowserStack("IE", "11.0", "Windows", "10", "1920x1200");
+            driver = useBrowserStack("Edge", "12.0", "Windows", "10", "1920x1200");
 
             //Set Browser driver
             //driver = useChrome();
             baseURL = Settings.Default.BaseURL;
-            Ie11DeviceTestPage = new DashboardPOM(driver);
+            EdgeDeviceTestPage = new DashboardPOM(driver);
 
             
             verificationErrors = new StringBuilder();
 
             //// maximize window
-            Ie11DeviceTestPage.MaximizeWindow();
+            // Not working for Edge
+            //Ie11DeviceTestPage.MaximizeWindow();
 
             //Set implicit wait
-            Ie11DeviceTestPage.setImplicitWait(10);
+            EdgeDeviceTestPage.setImplicitWait(10);
 
         }
 
@@ -63,28 +64,29 @@ namespace TestFramework
         }
 
         [Test]
-        public void TheIE11LoginTest()
+        public void TheEdgeLoginTest()
         {
             try
             {
                 //Got to base URL
-                Ie11DeviceTestPage.Goto(baseURL);
+                EdgeDeviceTestPage.Goto(baseURL);
 
                 //Login
-                Ie11DeviceTestPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                EdgeDeviceTestPage.doLogin(Settings.Default.User, Settings.Default.Password);
 
                 //Test Steps go here
-
+                EdgeDeviceTestPage.waitForSpinnerDashboard();
+                EdgeDeviceTestPage.waitForPlansToLoadDashboard();
                 //Any assertions if requried
 
                 //Take screenshot after test
                 System.Threading.Thread.Sleep(1000);
-                Ie11DeviceTestPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "IE11LoginResults.png");
+                EdgeDeviceTestPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "EdgeLoginResults.png");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Ie11DeviceTestPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "TemplateError.png"); ;
+                EdgeDeviceTestPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "EdgeLoginError.png"); ;
                 throw;
             }
         }

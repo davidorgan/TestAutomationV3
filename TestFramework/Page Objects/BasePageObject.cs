@@ -217,7 +217,33 @@ namespace TestFramework
             }
             catch (Exception e)
             {
-                throw new Exception("There was an issue creating Android Driver:" +
+                throw new Exception("There was an issue creating Browser Stack Driver:" +
+                                    " " + e.Message);
+            }
+            return BrowserStackDriver;
+        }
+
+        public IWebDriver useBrowserStackPhone(string browserName, string platform, string device)
+        {
+            IWebDriver BrowserStackDriver;
+            try
+            {
+                DesiredCapabilities capability = new DesiredCapabilities();
+                capability.SetCapability("browserstack.user", "cubictelecom1");
+                capability.SetCapability("browserstack.key", "c79ymuRgRUPWiEU9xr1H");
+                capability.SetCapability("browserName", "iPhone");
+                capability.SetCapability("platform", "MAC");
+                capability.SetCapability("device", "iPhone 6 Plus");
+                capability.SetCapability("browserstack.debug", "true");
+
+
+                BrowserStackDriver = new RemoteWebDriver(
+                  new Uri("http://hub.browserstack.com/wd/hub/"), capability
+                );
+            }
+            catch (Exception e)
+            {
+                throw new Exception("There was an issue creating Browser Stack Phone Driver:" +
                                     " " + e.Message);
             }
             return BrowserStackDriver;
