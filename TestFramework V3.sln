@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{568776
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseTemplateTestFramework", "..\AutomationTemplateFramework\TestFramework\BaseTemplateTestFramework.csproj", "{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,12 @@ Global
 		{39574A04-9251-4A10-8CD9-11BA1381DE8F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39574A04-9251-4A10-8CD9-11BA1381DE8F}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{39574A04-9251-4A10-8CD9-11BA1381DE8F}.Test|Any CPU.Build.0 = Test|Any CPU
+		{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{C0F29EF3-320E-43A9-BCE6-C3E5882BDD3B}.Test|Any CPU.Build.0 = Test|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

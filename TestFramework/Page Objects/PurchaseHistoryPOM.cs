@@ -30,6 +30,7 @@ namespace TestFramework
         
         IWebElement purchaseHistoryFirstInvoice_Link() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); }
         IWebElement purchaseHistoryFirstDate_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); }
+        //*[@id="purchase-history"]/div[1]/div/div/div[1]/div[4]/div[1]/div/span[1]
         IWebElement purchaseHistoryFirstPlanName_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); }
         IWebElement purchaseHistoryFirstPurchasedBy_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); }
         IWebElement purchaseHistoryFirstPrice_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); }

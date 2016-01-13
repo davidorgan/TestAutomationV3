@@ -231,9 +231,9 @@ namespace TestFramework
                 DesiredCapabilities capability = new DesiredCapabilities();
                 capability.SetCapability("browserstack.user", "cubictelecom1");
                 capability.SetCapability("browserstack.key", "c79ymuRgRUPWiEU9xr1H");
-                capability.SetCapability("browserName", "iPhone");
-                capability.SetCapability("platform", "MAC");
-                capability.SetCapability("device", "iPhone 6 Plus");
+                capability.SetCapability("browserName", browserName);
+                capability.SetCapability("platform", platform);
+                capability.SetCapability("device", device);
                 capability.SetCapability("browserstack.debug", "true");
 
 
