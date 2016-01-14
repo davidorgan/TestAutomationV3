@@ -14,26 +14,25 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Purchase History Elements
-        IWebElement purchaseHistoryFromDate_InputField() { return driver.FindElement(By.Id("PurchaseHistoryFrom")); }
-        IWebElement purchaseHistoryToDate_InputField() { return driver.FindElement(By.Id("PurchaseHistoryTo")); }
-        IWebElement purchaseHistoryVIN_Dropdown() { return driver.FindElement(By.Id("VehicleIdentificationNumber")); }
-        IWebElement purchaseHistorySubmit_Button() { return driver.FindElement(By.XPath("//input[@value='View']")); }
-        IWebElement purchaseHistoryEdit_Button() { return driver.FindElement(By.LinkText("Edit Details")); }
-        IWebElement purchaseHistoryFromError_Span() { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/span")); }
-        IWebElement purchaseHistoryToError_Span() { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/span")); }
-        IWebElement purchaseHistory_Link() { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/PurchaseHistory')]")); }
+        IWebElement purchaseHistoryFromDate_InputField { get { return driver.FindElement(By.Id("PurchaseHistoryFrom")); } }
+        IWebElement purchaseHistoryToDate_InputField { get { return driver.FindElement(By.Id("PurchaseHistoryTo")); } }
+        IWebElement purchaseHistoryVIN_Dropdown { get { return driver.FindElement(By.Id("VehicleIdentificationNumber")); } } 
+        IWebElement purchaseHistorySubmit_Button { get { return driver.FindElement(By.XPath("//input[@value='View']")); } }
+        IWebElement purchaseHistoryEdit_Button { get { return driver.FindElement(By.LinkText("Edit Details")); } }
+        IWebElement purchaseHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/span")); } }
+        IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/span")); } }
+        IWebElement purchaseHistory_Link { get { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/PurchaseHistory')]")); } }
 
-        IWebElement purchaseHistoryDashboard_Link() { return driver.FindElement(By.XPath("//*[@id='form0']/div[4]/div/a")); }
-        IWebElement purchaseHistoryBack_Link() { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[2]/div/a")); }
+        IWebElement purchaseHistoryDashboard_Link { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[4]/div/a")); } }
+        IWebElement purchaseHistoryBack_Link { get { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[2]/div/a")); } }
 
         //Purchase History Details Elements
         
-        IWebElement purchaseHistoryFirstInvoice_Link() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); }
-        IWebElement purchaseHistoryFirstDate_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); }
-        //*[@id="purchase-history"]/div[1]/div/div/div[1]/div[4]/div[1]/div/span[1]
-        IWebElement purchaseHistoryFirstPlanName_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); }
-        IWebElement purchaseHistoryFirstPurchasedBy_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); }
-        IWebElement purchaseHistoryFirstPrice_Span() { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); }
+        IWebElement purchaseHistoryFirstInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); } }
+        IWebElement purchaseHistoryFirstDate_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); } }
+        IWebElement purchaseHistoryFirstPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); } }
+        IWebElement purchaseHistoryFirstPurchasedBy_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); } }
+        IWebElement purchaseHistoryFirstPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); } }
 
         public void enterPurchaseHistory(String fromDate, String toDate)
         {
@@ -51,28 +50,28 @@ namespace TestFramework
 
         private void enterPurchaseHistoryFrom(String fromDate)
         {
-            purchaseHistoryFromDate_InputField().Click();
-            purchaseHistoryFromDate_InputField().Clear();
-            purchaseHistoryFromDate_InputField().SendKeys(fromDate);
+            purchaseHistoryFromDate_InputField.Click();
+            purchaseHistoryFromDate_InputField.Clear();
+            purchaseHistoryFromDate_InputField.SendKeys(fromDate);
         }
 
         private void enterPurchaseHistoryTo(String toDate)
         {
-            purchaseHistoryToDate_InputField().Click();
-            purchaseHistoryToDate_InputField().Clear();
-            purchaseHistoryToDate_InputField().SendKeys(toDate);
+            purchaseHistoryToDate_InputField.Click();
+            purchaseHistoryToDate_InputField.Clear();
+            purchaseHistoryToDate_InputField.SendKeys(toDate);
         }
 
         private void selectVIN(String VIN)
         {
-            new SelectElement(purchaseHistoryVIN_Dropdown()).SelectByText(VIN);
+            new SelectElement(purchaseHistoryVIN_Dropdown).SelectByText(VIN);
         }
 
         public void submitPurchaseHistory()
         {
             try
             {
-                purchaseHistorySubmit_Button().Click();
+                purchaseHistorySubmit_Button.Click();
             }
             catch (Exception e)
             {
@@ -84,7 +83,7 @@ namespace TestFramework
         {
             try
             {
-                purchaseHistoryEdit_Button().Click();
+                purchaseHistoryEdit_Button.Click();
             }
             catch (Exception e)
             {
@@ -95,7 +94,7 @@ namespace TestFramework
 
         public bool assertFromDateErrorPurchaseHistory()
         {
-            IWebElement fromValidation = purchaseHistoryFromError_Span();
+            IWebElement fromValidation = purchaseHistoryFromError_Span;
             string fromValidationstring = fromValidation.Text;
             if (fromValidationstring.Equals(Settings.Default.FromDateErrorPurchaseHistory))
             {
@@ -106,7 +105,7 @@ namespace TestFramework
 
         public bool assertToDateErrorPurchaseHistory()
         {
-            IWebElement toValidation = purchaseHistoryToError_Span();
+            IWebElement toValidation = purchaseHistoryToError_Span;
             string toValidationstring = toValidation.Text;
             if (toValidationstring.Equals(Settings.Default.ToDateErrorPurchaseHistory))
             {
@@ -117,7 +116,7 @@ namespace TestFramework
 
         public void goToFirstInvoice()
         {
-            purchaseHistoryFirstInvoice_Link().Click();
+            purchaseHistoryFirstInvoice_Link.Click();
         }
 
         /// <summary>
@@ -127,11 +126,11 @@ namespace TestFramework
         /// <exception cref="System.Exception">The Purchase History details are not displayed as expected.</exception>
         public bool assertPurchaseHistoryDetailsRow()
         {
-            string date = purchaseHistoryFirstDate_Span().Text;
-            string planName = purchaseHistoryFirstPlanName_Span().Text;
-            string purchasedBy = purchaseHistoryFirstPurchasedBy_Span().Text;
-            string price = purchaseHistoryFirstPrice_Span().Text;
-            string invoiceText = purchaseHistoryFirstInvoice_Link().Text;
+            string date = purchaseHistoryFirstDate_Span.Text;
+            string planName = purchaseHistoryFirstPlanName_Span.Text;
+            string purchasedBy = purchaseHistoryFirstPurchasedBy_Span.Text;
+            string price = purchaseHistoryFirstPrice_Span.Text;
+            string invoiceText = purchaseHistoryFirstInvoice_Link.Text;
 
             if (!isValidDate(date))
             {
@@ -167,7 +166,7 @@ namespace TestFramework
         {
             //driver.Navigate().GoToUrl(Settings.Default.BaseURL + "Account/PurchaseHistory");
             //Javascript Click overide used for nav dropdown menu items
-            IWebElement Link = purchaseHistory_Link();
+            IWebElement Link = purchaseHistory_Link;
             JavaScriptClick(Link);
         }
         

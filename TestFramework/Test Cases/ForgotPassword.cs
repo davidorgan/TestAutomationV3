@@ -110,7 +110,7 @@ namespace TestFramework
 
                 //Take screenshot after Test
                 System.Threading.Thread.Sleep(1000);
-                assertPageTitle(driver.Title, Settings.Default.TitleHome);
+                assertPageTitle(Settings.Default.TitleHome);
                 ForgotPasswordPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "ForgotPasswordResults2.png");
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/ForgotPasswordResults2.png"));
 

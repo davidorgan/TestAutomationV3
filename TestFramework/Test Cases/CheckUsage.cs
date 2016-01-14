@@ -53,23 +53,6 @@ namespace TestFramework
             //Set implicit wait
             UsageHistoryPage.setImplicitWait(30);
 
-            //Dates strings for Check Usage/Purchase History
-            today = DateTime.Now;
-            futureDateTo = today.AddDays(60);
-            futureDateFrom = today.AddDays(90);
-            todayString = today.ToString("dd/MM/yyyy");
-            futureDateToString = futureDateTo.ToString("dd/MM/yyyy");
-            futureDateFromString = futureDateFrom.ToString("dd/MM/yyyy");
-
-            // Set dates in settings    
-            Settings.Default.CurrentDateString = todayString;
-            Settings.Default.FutureDateFromString = futureDateFromString;
-            Settings.Default.FutureDateToString = futureDateToString;
-
-            // Save all settings
-            Settings.Default.Save();
-            Settings.Default.Reload();
-
             extent.Config()
                     .DocumentTitle("Usage History Report")
                     .ReportName("Usage History")
@@ -112,7 +95,7 @@ namespace TestFramework
                 UsageHistoryPage.goToCheckUsage();
 
                 //Enter dates
-                UsageHistoryPage.enterCheckUsageDates("01/01/2015", todayString);
+                UsageHistoryPage.enterCheckUsageDates(pastDateFromString, todayString);
 
                 //Submit
                 UsageHistoryPage.submitCheckUsage();

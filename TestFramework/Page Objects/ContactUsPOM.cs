@@ -26,22 +26,22 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Contact Us Elements
-        IWebElement contactUsName_InputField() { return driver.FindElement(By.Id("Name")); }
-        IWebElement contactUsEmail_InputField() { return driver.FindElement(By.Id("Email")); }
-        IWebElement contactUsMobileNumber_InputField() { return driver.FindElement(By.Id("mobile-number")); }
-        IWebElement contactUsMessage_InputField() { return driver.FindElement(By.Id("Message")); }
-        IWebElement contactUsSubmit_Button() { return driver.FindElement(By.XPath("//*[@id='contact-form']/div/div/div/div[2]/div/input")); }
+        IWebElement contactUsName_InputField { get { return driver.FindElement(By.Id("Name")); } }
+        IWebElement contactUsEmail_InputField { get { return driver.FindElement(By.Id("Email")); } }
+        IWebElement contactUsMobileNumber_InputField { get { return driver.FindElement(By.Id("mobile-number")); } }
+        IWebElement contactUsMessage_InputField { get { return driver.FindElement(By.Id("Message")); } }
+        IWebElement contactUsSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='contact-form']/div/div/div/div[2]/div/input")); } }
         
 
         //Contact Us Error Validation Elements
-        IWebElement contactUsNameError_Span() { return driver.FindElement(By.Id("Name-error")); }
-        IWebElement contactUsEmailError_Span() { return driver.FindElement(By.Id("Email-error")); }
-        IWebElement contactUsMobileError_Span() { return driver.FindElement(By.Id("mobile-number-error")); }
-        IWebElement contactUsMessageError_Span() { return driver.FindElement(By.Id("Message-error")); }
+        IWebElement contactUsNameError_Span { get { return driver.FindElement(By.Id("Name-error")); } }
+        IWebElement contactUsEmailError_Span { get { return driver.FindElement(By.Id("Email-error")); } }
+        IWebElement contactUsMobileError_Span { get { return driver.FindElement(By.Id("mobile-number-error")); } }
+        IWebElement contactUsMessageError_Span { get { return driver.FindElement(By.Id("Message-error")); } }
 
         //Comtact Us Link Elements
-        IWebElement contactUsNav_Dropdown() { return driver.FindElement(By.XPath("//*[@id='nav-left']/ul/li[2]")); }
-        IWebElement contactUsNav_Link() { return driver.FindElement(By.LinkText("Contact Us")); }
+        IWebElement contactUsNav_Dropdown { get { return driver.FindElement(By.XPath("//*[@id='nav-left']/ul/li[2]")); } }
+        IWebElement contactUsNav_Link { get { return driver.FindElement(By.LinkText("Contact Us")); } }
 
 
         /// <summary>
@@ -51,14 +51,14 @@ namespace TestFramework
         {
             try
             {
-                contactUsName_InputField().Clear();
-                contactUsName_InputField().SendKeys("AutoName");
-                contactUsEmail_InputField().Clear();
-                contactUsEmail_InputField().SendKeys("auto@address.com");
-                contactUsMobileNumber_InputField().Clear();
-                contactUsMobileNumber_InputField().SendKeys("353872743926");
-                contactUsMessage_InputField().Clear();
-                contactUsMessage_InputField().SendKeys("Auto Message to be sent");
+                contactUsName_InputField.Clear();
+                contactUsName_InputField.SendKeys("AutoName");
+                contactUsEmail_InputField.Clear();
+                contactUsEmail_InputField.SendKeys("auto@address.com");
+                contactUsMobileNumber_InputField.Clear();
+                contactUsMobileNumber_InputField.SendKeys("353872743926");
+                contactUsMessage_InputField.Clear();
+                contactUsMessage_InputField.SendKeys("Auto Message to be sent");
             }
             catch (Exception e)
             {
@@ -78,14 +78,14 @@ namespace TestFramework
         {
             try
             {
-                contactUsName_InputField().Clear();
-                contactUsName_InputField().SendKeys(name);
-                contactUsEmail_InputField().Clear();
-                contactUsEmail_InputField().SendKeys(email);
-                contactUsMobileNumber_InputField().Clear();
-                contactUsMobileNumber_InputField().SendKeys(num);
-                contactUsMessage_InputField().Clear();
-                contactUsMessage_InputField().SendKeys(message);
+                contactUsName_InputField.Clear();
+                contactUsName_InputField.SendKeys(name);
+                contactUsEmail_InputField.Clear();
+                contactUsEmail_InputField.SendKeys(email);
+                contactUsMobileNumber_InputField.Clear();
+                contactUsMobileNumber_InputField.SendKeys(num);
+                contactUsMessage_InputField.Clear();
+                contactUsMessage_InputField.SendKeys(message);
             }
             catch (Exception e)
             {
@@ -101,7 +101,7 @@ namespace TestFramework
         {
             try
             {
-                contactUsSubmit_Button().Click();
+                contactUsSubmit_Button.Click();
             }
             catch (Exception e)
             {
@@ -131,7 +131,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">Expected Error message for Name was not displayed.\r Expected: +Settings.Default.ContactNameError+\r Actual: +nameError</exception>
         public bool assertContactNameValidation()
         {
-            string nameError = contactUsNameError_Span().Text;
+            string nameError = contactUsNameError_Span.Text;
             if (nameError.Contains(Settings.Default.ContactNameError))
             {
                 return true;
@@ -147,7 +147,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">Expected Error message for Email was not displayed.\r Expected:  + Settings.Default.ContactEmailError + \r Actual:  + emailError</exception>
         public bool assertContactEmailValidation()
         {
-            string emailError = contactUsEmailError_Span().Text;
+            string emailError = contactUsEmailError_Span.Text;
             if (emailError.Contains(Settings.Default.ContactEmailError))
             {
                 return true;
@@ -163,7 +163,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">Expected Error message for Email was not displayed.\r Expected:  + Settings.Default.ContactEmailError + \r Actual:  + phoneError</exception>
         public bool assertContactPhoneValidation()
         {
-            string phoneError = contactUsMobileError_Span().Text;
+            string phoneError = contactUsMobileError_Span.Text;
             if (phoneError.Contains(Settings.Default.ContactPhoneError))
             {
                 return true;
@@ -179,7 +179,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">Expected Error message for Message Field was not displayed.\r Expected:  + Settings.Default.ContactMessageError + \r Actual:  + messageError</exception>
         public bool assertContactMessageValidation()
         {
-            string messageError = contactUsMessageError_Span().Text;
+            string messageError = contactUsMessageError_Span.Text;
             if (messageError.Contains(Settings.Default.ContactMessageError))
             {
                 return true;
@@ -198,8 +198,8 @@ namespace TestFramework
             try
             {         
                 Actions action = new Actions(driver);
-                IWebElement we = contactUsNav_Dropdown();
-                action.MoveToElement(we).MoveToElement(contactUsNav_Link()).Click().Build().Perform();
+                IWebElement we = contactUsNav_Dropdown;
+                action.MoveToElement(we).MoveToElement(contactUsNav_Link).Click().Build().Perform();
 
             }
             catch (Exception e)

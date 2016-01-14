@@ -292,5 +292,8 @@ Please verify that the number is correct and try again.
     <Setting Name="PlanPurchaseSuccessEuropeBorder" Type="System.String" Scope="User">
       <Value Profile="(Default)">Thank you for purchasing the Europe Border 1 Day 50MB plan.</Value>
     </Setting>
+    <Setting Name="DateFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dd/MM/yyyy</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

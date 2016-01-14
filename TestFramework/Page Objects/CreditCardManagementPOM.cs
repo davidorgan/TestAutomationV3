@@ -25,10 +25,10 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Create Account Elements
-        IWebElement currentCard_Container() { return driver.FindElement(By.XPath("//*[@id='creditCardManagement']/div[2]/div")); }
-        IWebElement deleteCard_Img() { return driver.FindElement(By.XPath("//*[@id='creditCardManagement']/div[2]/div/div/div[2]/div/div[2]/a/img")); }
-        IWebElement sponsorWarningPopUpClose_Button() { return driver.FindElement(By.Id("close-error-button")); }
-        IWebElement sponsorWarningPopUpMessage_Container() { return driver.FindElement(By.Id("errors-summary")); }
+        IWebElement currentCard_Container { get { return driver.FindElement(By.XPath("//*[@id='creditCardManagement']/div[2]/div")); } }
+        IWebElement deleteCard_Img { get { return driver.FindElement(By.XPath("//*[@id='creditCardManagement']/div[2]/div/div/div[2]/div/div[2]/a/img")); } }
+        IWebElement sponsorWarningPopUpClose_Button { get { return driver.FindElement(By.Id("close-error-button")); } }
+        IWebElement sponsorWarningPopUpMessage_Container { get { return driver.FindElement(By.Id("errors-summary")); } }
 
 
         //Nav Menu "GoTo" links
@@ -49,7 +49,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">There was an issue finding the credit card details</exception>
         public bool assertCreditCardIsPresent(string expected)
         {
-            string currentCCString = currentCard_Container().Text;
+            string currentCCString = currentCard_Container.Text;
             if (currentCCString.Contains(expected))
             {
                 return true;
@@ -65,7 +65,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">The expected text was not shown for user with no Credit Card on the account.</exception>
         public bool assertCreditCardIsNotPresent(string expected)
         {
-            IWebElement noCard = currentCard_Container();
+            IWebElement noCard = currentCard_Container;
             string noCardString = noCard.Text;
             if (noCardString.Contains(expected))
             {
@@ -82,7 +82,7 @@ namespace TestFramework
         {
             try
             {
-                deleteCard_Img().Click();
+                deleteCard_Img.Click();
             }
             catch (Exception e)
             {
@@ -98,7 +98,7 @@ namespace TestFramework
         {
             try
             {
-                sponsorWarningPopUpClose_Button().Click();
+                sponsorWarningPopUpClose_Button.Click();
             }
             catch (Exception e)
             {
@@ -113,7 +113,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">Expected Warning message was not displayed.</exception>
         public bool assertSponsorWarning()
         {
-            if (sponsorWarningPopUpMessage_Container().Text.Equals(Settings.Default.DeleteCardSponsorWarning))
+            if (sponsorWarningPopUpMessage_Container.Text.Equals(Settings.Default.DeleteCardSponsorWarning))
             {
                 return true;
             }
@@ -122,7 +122,7 @@ namespace TestFramework
 
         public bool isSponsorPopUpDisplayed()
         {
-            if (sponsorWarningPopUpMessage_Container().Displayed)
+            if (sponsorWarningPopUpMessage_Container.Displayed)
             {
                 return true;
             }

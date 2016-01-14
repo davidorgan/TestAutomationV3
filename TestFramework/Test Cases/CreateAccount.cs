@@ -32,10 +32,6 @@ namespace TestFramework
 
             mailNum = Settings.Default.NewMailCounter.ToString();
 
-            newEmail = "autoMail"+mailNum+Settings.Default.DisposableMail;
-            newPassword = "Cubic!!04";
-            newFName = "FNameAutoReallast";
-            newLName = "LNameAutoReallast";
 
             //Set Browser driver
             if (Settings.Default.Driver.Equals("Chrome"))
@@ -99,7 +95,7 @@ namespace TestFramework
                 //Test Steps go here
                 CreateAccountPage.goToCreateAccount();
                 System.Threading.Thread.Sleep(1000);
-                CreateAccountPage.enterCustomAccountDetails(newEmail, newPassword, newFName, newLName);
+                CreateAccountPage.enterNewAccountDetails();
                 CreateAccountPage.tickAgreeTandC();
                 CreateAccountPage.submitCreateAccount();
 
@@ -150,7 +146,7 @@ namespace TestFramework
                 //Take screenshot after Test
                 System.Threading.Thread.Sleep(1000);
                 CreateAccountPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "ActivateAccountResults1.png");       
-                CreateAccountPage.assertPageTitle(driver.Title,Settings.Default.TitleHome);
+                CreateAccountPage.assertPageTitle(Settings.Default.TitleHome);
 
                 outputText = "Activate link worked as intended.";
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/ActivateAccountResults1.png"));
@@ -158,7 +154,7 @@ namespace TestFramework
                 CreateAccountPage.doLogin(newEmail, newPassword);
 
                 System.Threading.Thread.Sleep(1000);
-                CreateAccountPage.assertPageTitle(driver.Title, Settings.Default.TitleAddVin);
+                CreateAccountPage.assertPageTitle(Settings.Default.TitleAddVin);
 
                 //Take screenshot after Test
                 System.Threading.Thread.Sleep(1000);

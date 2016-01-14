@@ -24,22 +24,38 @@ namespace TestFramework
     /// </summary>
     public abstract class BasePageObject
     {
-        private static string PageTitle { get; set; }
+        protected string PageTitle { get { return driver.Title; } }
         internal static string Url { get; set; }
         protected IWebDriver driver;
         protected string baseURL = Settings.Default.BaseURL;
         protected string outputText;
 
-        protected static DateTime today;
-        protected static DateTime futureDateTo;
-        protected static DateTime futureDateFrom;
-        protected string todayString;
-        protected string futureDateToString;
-        protected string futureDateFromString;
+        protected static DateTime today { get { return DateTime.Now; } }
+        protected static DateTime futureDateTo { get { return DateTime.Now.AddDays(30); } }
+        protected static DateTime futureDateFrom { get { return DateTime.Now.AddDays(90); } }
+        protected static DateTime pastDateFrom { get { return DateTime.Now.AddDays(-90); } }
+        protected string todayString { get { return today.ToString(Settings.Default.DateFormat); } }
+        protected string futureDateToString { get { return futureDateTo.ToString(Settings.Default.DateFormat); } }
+        protected string futureDateFromString { get { return futureDateFrom.ToString(Settings.Default.DateFormat); } }
+        protected string pastDateFromString { get { return pastDateFrom.ToString(Settings.Default.DateFormat); } }
 
         protected IWebElement CurrentPetName;
-        private string CurrentDBConnection;
+        private string CurrentDBConnection
+        {
+            get
+            {
+                if (Settings.Default.BaseURL.Contains("https://auto-qa.cubictelecom.com/"))
+                {
+                    return Settings.Default.DBConnectionStringQa;
+                }
+                else if (Settings.Default.BaseURL.Contains("https://auto-uat.cubictelecom.com/"))
+                {
+                    return Settings.Default.DBConnectionStringUAT;
+                }
+                return Settings.Default.DBConnectionStringQa;
+            }
 
+        }
 
         protected Dictionary<string, string> DBLatestCustomer;
         protected Dictionary<string, string> DBActivateToken;
@@ -47,10 +63,10 @@ namespace TestFramework
 
         protected static string mailNum;
 
-        protected string newEmail;
-        protected string newPassword;
-        protected string newFName;
-        protected string newLName;
+        protected string newEmail { get {return "autoMail"+mailNum+Settings.Default.DisposableMail;} set { newEmail=value;} }
+        protected string newPassword { get {return "Cubic!!04";} set { newPassword=value;} }
+        protected string newFName { get {return "FNameAutoReallast";} set { newFName=value;} }
+        protected string newLName { get {return "LNameAutoReallast";} set { newLName=value;} }
 
         protected StringBuilder verificationErrors = new StringBuilder();
 
@@ -67,42 +83,42 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Login Elements
-        IWebElement loginEmail_InputField() { return driver.FindElement(By.Id("Email")); }
-        IWebElement loginPassword_InputField() { return driver.FindElement(By.Id("Password")); }
-        IWebElement loginSubmit_Button(){return driver.FindElement(By.Id("login-button"));}
-        IWebElement logout_Link(){ return driver.FindElement(By.XPath("//a[contains(@href, '/Account/Logout')]")); }
+        IWebElement loginEmail_InputField { get { return driver.FindElement(By.Id("Email")); } }
+        IWebElement loginPassword_InputField { get { return driver.FindElement(By.Id("Password")); } }
+        IWebElement loginSubmit_Button { get {return driver.FindElement(By.Id("login-button"));} }
+        IWebElement logout_Link { get { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/Logout')]")); } }
 
         //Footer Elements
-        IWebElement footerDataInside_Link(){ return driver.FindElement(By.LinkText("About Data Inside")); }
-        IWebElement footerTermsAndConditions_Link() { return driver.FindElement(By.LinkText("Terms & Conditions"));}
-        IWebElement footerPrivacyPolicy_Link(){ return driver.FindElement(By.LinkText("Privacy Policy")); }
-        IWebElement footerContactUs_Link() { return driver.FindElement(By.LinkText("Contact Us")); }
-        IWebElement footerCopyright_Container() { return driver.FindElement(By.XPath("/html/body/footer/div/div/div/div")); }
-        IWebElement footerPoweredByAudi_Img() {return driver.FindElement(By.XPath("/html/body/footer/div/div/div/a/img")); }
+        IWebElement footerDataInside_Link { get { return driver.FindElement(By.LinkText("About Data Inside")); } }
+        IWebElement footerTermsAndConditions_Link { get { return driver.FindElement(By.LinkText("Terms & Conditions"));} }
+        IWebElement footerPrivacyPolicy_Link { get { return driver.FindElement(By.LinkText("Privacy Policy")); } }
+        IWebElement footerContactUs_Link { get { return driver.FindElement(By.LinkText("Contact Us")); } }
+        IWebElement footerCopyright_Container { get { return driver.FindElement(By.XPath("/html/body/footer/div/div/div/div")); } }
+        IWebElement footerPoweredByAudi_Img { get {return driver.FindElement(By.XPath("/html/body/footer/div/div/div/a/img")); } }
 
         //Forgot Password Elements
-        IWebElement forgotPassword_Link() { return driver.FindElement(By.XPath("//*[@id='loginForm']/div/div[4]/a")); }
-        IWebElement forgotPasswordEmail_InputField() {  return driver.FindElement(By.Id("Email")); }
-        IWebElement forgotPasswordSubmit_Button() {  return driver.FindElement(By.XPath("//*[@id='form0']/div/div[2]/input")); }
-        IWebElement forgotPasswordSuccess_P(){return driver.FindElement(By.XPath("//*[@id='forgot-password-wrapper']/div/div[1]/p"));}
-        IWebElement forgotPasswordMailSentBack_Button() { return driver.FindElement(By.XPath("//*[@id='forgot-password-wrapper']/div/div[2]/a")); }
+        IWebElement forgotPassword_Link { get { return driver.FindElement(By.XPath("//*[@id='loginForm']/div/div[4]/a")); } }
+        IWebElement forgotPasswordEmail_InputField { get {  return driver.FindElement(By.Id("Email")); } }
+        IWebElement forgotPasswordSubmit_Button { get {  return driver.FindElement(By.XPath("//*[@id='form0']/div/div[2]/input")); } }
+        IWebElement forgotPasswordSuccess_P { get {return driver.FindElement(By.XPath("//*[@id='forgot-password-wrapper']/div/div[1]/p"));} }
+        IWebElement forgotPasswordMailSentBack_Button { get { return driver.FindElement(By.XPath("//*[@id='forgot-password-wrapper']/div/div[2]/a")); } }
 
         //Reset Password
-        IWebElement resetPasswordEmail_InputField(){ return driver.FindElement(By.Id("Password")); }
-        IWebElement resetPasswordReEnterEmail_InputField() { return driver.FindElement(By.Id("RePassword")); }
-        IWebElement resetPasswordSubmit_Button() { return driver.FindElement(By.XPath("//*[@id='form0']/div/div/div/input[3]")); }
-        IWebElement resetPasswordSuccess_Container() { return driver.FindElement(By.XPath("//*[@id='reset-password-page']/div[2]/div/div")); }
+        IWebElement resetPasswordEmail_InputField { get { return driver.FindElement(By.Id("Password")); } }
+        IWebElement resetPasswordReEnterEmail_InputField { get { return driver.FindElement(By.Id("RePassword")); } }
+        IWebElement resetPasswordSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='form0']/div/div/div/input[3]")); } }
+        IWebElement resetPasswordSuccess_Container { get { return driver.FindElement(By.XPath("//*[@id='reset-password-page']/div[2]/div/div")); } }
 
         //Loading Spinner
         IWebElement planLoadSpinner_Container(string vin) { return driver.FindElement(By.XPath("//div[contains(@id, 'plans-placeholder-spinner-" + vin + "')]")); }
 
-        IWebElement pageLoadSpinner_Container() { return driver.FindElement(By.XPath("//*[@id='progress-indicator']")); }
+        IWebElement pageLoadSpinner_Container { get { return driver.FindElement(By.XPath("//*[@id='progress-indicator']")); } }
 
         //Nav Elements
-        IWebElement navFirstName_Container() { return driver.FindElement(By.XPath("//*[@id='nav-right']/ul/li")); }
+        IWebElement navFirstName_Container { get { return driver.FindElement(By.XPath("//*[@id='nav-right']/ul/li")); } }
 
 
-            /// <summary>
+        /// <summary>
         /// Gets the page title.
         /// </summary>
         /// <returns></returns>
@@ -120,13 +136,13 @@ namespace TestFramework
         /// <param name="expectedTitle">The expected title.</param>
         /// <returns></returns>
         /// <exception cref="System.Exception">The expected page is not displayed!</exception>
-        public bool assertPageTitle(string actualTitle, string expectedTitle)
+        public bool assertPageTitle(string expectedTitle)
         {
-            if (String.CompareOrdinal(actualTitle, expectedTitle) == 0)
+            if (String.CompareOrdinal(PageTitle, expectedTitle) == 0)
             {
                 return true;
             }
-            throw new Exception("The expected page is not displayed! Expected: '"+expectedTitle+"', Actual: '"+actualTitle+"'");
+            throw new Exception("The expected page is not displayed! Expected: '"+expectedTitle+"', Actual: '"+PageTitle+"'");
         }
 
         /// <summary>
@@ -394,11 +410,11 @@ namespace TestFramework
         {
             try
             {
-                loginEmail_InputField().Clear();
-                loginEmail_InputField().SendKeys(User);
-                loginPassword_InputField().Clear();
-                loginPassword_InputField().SendKeys(Pwd);
-                loginSubmit_Button().Click();
+                loginEmail_InputField.Clear();
+                loginEmail_InputField.SendKeys(User);
+                loginPassword_InputField.Clear();
+                loginPassword_InputField.SendKeys(Pwd);
+                loginSubmit_Button.Click();
             }
             catch (Exception e)
             {
@@ -416,7 +432,7 @@ namespace TestFramework
         {
             try
             {
-                logout_Link().Click();
+                logout_Link.Click();
             }
             catch (Exception e)
             {
@@ -474,7 +490,7 @@ namespace TestFramework
         {
             try
             {
-                JavaScriptClick(footerDataInside_Link());
+                JavaScriptClick(footerDataInside_Link);
             }
             catch (NoSuchElementException e1)
             {
@@ -491,7 +507,7 @@ namespace TestFramework
         /// </summary>
         public void goToTandC()
         {
-            JavaScriptClick(footerTermsAndConditions_Link());
+            JavaScriptClick(footerTermsAndConditions_Link);
         }
 
         /// <summary>
@@ -499,7 +515,7 @@ namespace TestFramework
         /// </summary>
         public void goToPrivacyPolicy()
         {
-            JavaScriptClick(footerPrivacyPolicy_Link());
+            JavaScriptClick(footerPrivacyPolicy_Link);
         }
 
         /// <summary>
@@ -507,7 +523,7 @@ namespace TestFramework
         /// </summary>
         public void goToFooterContact()
         {
-            JavaScriptClick(footerContactUs_Link());
+            JavaScriptClick(footerContactUs_Link);
         }
 
         /// <summary>
@@ -515,12 +531,12 @@ namespace TestFramework
         /// </summary>
         public void goToPoweredBy()
         {
-            footerPoweredByAudi_Img().Click();
+            footerPoweredByAudi_Img.Click();
         }
 
         public void assertCopyrightText()
         {
-            string span = footerCopyright_Container().Text;
+            string span = footerCopyright_Container.Text;
             if (span.Contains(Settings.Default.FooterCopyrightText))
             {
                 return;
@@ -661,7 +677,7 @@ namespace TestFramework
         /// </summary>
         public void goToForgotPassword()
         {
-            forgotPassword_Link().Click();
+            forgotPassword_Link.Click();
         }
 
         /// <summary>
@@ -670,8 +686,8 @@ namespace TestFramework
         /// <param name="email">The email.</param>
         public void enterEmailForgotPW(string email)
         {
-            forgotPasswordEmail_InputField().Clear();
-            forgotPasswordEmail_InputField().SendKeys(email);
+            forgotPasswordEmail_InputField.Clear();
+            forgotPasswordEmail_InputField.SendKeys(email);
         }
 
         /// <summary>
@@ -680,8 +696,8 @@ namespace TestFramework
         /// <param name="pw">The pw.</param>
         public void enterNewPassword(string pw)
         {
-            resetPasswordEmail_InputField().Clear();
-            resetPasswordEmail_InputField().SendKeys(pw);
+            resetPasswordEmail_InputField.Clear();
+            resetPasswordEmail_InputField.SendKeys(pw);
         }
 
         /// <summary>
@@ -690,8 +706,8 @@ namespace TestFramework
         /// <param name="pw">The pw.</param>
         public void reenterNewPassword(string pw)
         {
-            resetPasswordReEnterEmail_InputField().Clear();
-            resetPasswordReEnterEmail_InputField().SendKeys(pw);
+            resetPasswordReEnterEmail_InputField.Clear();
+            resetPasswordReEnterEmail_InputField.SendKeys(pw);
         }
 
 
@@ -700,12 +716,12 @@ namespace TestFramework
         /// </summary>
         public void submitNewPassword()
         {
-            resetPasswordSubmit_Button().Click();
+            resetPasswordSubmit_Button.Click();
         }
 
         public bool assertPasswordChangedSuccess()
         {
-            IWebElement success = resetPasswordSuccess_Container();
+            IWebElement success = resetPasswordSuccess_Container;
             try
             {               
                 if (success.Text.Equals(Settings.Default.PasswordChangedSuccessMessage))
@@ -727,7 +743,7 @@ namespace TestFramework
         /// </summary>
         public void submitForgotPW()
         {
-            forgotPasswordSubmit_Button().Click();
+            forgotPasswordSubmit_Button.Click();
         }
 
         /// <summary>
@@ -737,7 +753,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">The mail successfully sent page has not displayed correctly.</exception>
         public bool checkForgotMailSent()
         {
-            string mailsent = forgotPasswordSuccess_P().Text;
+            string mailsent = forgotPasswordSuccess_P.Text;
             if (mailsent.Equals(Settings.Default.ForgotPWMailSent))
             {
                 return true;
@@ -750,7 +766,7 @@ namespace TestFramework
         /// </summary>
         public void backForgotPWMailSent()
         {
-            forgotPasswordMailSentBack_Button().Click();
+            forgotPasswordMailSentBack_Button.Click();
         }
 
         /// <summary>
@@ -777,17 +793,6 @@ namespace TestFramework
         /// </value>
         private static IJavaScriptExecutor IJDriver { get; set; }
 
-        private void setDBConnection()
-        {
-            if (Settings.Default.BaseURL.Contains("https://auto-qa.cubictelecom.com/"))
-            {
-                CurrentDBConnection = Settings.Default.DBConnectionStringQa;
-            }
-            else if (Settings.Default.BaseURL.Contains("https://auto-uat.cubictelecom.com/"))
-            {
-                CurrentDBConnection = Settings.Default.DBConnectionStringUAT;
-            }
-        }
 
         //SQL Database connections
         /// <summary>
@@ -796,7 +801,6 @@ namespace TestFramework
         /// <returns></returns>
         protected Dictionary<string,string> getLatestCustomerDetailsDB()
         {
-            setDBConnection();
 
             Dictionary<string, string> customerDetails = new Dictionary<string,string>();
             using (SqlConnection conn = new SqlConnection())
@@ -831,7 +835,6 @@ namespace TestFramework
         /// <returns></returns>
         public Dictionary<string, string> getLatestTokenDB()
         {
-            setDBConnection();
             Dictionary<string, string> activateToken = new Dictionary<string, string>();
             using (SqlConnection conn = new SqlConnection())
             {
@@ -862,7 +865,6 @@ namespace TestFramework
         /// <returns></returns>
         private Dictionary<string, string> getCustomerDetailsDB()
         {
-            setDBConnection();
             Dictionary<string, string> customerDetails = new Dictionary<string, string>();
             using (SqlConnection conn = new SqlConnection())
             {
@@ -930,7 +932,7 @@ namespace TestFramework
         public void waitForSpinnerDashboard()
         {
             Thread.Sleep(500);
-            IWebElement PageSpinner = pageLoadSpinner_Container();
+            IWebElement PageSpinner = pageLoadSpinner_Container;
             waitUntilElementNotDisplayed(PageSpinner);
         }
 
@@ -943,7 +945,7 @@ namespace TestFramework
         {
             DateTime dt;
             CultureInfo enIE = new CultureInfo("en-IE");
-            bool isValid = DateTime.TryParseExact(date, "dd/MM/yyyy", enIE, DateTimeStyles.None, out dt);
+            bool isValid = DateTime.TryParseExact(date, Settings.Default.DateFormat, enIE, DateTimeStyles.None, out dt);
             return isValid;
         }
 

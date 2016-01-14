@@ -13,15 +13,15 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Delete Account Elements
-        IWebElement deleteAccountConfirm_Checkbox() { return driver.FindElement(By.XPath("//*[@id='HasConfirmedDataDeletion']")); }
-        IWebElement deleteAccountSubmit_Button() { return driver.FindElement(By.XPath("//*[@id='content-page']/div[2]/form/div[2]/div/input")); }
-        IWebElement deleteAccountBack_Button() { return driver.FindElement(By.LinkText("Back")); }
+        IWebElement deleteAccountConfirm_Checkbox { get { return driver.FindElement(By.XPath("//*[@id='HasConfirmedDataDeletion']")); } }
+        IWebElement deleteAccountSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='content-page']/div[2]/form/div[2]/div/input")); } }
+        IWebElement deleteAccountBack_Button { get { return driver.FindElement(By.LinkText("Back")); } }
 
         public void tickUnderstand()
         {
             try
             {
-                deleteAccountConfirm_Checkbox().Click();
+                deleteAccountConfirm_Checkbox.Click();
             }
             catch (Exception e)
             {
@@ -33,7 +33,7 @@ namespace TestFramework
         {
             try
             {
-                deleteAccountSubmit_Button().Click();
+                deleteAccountSubmit_Button.Click();
             }
             catch (Exception e)
             {
@@ -45,7 +45,7 @@ namespace TestFramework
         {
             try
             {
-                deleteAccountBack_Button().Click();
+                deleteAccountBack_Button.Click();
             }
             catch (Exception e)
             {

@@ -118,7 +118,7 @@ namespace TestFramework
                 DashboardPage.goBackDashboard();
 
                 //Any assertions if requried
-                DashboardPage.assertPageTitle(driver.Title, Settings.Default.TitleDashboard);
+                DashboardPage.assertPageTitle(Settings.Default.TitleDashboard);
                 Console.WriteLine("Expected page displayed after cancelling adding the VIN");
 
                 //Take screenshot after Test

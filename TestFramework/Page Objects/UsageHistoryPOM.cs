@@ -15,28 +15,28 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Usage History Elements
-        private IWebElement usageHistoryFromDate_InputField() { return driver.FindElement(By.Id("UsageHistoryFrom")); }
+        private IWebElement usageHistoryFromDate_InputField { get { return driver.FindElement(By.Id("UsageHistoryFrom")); } }
 
-        private IWebElement usageHistoryToDate_InputField() { return driver.FindElement(By.Id("UsageHistoryTo")); }
-        private IWebElement usageHistoryVIN_Dropdown() { return driver.FindElement(By.Id("VehicleIdentificationNumber")); }
-        private IWebElement usageHistorySubmit_Button() { return driver.FindElement(By.XPath("//input[@value='View']")); }
-        private IWebElement usageHistoryFromError_Span() { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/span")); }
-        private IWebElement usageHistoryToError_Span() { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/span")); }
-        private IWebElement usageHistory_Link() { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/UsageHistory')]")); }
+        private IWebElement usageHistoryToDate_InputField { get { return driver.FindElement(By.Id("UsageHistoryTo")); } }
+        private IWebElement usageHistoryVIN_Dropdown { get { return driver.FindElement(By.Id("VehicleIdentificationNumber")); } }
+        private IWebElement usageHistorySubmit_Button { get { return driver.FindElement(By.XPath("//input[@value='View']")); } }
+        private IWebElement usageHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/span")); } }
+        private IWebElement usageHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/span")); } }
+        private IWebElement usageHistory_Link { get { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/UsageHistory')]")); } }
 
-        private IWebElement usageHistoryDashboard_Link() { return driver.FindElement(By.XPath("//*[@id='form0']/div[4]/div/a")); }
-        private IWebElement usageHistoryBack_Link() { return driver.FindElement(By.XPath("//*[@id='usage-history']/div/div/div[2]/div/a")); }
+        private IWebElement usageHistoryDashboard_Link { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[4]/div/a")); } }
+        private IWebElement usageHistoryBack_Link { get { return driver.FindElement(By.XPath("//*[@id='usage-history']/div/div/div[2]/div/a")); } }
 
         public void enterCheckUsageDates(String fromDate, String toDate)
         {
             try
             {
-                usageHistoryFromDate_InputField().Click();
-                usageHistoryFromDate_InputField().Clear();
-                usageHistoryFromDate_InputField().SendKeys(fromDate);
-                usageHistoryToDate_InputField().Click();
-                usageHistoryToDate_InputField().Clear();
-                usageHistoryToDate_InputField().SendKeys(toDate);
+                usageHistoryFromDate_InputField.Click();
+                usageHistoryFromDate_InputField.Clear();
+                usageHistoryFromDate_InputField.SendKeys(fromDate);
+                usageHistoryToDate_InputField.Click();
+                usageHistoryToDate_InputField.Clear();
+                usageHistoryToDate_InputField.SendKeys(toDate);
             }
             catch (Exception e)
             {
@@ -48,7 +48,7 @@ namespace TestFramework
         {
             try
             {
-                usageHistorySubmit_Button().Click();
+                usageHistorySubmit_Button.Click();
             }
             catch (Exception e)
             {
@@ -58,14 +58,14 @@ namespace TestFramework
 
         public void selectVIN(String VIN)
         {
-            new SelectElement(usageHistoryVIN_Dropdown()).SelectByText(VIN);
+            new SelectElement(usageHistoryVIN_Dropdown).SelectByText(VIN);
         }
 
 
         public bool assertFromDateErrorUsageHistory()
         {
 
-            IWebElement fromValidation = usageHistoryFromError_Span();
+            IWebElement fromValidation = usageHistoryFromError_Span;
             string fromValidationstring = fromValidation.Text;
             if (fromValidationstring.Contains(Settings.Default.FromDateErrorUsageHistory))
             {
@@ -77,7 +77,7 @@ namespace TestFramework
         public bool assertToDateErrorUsageHistory()
         {
 
-            IWebElement toValidation = usageHistoryToError_Span();
+            IWebElement toValidation = usageHistoryToError_Span;
             string toValidationstring = toValidation.Text;
             if (toValidationstring.Equals(Settings.Default.ToDateErrorUsageHistory))
             {

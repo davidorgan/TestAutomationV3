@@ -136,7 +136,7 @@ namespace TestFramework
                 //Assert Page
                 string currentPageTitle = driver.Title;
                 Console.WriteLine("Current Page title is: "+currentPageTitle);
-                assertPageTitle(currentPageTitle, Settings.Default.TitleDashboard);
+                assertPageTitle(Settings.Default.TitleDashboard);
                 //Test.Log(LogStatus.Info, "Page title displayed is as Expected: " + currentPageTitle);
 
                 //Take screenshot after Test

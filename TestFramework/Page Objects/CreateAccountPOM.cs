@@ -25,17 +25,22 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Create Account Elements
-        IWebElement createAccountEmail_InputField() { return driver.FindElement(By.Id("Email")); }
-        IWebElement createAccountPassword_InputField() { return driver.FindElement(By.Id("Password")); }
-        IWebElement createAccountConfirmPassword_InputField() { return driver.FindElement(By.Id("ConfirmPassword")); }
-        IWebElement createAccountFirstName_InputField() { return driver.FindElement(By.Id("FirstName")); }
-        IWebElement createAccountLastName_InputField() { return driver.FindElement(By.Id("LastName")); }
-        IWebElement createAccountTerms_Checkbox() { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[2]/div/div/label")); }
-        IWebElement createAccountSubmit_Button() { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[3]/div/input")); }
-        IWebElement createAccountSuccess_P() { return driver.FindElement(By.XPath("//*[@id='registration-page']/div/div[1]/p")); }
+        IWebElement createAccountEmail_InputField { get { return driver.FindElement(By.Id("Email")); } }
+        IWebElement createAccountPassword_InputField { get { return driver.FindElement(By.Id("Password")); } }
+        IWebElement createAccountConfirmPassword_InputField { get { return driver.FindElement(By.Id("ConfirmPassword")); } }
+        IWebElement createAccountFirstName_InputField { get { return driver.FindElement(By.Id("FirstName")); } }
+        IWebElement createAccountLastName_InputField { get { return driver.FindElement(By.Id("LastName")); } }
+        IWebElement createAccountTerms_Checkbox { get { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[2]/div/div/label")); } }
+        IWebElement createAccountSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[3]/div/input")); } }
+        IWebElement createAccountSuccess_P { get { return driver.FindElement(By.XPath("//*[@id='registration-page']/div/div[1]/p")); } }
 
-        IWebElement createAccountBackToLogin_Button() { return driver.FindElement(By.XPath("//*[@id='registration-page']/div/div[2]/a")); }
-        IWebElement createAccount_Link() { return driver.FindElement(By.LinkText("Create New Account")); }
+        IWebElement createAccountBackToLogin_Button { get { return driver.FindElement(By.XPath("//*[@id='registration-page']/div/div[2]/a")); } }
+        IWebElement createAccount_Link { get { return driver.FindElement(By.LinkText("Create New Account")); } }
+
+       // String _newEmail { get { return "AutoUser@Test.com"; } set { _newEmail = value; } }
+       // String _newPassword { get { return "Cubic!!04"; } set { _newPassword = value; } }
+        //String _newFirstName { get { return "AutoName"; } set { _newFirstName = value; } }
+       // String _newLastName { get { return "AutoLast"; } set { _newLastName = value; } }
 
         /// <summary>
         /// Enters the new account details.
@@ -44,16 +49,16 @@ namespace TestFramework
         {
             try
             {
-                createAccountEmail_InputField().Clear();
-                createAccountEmail_InputField().SendKeys("AutoUser@Test.com");
-                createAccountPassword_InputField().Clear();
-                createAccountPassword_InputField().SendKeys("Cubic!!04");
-                createAccountConfirmPassword_InputField().Clear();
-                createAccountConfirmPassword_InputField().SendKeys("Cubic!!04");
-                createAccountFirstName_InputField().Clear();
-                createAccountFirstName_InputField().SendKeys("AutoName");
-                createAccountLastName_InputField().Clear();
-                createAccountLastName_InputField().SendKeys("AutoLast");
+                createAccountEmail_InputField.Clear();
+                createAccountEmail_InputField.SendKeys(newEmail);
+                createAccountPassword_InputField.Clear();
+                createAccountPassword_InputField.SendKeys(newPassword);
+                createAccountConfirmPassword_InputField.Clear();
+                createAccountConfirmPassword_InputField.SendKeys(newPassword);
+                createAccountFirstName_InputField.Clear();
+                createAccountFirstName_InputField.SendKeys(newFName);
+                createAccountLastName_InputField.Clear();
+                createAccountLastName_InputField.SendKeys(newLName);
             }
             catch (Exception e)
             {
@@ -68,20 +73,14 @@ namespace TestFramework
         /// <param name="password">The password.</param>
         /// <param name="fname">The fname.</param>
         /// <param name="lname">The lname.</param>
-        public void enterCustomAccountDetails(String email, String password, String fname, String lname)
+        public void setCustomAccountDetails(String email, String password, String fname, String lname)
         {
             try
             {
-                createAccountEmail_InputField().Clear();
-                createAccountEmail_InputField().SendKeys(email);
-                createAccountPassword_InputField().Clear();
-                createAccountPassword_InputField().SendKeys(password);
-                createAccountConfirmPassword_InputField().Clear();
-                createAccountConfirmPassword_InputField().SendKeys(password);
-                createAccountFirstName_InputField().Clear();
-                createAccountFirstName_InputField().SendKeys(fname);
-                createAccountLastName_InputField().Clear();
-                createAccountLastName_InputField().SendKeys(lname);
+                newEmail = email;
+                newPassword = password;
+                newFName = fname;
+                newLName = lname;               
             }
             catch (Exception e)
             {
@@ -94,7 +93,7 @@ namespace TestFramework
         /// </summary>
         public void tickAgreeTandC()
         {
-            createAccountTerms_Checkbox().Click();
+            createAccountTerms_Checkbox.Click();
         }
 
         /// <summary>
@@ -104,7 +103,7 @@ namespace TestFramework
         {
             try
             {
-                createAccountSubmit_Button().Click();
+                createAccountSubmit_Button.Click();
             }
             catch (Exception e)
             {
@@ -119,7 +118,7 @@ namespace TestFramework
         /// <exception cref="System.Exception">The confirmation of account creation page was not displayed correctly</exception>
         public bool assertAccountCreated()
         {
-            IWebElement created = createAccountSuccess_P();
+            IWebElement created = createAccountSuccess_P;
             if (created.Text.Contains(Settings.Default.CreateAccountConfirmed))
             {
                 return true;
@@ -132,7 +131,7 @@ namespace TestFramework
         /// </summary>
         public void goBackToLogin()
         {
-            createAccountBackToLogin_Button().Click();
+            createAccountBackToLogin_Button.Click();
         }
 
         //Nav Menu "GoTo" links
@@ -144,7 +143,7 @@ namespace TestFramework
         {
             try
             {
-                createAccount_Link().Click();
+                createAccount_Link.Click();
             }
             catch (ElementNotVisibleException e)
             {
@@ -153,7 +152,7 @@ namespace TestFramework
         }
 
         /// <summary>
-        /// Asserts the customer addedto database.
+        /// Asserts the customer added to database.
         /// </summary>
         /// <param name="newEmail">The new email.</param>
         /// <returns></returns>
