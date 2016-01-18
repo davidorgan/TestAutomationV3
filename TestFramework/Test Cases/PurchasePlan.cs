@@ -83,7 +83,7 @@ namespace TestFramework
         }
 
         [Test,Explicit]
-        public void C_ThePurchaseLocalPlanTest()
+        public void A_ThePurchaseLocalPlanTest()
         {
             try
             {
@@ -138,7 +138,7 @@ namespace TestFramework
         }
 
         [Test, Explicit]
-        public void E_ThePurchaseEuropePlanTest()
+        public void B_ThePurchaseEuropePlanTest()
         {
             try
             {
@@ -193,7 +193,7 @@ namespace TestFramework
         }
 
         [Test]
-        public void B_ThePurchasePlanInvalidCardDetails()
+        public void C_ThePurchasePlanInvalidCardDetails()
         {
             try
             {
@@ -259,7 +259,7 @@ namespace TestFramework
         }
 
         [Test]
-        public void A_ThePurchasePlanEmptyCardDetails()
+        public void D_ThePurchasePlanEmptyCardDetails()
         {
             try
             {
@@ -323,7 +323,7 @@ namespace TestFramework
         }
 
         [Test]
-        public void D_ThePurchasePlanTooManyAttempts()
+        public void E_ThePurchasePlanTooManyAttempts()
         {
             try
             {

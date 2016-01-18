@@ -102,7 +102,7 @@ namespace TestFramework
 
                 DashboardPurchaseHistoryPage.goToPurchaseHistoryDashboard();
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
-                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard("01/01/2015",Settings.Default.CurrentDateString);
+                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(pastDateFromString, todayString);
                 DashboardPurchaseHistoryPage.viewPurchaseHistoryDashboard();
 
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
@@ -155,7 +155,7 @@ namespace TestFramework
 
                 DashboardPurchaseHistoryPage.goToPurchaseHistoryDashboard();
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
-                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(Settings.Default.FutureDateFromString, Settings.Default.FutureDateToString);
+                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(futureDateFromString, futureDateToString);
                 DashboardPurchaseHistoryPage.viewPurchaseHistoryDashboard();
 
 

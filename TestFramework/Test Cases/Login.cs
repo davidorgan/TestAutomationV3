@@ -90,7 +90,7 @@ namespace TestFramework
                 //Got to base URL
                 LoginPage.Goto(baseURL);
                 //Test.Log(LogStatus.Info, "Go to Base URL: "+Settings.Default.BaseURL);
-
+                    
                 //Login
                 LoginPage.doLogin(Settings.Default.User, Settings.Default.Password);
                 //Test.Log(LogStatus.Info, "Login to Account");

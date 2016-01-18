@@ -100,11 +100,11 @@ namespace TestFramework
         private IWebElement purchaseHistorySubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/input")); } }
         private IWebElement purchaseHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[1]/div/span")); } }
         private IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[2]/div/span")); } }
-        private IWebElement purchaseHistoryFirstEntryInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); } }
-        private IWebElement purchaseHistoryFirstEntryDate_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); } }
-        private IWebElement purchaseHistoryFirstEntryPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); } }
-        private IWebElement purchaseHistoryFirstEntryPurchaseBy_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); } }
-        private IWebElement purchaseHistoryFirstEntryPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); } }
+        private IWebElement purchaseHistoryFirstEntryInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/a")); } }
+        private IWebElement purchaseHistoryFirstEntryDate_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[1]")); } }
+        private IWebElement purchaseHistoryFirstEntryPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[2]")); } }
+        private IWebElement purchaseHistoryFirstEntryPurchaseBy_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[3]")); } }
+        private IWebElement purchaseHistoryFirstEntryPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[4]")); } }
 
         //Manage In Car Top Up Elements
         private IWebElement manageInCarTopUp_Link { get { return driver.FindElement(By.XPath("//*[@id='form0']/label/span")); } }

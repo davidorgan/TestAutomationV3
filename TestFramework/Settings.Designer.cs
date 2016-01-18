@@ -641,7 +641,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.29")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.30")]
         public string SoftwareVersion {
             get {
                 return ((string)(this["SoftwareVersion"]));
@@ -653,7 +653,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Visa **** **** **** 0281 expiring on 01/19")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Visa \r\n**** **** **** 0281")]
         public string CurrentCreditCardString {
             get {
                 return ((string)(this["CurrentCreditCardString"]));
