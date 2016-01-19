@@ -261,13 +261,13 @@ Please verify that the number is correct and try again.
       <Value Profile="(Default)">..\..\IEDriver</Value>
     </Setting>
     <Setting Name="CreditCardEmptyNameError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">The Name field is required.</Value>
+      <Value Profile="(Default)">The Card Holder Name is required.</Value>
     </Setting>
     <Setting Name="CreditCardEmptyNumberError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">The Card Number field is required.</Value>
+      <Value Profile="(Default)">The Card Number is required.</Value>
     </Setting>
     <Setting Name="CreditCardEmptyCVVError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">The CVV field is required.</Value>
+      <Value Profile="(Default)">The CVV is required.</Value>
     </Setting>
     <Setting Name="CreditCardInvalidError" Type="System.String" Scope="User">
       <Value Profile="(Default)">The value is not a valid credit card number.</Value>
@@ -279,7 +279,7 @@ Please verify that the number is correct and try again.
       <Value Profile="(Default)">The field CVV must be a string with a minimum length of 3 and a maximum length of 4.</Value>
     </Setting>
     <Setting Name="CreditCardInvalidNameError" Type="System.String" Scope="User">
-      <Value Profile="(Default)">The Name field requires at least 2 words</Value>
+      <Value Profile="(Default)">The Card Holder Name field requires at least 2 words</Value>
     </Setting>
     <Setting Name="AccountLocale" Type="System.String" Scope="User">
       <Value Profile="(Default)">Germany</Value>

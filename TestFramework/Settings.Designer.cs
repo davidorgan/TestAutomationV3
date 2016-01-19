@@ -1033,7 +1033,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("The Name field is required.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("The Card Holder Name is required.")]
         public string CreditCardEmptyNameError {
             get {
                 return ((string)(this["CreditCardEmptyNameError"]));
@@ -1045,7 +1045,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("The Card Number field is required.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("The Card Number is required.")]
         public string CreditCardEmptyNumberError {
             get {
                 return ((string)(this["CreditCardEmptyNumberError"]));
@@ -1057,7 +1057,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("The CVV field is required.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("The CVV is required.")]
         public string CreditCardEmptyCVVError {
             get {
                 return ((string)(this["CreditCardEmptyCVVError"]));
@@ -1106,7 +1106,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("The Name field requires at least 2 words")]
+        [global::System.Configuration.DefaultSettingValueAttribute("The Card Holder Name field requires at least 2 words")]
         public string CreditCardInvalidNameError {
             get {
                 return ((string)(this["CreditCardInvalidNameError"]));

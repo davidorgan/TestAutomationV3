@@ -42,4 +42,3 @@ C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Tho
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\ThoughtWorks.Selenium.Core.xml
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\obj\Release\TestFramework.dll
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\obj\Release\TestFramework.pdb
-C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\obj\Release\TestFramework V2.csprojResolveAssemblyReference.cache

@@ -771,9 +771,9 @@ namespace TestFramework
             bool nameError = assertInvalidCardNameError();
             bool numberError = assertInvalidCardNumberError();
             bool cvvError = assertInvalidCVVError();
-            bool monthError = assertInvalidExpireMonthError();
+            //bool monthError = assertInvalidExpireMonthError();
 
-            if (nameError && numberError && cvvError && monthError)
+            if (nameError && numberError && cvvError /*&& monthError*/)
             {
                 return true;
             }
