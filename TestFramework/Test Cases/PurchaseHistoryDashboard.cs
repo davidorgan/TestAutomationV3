@@ -93,7 +93,7 @@ namespace TestFramework
                 DashboardPurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                DashboardPurchaseHistoryPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPurchaseHistoryPage.doLogin();
 
                 //Test Steps go here
 
@@ -102,7 +102,7 @@ namespace TestFramework
 
                 DashboardPurchaseHistoryPage.goToPurchaseHistoryDashboard();
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
-                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(pastDateFromString, todayString);
+                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(DateVars.pastDateFromString, DateVars.todayString);
                 DashboardPurchaseHistoryPage.viewPurchaseHistoryDashboard();
 
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
@@ -146,7 +146,7 @@ namespace TestFramework
                 DashboardPurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                DashboardPurchaseHistoryPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPurchaseHistoryPage.doLogin();
 
                 //Test Steps go here
 
@@ -155,7 +155,7 @@ namespace TestFramework
 
                 DashboardPurchaseHistoryPage.goToPurchaseHistoryDashboard();
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
-                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(futureDateFromString, futureDateToString);
+                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(DateVars.futureDateFromString, DateVars.futureDateToString);
                 DashboardPurchaseHistoryPage.viewPurchaseHistoryDashboard();
 
 

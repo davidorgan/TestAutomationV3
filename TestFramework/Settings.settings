@@ -160,7 +160,7 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">Server=cubicqaserver.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
     </Setting>
     <Setting Name="SoftwareVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0.2.1.30</Value>
+      <Value Profile="(Default)">0.2.1.32</Value>
     </Setting>
     <Setting Name="CurrentCreditCardString" Type="System.String" Scope="User">
       <Value Profile="(Default)">Visa 
@@ -170,7 +170,7 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">You don't currently have any stored credit cards.</Value>
     </Setting>
     <Setting Name="StandardUser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">standard@testuser.com</Value>
+      <Value Profile="(Default)">davido@cubictelecom.com</Value>
     </Setting>
     <Setting Name="TitleAddVin" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Inside - Vehicle - Add</Value>
@@ -197,7 +197,7 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">@davidocubic.33mail.com</Value>
     </Setting>
     <Setting Name="NewMailCounter" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">30</Value>
+      <Value Profile="(Default)">40</Value>
     </Setting>
     <Setting Name="PasswordChangedSuccessMessage" Type="System.String" Scope="User">
       <Value Profile="(Default)">Password Successfully Changed
@@ -295,6 +295,15 @@ Please verify that the number is correct and try again.
     </Setting>
     <Setting Name="DateFormat" Type="System.String" Scope="User">
       <Value Profile="(Default)">dd/MM/yyyy</Value>
+    </Setting>
+    <Setting Name="SwissUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">davido@cubictelecom.com</Value>
+    </Setting>
+    <Setting Name="UserType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sponsor</Value>
+    </Setting>
+    <Setting Name="test" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

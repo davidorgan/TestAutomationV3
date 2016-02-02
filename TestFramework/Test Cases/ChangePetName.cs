@@ -89,13 +89,14 @@ namespace TestFramework
                 PetNamePage.Goto(baseURL);
 
                 //Login
-                PetNamePage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PetNamePage.doLogin();
 
                 //Test Steps go here
                 string petnamechange = "NewAutoName8";
                 PetNamePage.waitForSpinnerDashboard();
                 PetNamePage.waitForPlansToLoadDashboard();
                 PetNamePage.goToPetName();
+
                 PetNamePage.changePetName(petnamechange);
                 PetNamePage.submitPetName();
 
@@ -137,7 +138,7 @@ namespace TestFramework
                 PetNamePage.Goto(baseURL);
 
                 //Login
-                PetNamePage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PetNamePage.doLogin();
 
                 PetNamePage.waitForPlansToLoadDashboard();
 

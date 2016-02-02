@@ -98,7 +98,7 @@ namespace TestFramework
                 ContactUsPage.Goto(baseURL);
 
                 //Login
-                ContactUsPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                ContactUsPage.doLogin();
 
                 //Test Steps go here
                 ContactUsPage.waitForSpinnerDashboard();
@@ -146,7 +146,7 @@ namespace TestFramework
                 ContactUsPage.Goto(baseURL);
 
                 //Login
-                ContactUsPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                ContactUsPage.doLogin();
 
                 //Test Steps go here
                 ContactUsPage.waitForSpinnerDashboard();

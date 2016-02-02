@@ -92,7 +92,7 @@ namespace TestFramework
                 InCarTopUpPage.Goto(baseURL);
 
                 //Login
-                InCarTopUpPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                InCarTopUpPage.doLogin();
                 InCarTopUpPage.waitForSpinnerDashboard();
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
@@ -136,7 +136,7 @@ namespace TestFramework
                 InCarTopUpPage.Goto(baseURL);
 
                 //Login
-                InCarTopUpPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                InCarTopUpPage.doLogin();
                 InCarTopUpPage.waitForSpinnerDashboard();
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
@@ -180,7 +180,7 @@ namespace TestFramework
                 InCarTopUpPage.Goto(baseURL);
 
                 //Login
-                InCarTopUpPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                InCarTopUpPage.doLogin();
                 InCarTopUpPage.waitForSpinnerDashboard();
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
@@ -229,7 +229,7 @@ namespace TestFramework
                 InCarTopUpPage.Goto(baseURL);
 
                 //Login
-                InCarTopUpPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                InCarTopUpPage.doLogin();
                 InCarTopUpPage.waitForSpinnerDashboard();
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 

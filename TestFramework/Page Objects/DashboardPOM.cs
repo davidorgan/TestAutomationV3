@@ -100,11 +100,11 @@ namespace TestFramework
         private IWebElement purchaseHistorySubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/input")); } }
         private IWebElement purchaseHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[1]/div/span")); } }
         private IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[2]/div/span")); } }
-        private IWebElement purchaseHistoryFirstEntryInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/a")); } }
-        private IWebElement purchaseHistoryFirstEntryDate_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[1]")); } }
-        private IWebElement purchaseHistoryFirstEntryPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[2]")); } }
-        private IWebElement purchaseHistoryFirstEntryPurchaseBy_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[3]")); } }
-        private IWebElement purchaseHistoryFirstEntryPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='scrollable-panel']/div[1]/div/span[4]")); } }
+        private IWebElement purchaseHistoryFirstEntryInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); } }
+        private IWebElement purchaseHistoryFirstEntryDate_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); } }
+        private IWebElement purchaseHistoryFirstEntryPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); } }
+        private IWebElement purchaseHistoryFirstEntryPurchaseBy_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); } }
+        private IWebElement purchaseHistoryFirstEntryPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); } }
 
         //Manage In Car Top Up Elements
         private IWebElement manageInCarTopUp_Link { get { return driver.FindElement(By.XPath("//*[@id='form0']/label/span")); } }
@@ -120,20 +120,21 @@ namespace TestFramework
         private IWebElement manageInCarTopUp_Img(string vin) { return driver.FindElement(By.XPath("//*[@id='dashboard-side-vehicle-"+vin+"']/div/div[2]/div/div[2]/img"));}
         private IWebElement manageInCarTopUpError_Span(string vin) { return driver.FindElement(By.XPath("//*[@id='top-up-details-"+vin+"']/span[2]")); }
 
-        //Advise using individual functionality methods below over this method
+
         /// <summary>
         /// Does the add new car.
         /// </summary>
         /// <param name="vin">The vin.</param>
         /// <param name="valid">The valid.</param>
-        public void doAddNewCar(string vin, string valid)
+        [Obsolete("Advise using individual functionality methods below over this method")]
+        public void doAddNewCar(string vin, ConfirmAddVehicle AddV)
         {
             addCar_Link.Click();
             addCarVIN_Input.Clear();
             addCarVIN_Input.SendKeys(vin);
             addCarSubmit_Button.Click();
             Thread.Sleep(1000);
-            if (valid.Equals("Valid"))
+            if (AddV.Equals(ConfirmAddVehicle.Yes))
             {
                 addCarPopUp_Yes_Button.Click();
             }
@@ -141,6 +142,7 @@ namespace TestFramework
             {
                 addCarPopUp_No_Button.Click();
             }
+            
         }
 
         /// <summary>
@@ -162,39 +164,40 @@ namespace TestFramework
             addCarSubmit_Button.Click();
         }
 
+
         /// <summary>
-        /// Answers 'Do you want to add this vehicle' pop up. Clicks Yes/No based on parameter value.
+        /// Do you want to add this vehicle.
         /// </summary>
-        /// <param name="yesno">The yesno.</param>
+        /// <param name="AddV">The add v.</param>
         /// <exception cref="System.Exception">
-        /// Could not find link with JS click
+        /// Could not find link with JS click. + e.Message
         /// or
-        /// Yes/No is needed to be entered for string
+        /// Confirm/Cancel Add Vehicle step failed.
         /// </exception>
-        public void doYouWantToAddThisVehicle(string yesno)
+        public void doYouWantToAddThisVehicle(ConfirmAddVehicle AddV)
         {
-            yesno = yesno.ToLower();
-            if (yesno.Equals("yes") || yesno.Equals("y"))
+            if (AddV.Equals(ConfirmAddVehicle.Yes))
             {
                 IWebElement Link = addCarPopUp_Yes_Button;
                 JavaScriptClick(Link);
 
             }
-            else if (yesno.Equals("no") || yesno.Equals("n"))
+            else if (AddV.Equals(ConfirmAddVehicle.No))
             {
                 try
                 {
                     IWebElement Link = addCarPopUp_No_Button;
-                    JavaScriptClick(Link); 
+                    JavaScriptClick(Link);
                 }
                 catch (Exception e)
                 {
-                    throw new Exception("Could not find link with JS click. "+ e.Message);
+                    throw new Exception("Could not find link with JS click. " + e.Message);
                 }
             }
-            else {
-                throw new Exception("Yes/No is needed to be entered for string");
-            }       
+            else
+            {
+                throw new Exception("Confirm/Cancel Add Vehicle step failed.");
+            }
         }
 
         /// <summary>
@@ -328,6 +331,8 @@ namespace TestFramework
         public void goToPetName()
         {
             changePetName_Link.Click();
+            //wait for scroll to top
+            System.Threading.Thread.Sleep(1000);
         }
 
         /// <summary>
@@ -466,7 +471,7 @@ namespace TestFramework
             driver.FindElement(By.XPath("//*[@id='ui-id-1']")).Click();
         }
 
-        /// <summary>
+        /// <summary>q
         /// Cancels the purchase history on dashboard.
         /// </summary>
         public void cancelPurchaseHistoryDashboard()
@@ -866,18 +871,18 @@ namespace TestFramework
         public void enterValidCreditCardDetails()
         {
             cardHolderName_InputField.Clear();
-            cardHolderName_InputField.SendKeys("Denise Minnock");
+            cardHolderName_InputField.SendKeys(_payDetails.cardHolderName);
 
-            new SelectElement(cardType_Dropdown).SelectByText("VISA");
+            new SelectElement(cardType_Dropdown).SelectByText(_payDetails.cardType);
 
             cardNumber_InputField.Clear();
-            cardNumber_InputField.SendKeys("4539258504070281");
+            cardNumber_InputField.SendKeys(_payDetails.cardNumber);
 
             cardVerificationCode_InputField.Clear();
-            cardVerificationCode_InputField.SendKeys("160");
+            cardVerificationCode_InputField.SendKeys(_payDetails.cardCVV);
 
-            new SelectElement(cardExpireMonth_Dropdown).SelectByText("01 Jan");
-            new SelectElement(cardExpireYear_Dropdown).SelectByText("19");
+            new SelectElement(cardExpireMonth_Dropdown).SelectByText(_payDetails.cardExpireMonth);
+            new SelectElement(cardExpireYear_Dropdown).SelectByText(_payDetails.cardExpireYear);
 
         }
 

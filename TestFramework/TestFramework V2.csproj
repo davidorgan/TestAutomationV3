@@ -114,6 +114,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Helpers\AccountHelper.cs" />
+    <Compile Include="Helpers\DateVars.cs" />
+    <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\Wait.cs" />
     <Compile Include="Page Objects\CreditCardManagementPOM.cs" />
     <Compile Include="Page Objects\CreateAccountPOM.cs" />

@@ -87,7 +87,7 @@ namespace TestFramework
                 UsageHistoryPage.Goto(baseURL);
 
                 //Login
-                UsageHistoryPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                UsageHistoryPage.doLogin();
 
                 //Go to Usage Page
                 UsageHistoryPage.waitForSpinnerDashboard();
@@ -95,7 +95,7 @@ namespace TestFramework
                 UsageHistoryPage.goToCheckUsage();
 
                 //Enter dates
-                UsageHistoryPage.enterCheckUsageDates(pastDateFromString, todayString);
+                UsageHistoryPage.enterCheckUsageDates(DateVars.pastDateFromString, DateVars.todayString);
 
                 //Submit
                 UsageHistoryPage.submitCheckUsage();
@@ -105,7 +105,7 @@ namespace TestFramework
 
                 //Assert Usage history displayed.
                 UsageHistoryPage.waitForSpinnerDashboard();
-                UsageHistoryPage.assertUsageHistoryDisplayed("01/01/2015", todayString);
+                UsageHistoryPage.assertUsageHistoryDisplayed("01/01/2015", DateVars.todayString);
                 outputText = "The expected text was displayed. \rSee screenshot created to confirm Usage History details are correct.";
 
                 //Take screenshot after Test
@@ -133,7 +133,7 @@ namespace TestFramework
                 UsageHistoryPage.Goto(baseURL);
 
                 //Login
-                UsageHistoryPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                UsageHistoryPage.doLogin();
 
                 //Go to Usage Page
                 UsageHistoryPage.waitForSpinnerDashboard();
@@ -141,7 +141,7 @@ namespace TestFramework
                 UsageHistoryPage.goToCheckUsage();
 
                 //Enter dates
-                UsageHistoryPage.enterCheckUsageDates(futureDateFromString, futureDateToString);
+                UsageHistoryPage.enterCheckUsageDates(DateVars.futureDateFromString, DateVars.futureDateToString);
 
                 //Submit
                 UsageHistoryPage.submitCheckUsage();

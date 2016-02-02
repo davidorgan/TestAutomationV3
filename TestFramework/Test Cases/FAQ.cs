@@ -92,7 +92,7 @@ namespace TestFramework
                  FAQPage.Goto(baseURL);
 
                  //Login
-                 FAQPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                 FAQPage.doLogin();
 
                  //Test Steps go here
                  //FAQPage.waitUntilElementExists("//*[@id='nav-left']/ul/li[3]/ul/li[2]/a");

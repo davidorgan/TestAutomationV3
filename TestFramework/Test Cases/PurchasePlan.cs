@@ -93,7 +93,7 @@ namespace TestFramework
                 PurchasePlanPage.Goto(baseURL);
 
                 //Login
-                PurchasePlanPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchasePlanPage.doLogin();
 
                 //Test Steps go here
 
@@ -148,7 +148,7 @@ namespace TestFramework
                 PurchasePlanPage.Goto(baseURL);
 
                 //Login
-                PurchasePlanPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchasePlanPage.doLogin();
 
                 //Test Steps go here
 
@@ -203,7 +203,7 @@ namespace TestFramework
                 PurchasePlanPage.Goto(baseURL);
 
                 //Login
-                PurchasePlanPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchasePlanPage.doLogin();
 
                 //Test Steps go here
 
@@ -269,7 +269,7 @@ namespace TestFramework
                 PurchasePlanPage.Goto(baseURL);
 
                 //Login
-                PurchasePlanPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchasePlanPage.doLogin();
 
                 //Test Steps go here
 
@@ -333,7 +333,7 @@ namespace TestFramework
                 PurchasePlanPage.Goto(baseURL);
 
                 //Login
-                PurchasePlanPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchasePlanPage.doLogin();
 
                 //Test Steps go here
 

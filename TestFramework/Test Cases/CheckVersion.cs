@@ -81,13 +81,14 @@ namespace TestFramework
         {
             try
             {
+              
                 test = extent.StartTest("Version Test", "Test to check the expected software version.")
                                 .AssignCategory(Settings.Default.Driver); 
                 //Got to base URL
                 VersionPage.Goto(baseURL);
 
                 //Login
-                VersionPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                VersionPage.doLogin();
 
                 //Test Steps go here
                 VersionPage.checkVersion(Settings.Default.SoftwareVersion);

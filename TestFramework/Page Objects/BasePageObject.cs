@@ -23,21 +23,14 @@ namespace TestFramework
     /// Age Object model for overall audi site
     /// </summary>
     public abstract class BasePageObject
-    {
-        protected string PageTitle { get { return driver.Title; } }
-        internal static string Url { get; set; }
+    {       
         protected IWebDriver driver;
+        protected string PageTitle { get { return driver.Title; } }
         protected string baseURL = Settings.Default.BaseURL;
-        protected string outputText;
 
-        protected static DateTime today { get { return DateTime.Now; } }
-        protected static DateTime futureDateTo { get { return DateTime.Now.AddDays(30); } }
-        protected static DateTime futureDateFrom { get { return DateTime.Now.AddDays(90); } }
-        protected static DateTime pastDateFrom { get { return DateTime.Now.AddDays(-90); } }
-        protected string todayString { get { return today.ToString(Settings.Default.DateFormat); } }
-        protected string futureDateToString { get { return futureDateTo.ToString(Settings.Default.DateFormat); } }
-        protected string futureDateFromString { get { return futureDateFrom.ToString(Settings.Default.DateFormat); } }
-        protected string pastDateFromString { get { return pastDateFrom.ToString(Settings.Default.DateFormat); } }
+        protected AccountHelper.paymentDetails _payDetails = new AccountHelper.paymentDetails();
+
+        protected string outputText;
 
         protected IWebElement CurrentPetName;
         private string CurrentDBConnection
@@ -62,11 +55,6 @@ namespace TestFramework
         private Dictionary<string, string> DBCustomerDetails;
 
         protected static string mailNum;
-
-        protected string newEmail { get {return "autoMail"+mailNum+Settings.Default.DisposableMail;} set { newEmail=value;} }
-        protected string newPassword { get {return "Cubic!!04";} set { newPassword=value;} }
-        protected string newFName { get {return "FNameAutoReallast";} set { newFName=value;} }
-        protected string newLName { get {return "LNameAutoReallast";} set { newLName=value;} }
 
         protected StringBuilder verificationErrors = new StringBuilder();
 
@@ -406,14 +394,14 @@ namespace TestFramework
         /// <param name="Pwd">The password.</param>
         /// <exception cref="System.Exception">The login process did not work: +
         ///                       + e.Message</exception>
-        public void doLogin(String User, String Pwd)
+        public void doLogin()
         {
             try
             {
                 loginEmail_InputField.Clear();
-                loginEmail_InputField.SendKeys(User);
+                loginEmail_InputField.SendKeys(AccountHelper.accountDetails.username);
                 loginPassword_InputField.Clear();
-                loginPassword_InputField.SendKeys(Pwd);
+                loginPassword_InputField.SendKeys(AccountHelper.accountDetails.password);
                 loginSubmit_Button.Click();
             }
             catch (Exception e)
@@ -932,8 +920,7 @@ namespace TestFramework
         public void waitForSpinnerDashboard()
         {
             Thread.Sleep(500);
-            IWebElement PageSpinner = pageLoadSpinner_Container;
-            waitUntilElementNotDisplayed(PageSpinner);
+            waitUntilElementNotDisplayed(pageLoadSpinner_Container);
         }
 
         /// <summary>

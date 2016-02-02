@@ -89,7 +89,7 @@ namespace TestFramework
                 foot.Goto(baseURL);
 
                 //Login
-                foot.doLogin(Settings.Default.User, Settings.Default.Password);
+                foot.doLogin();
 
                 //Test Steps go here
                 foot.goToAboutDataInside();
@@ -124,7 +124,7 @@ namespace TestFramework
                 foot.Goto(baseURL);
 
                 //Login
-                foot.doLogin(Settings.Default.User, Settings.Default.Password);
+                foot.doLogin();
 
                 //Test Steps go here
                 foot.goToTandC();
@@ -158,7 +158,7 @@ namespace TestFramework
                 foot.Goto(baseURL);
 
                 //Login
-                foot.doLogin(Settings.Default.User, Settings.Default.Password);
+                foot.doLogin();
 
                 //Test Steps go here
                 foot.goToPrivacyPolicy();
@@ -193,7 +193,7 @@ namespace TestFramework
                 foot.Goto(baseURL);
 
                 //Login
-                foot.doLogin(Settings.Default.User, Settings.Default.Password);
+                foot.doLogin();
 
                 //Test Steps go here
                 foot.goToFooterContact();
@@ -225,7 +225,7 @@ namespace TestFramework
                 foot.Goto(baseURL);
 
                 //Login
-                foot.doLogin(Settings.Default.User, Settings.Default.Password);
+                foot.doLogin();
 
                 //Test Steps go here
                 foot.waitForPlansToLoadDashboard();
@@ -259,7 +259,7 @@ namespace TestFramework
                 foot.Goto(baseURL);
 
                 //Login
-                foot.doLogin(Settings.Default.User, Settings.Default.Password);
+                foot.doLogin();
 
                 //Test Steps go here
                 foot.waitForPlansToLoadDashboard();               

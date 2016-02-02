@@ -48,9 +48,6 @@ namespace TestFramework
 
             DashboardPage = new DashboardPOM(driver);
 
-            baseURL = Settings.Default.BaseURL;
-            verificationErrors = new StringBuilder();
-
             //// maximize window
             DashboardPage.MaximizeWindow();
 
@@ -96,7 +93,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -110,7 +107,7 @@ namespace TestFramework
                 IWebElement modal = driver.FindElement(By.ClassName("reveal-modal-bg"));
                 DashboardPage.waitUntilElementIsDisplayed(modal);
 
-                DashboardPage.doYouWantToAddThisVehicle("N");
+                DashboardPage.doYouWantToAddThisVehicle(ConfirmAddVehicle.No);
 
                 /* Wait required so element can be clicked once pop-up animation is complete */
                 Thread.Sleep(1000);
@@ -135,7 +132,7 @@ namespace TestFramework
             }
         }
 
-        [Test,Explicit]
+        [Test]
         public void B_TheAddCarTest()
         {
             try
@@ -146,7 +143,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -155,7 +152,7 @@ namespace TestFramework
                 DashboardPage.waitForSpinnerDashboard();
                 DashboardPage.addVIN(Settings.Default.AddedVIN);
 
-                DashboardPage.doYouWantToAddThisVehicle("Y");
+                DashboardPage.doYouWantToAddThisVehicle(ConfirmAddVehicle.Yes);
 
                 //Any assertions if requried
 
@@ -174,7 +171,7 @@ namespace TestFramework
             }
         }
 
-        [Test,Explicit]
+        [Test]
         public void C_TheCancelRemoveCarTest()
         {
             try
@@ -185,7 +182,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -213,7 +210,7 @@ namespace TestFramework
             }
         }
 
-        [Test,Explicit]
+        [Test]
         public void D_TheRemoveCarTest()
         {
             try
@@ -224,7 +221,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -261,7 +258,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -315,7 +312,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -357,7 +354,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -403,7 +400,7 @@ namespace TestFramework
             }
         }
 
-        [Test, Explicit]
+        [Test]
         public void H_TheCancelRemoveSIMOwnerTest()
         {
             try
@@ -414,7 +411,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                DashboardPage.doLogin();
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();

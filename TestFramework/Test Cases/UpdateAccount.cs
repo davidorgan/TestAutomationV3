@@ -90,7 +90,7 @@ namespace TestFramework
                 AccountDetailsPage.Goto(baseURL);
 
                 //Login
-                AccountDetailsPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                AccountDetailsPage.doLogin();
 
                 //Test Steps go here
                 AccountDetailsPage.goToAccountDetails();
@@ -127,7 +127,7 @@ namespace TestFramework
                 AccountDetailsPage.Goto(baseURL);
 
                 //Login
-                AccountDetailsPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                AccountDetailsPage.doLogin();
 
                 //Test Steps go here
                 AccountDetailsPage.waitForSpinnerDashboard();
@@ -170,7 +170,8 @@ namespace TestFramework
                 AccountDetailsPage.Goto(baseURL);
 
                 //Login
-                AccountDetailsPage.doLogin(Settings.Default.User, Settings.Default.AltPassword);
+                AccountHelper.accountDetails.password = Settings.Default.AltPassword;
+                AccountDetailsPage.doLogin();
 
                 //Test Steps go here
                 AccountDetailsPage.waitForSpinnerDashboard();

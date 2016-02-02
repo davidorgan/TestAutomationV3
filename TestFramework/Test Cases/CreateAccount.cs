@@ -30,9 +30,6 @@ namespace TestFramework
         public void SetupTest()
         {
 
-            mailNum = Settings.Default.NewMailCounter.ToString();
-
-
             //Set Browser driver
             if (Settings.Default.Driver.Equals("Chrome"))
             {
@@ -47,7 +44,10 @@ namespace TestFramework
                 driver = useIE();
             }
 
-            CreateAccountPage = new CreateAccountPOM(driver);
+            mailNum = Settings.Default.NewMailCounter.ToString();
+            
+
+            CreateAccountPage = new CreateAccountPOM(driver);     
 
             baseURL = Settings.Default.BaseURL;
             verificationErrors = new StringBuilder();
@@ -86,6 +86,7 @@ namespace TestFramework
         {
             try
             {
+
                 test = extent.StartTest("Create Account Test", "Test to create account.")
                 .AssignCategory(Settings.Default.Driver);
 
@@ -117,7 +118,8 @@ namespace TestFramework
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/CreateAccountResults2.png"));
                 
                 //Check to ensure the customer has been added to the Database table
-                CreateAccountPage.assertCustomerAddedtoDB(newEmail);
+                Console.WriteLine("NewUser.username = " + AccountHelper.accountDetails.username);
+                CreateAccountPage.assertCustomerAddedtoDB(AccountHelper.accountDetails.username);
 
                 test.Log(LogStatus.Pass, outputText);
 
@@ -151,7 +153,7 @@ namespace TestFramework
                 outputText = "Activate link worked as intended.";
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/ActivateAccountResults1.png"));
 
-                CreateAccountPage.doLogin(newEmail, newPassword);
+                CreateAccountPage.doLogin();
 
                 System.Threading.Thread.Sleep(1000);
                 CreateAccountPage.assertPageTitle(Settings.Default.TitleAddVin);
@@ -160,7 +162,7 @@ namespace TestFramework
                 System.Threading.Thread.Sleep(1000);
                 CreateAccountPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "ActivateAccountResults2.png");
 
-                outputText = "Account active for User: "+newEmail+"";
+                outputText = "Account active for User: " + AccountHelper.accountDetails.username + "";
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/ActivateAccountResults2.png"));
 
                 Settings.Default.NewMailCounter = Settings.Default.NewMailCounter + 1;

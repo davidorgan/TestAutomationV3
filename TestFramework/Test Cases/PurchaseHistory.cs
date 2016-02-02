@@ -90,13 +90,13 @@ namespace TestFramework
                 PurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                PurchaseHistoryPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchaseHistoryPage.doLogin();
 
                 //Go to Usage Page
                 PurchaseHistoryPage.goToPurchaseHistory();
 
                 //Enter dates
-                PurchaseHistoryPage.enterPurchaseHistory(pastDateFromString, todayString);
+                PurchaseHistoryPage.enterPurchaseHistory(DateVars.pastDateFromString, DateVars.todayString);
 
                 //Submit
                 PurchaseHistoryPage.submitPurchaseHistory();
@@ -133,13 +133,13 @@ namespace TestFramework
                 PurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                PurchaseHistoryPage.doLogin(Settings.Default.User, Settings.Default.Password);
+                PurchaseHistoryPage.doLogin();
 
                 //Go to Usage Page
                 PurchaseHistoryPage.goToPurchaseHistory();
 
                 //Enter dates
-                PurchaseHistoryPage.enterPurchaseHistory(futureDateFromString, futureDateToString);
+                PurchaseHistoryPage.enterPurchaseHistory(DateVars.futureDateFromString, DateVars.futureDateToString);
 
                 //Submit
                 PurchaseHistoryPage.submitPurchaseHistory();

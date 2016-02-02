@@ -641,7 +641,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.32")]
         public string SoftwareVersion {
             get {
                 return ((string)(this["SoftwareVersion"]));
@@ -677,7 +677,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("standard@testuser.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("davido@cubictelecom.com")]
         public string StandardUser {
             get {
                 return ((string)(this["StandardUser"]));
@@ -785,7 +785,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("40")]
         public int NewMailCounter {
             get {
                 return ((int)(this["NewMailCounter"]));
@@ -1173,6 +1173,42 @@ Cubic Telecom Support Team")]
             }
             set {
                 this["DateFormat"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("davido@cubictelecom.com")]
+        public string SwissUser {
+            get {
+                return ((string)(this["SwissUser"]));
+            }
+            set {
+                this["SwissUser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Sponsor")]
+        public string UserType {
+            get {
+                return ((string)(this["UserType"]));
+            }
+            set {
+                this["UserType"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string test {
+            get {
+                return ((string)(this["test"]));
+            }
+            set {
+                this["test"] = value;
             }
         }
     }

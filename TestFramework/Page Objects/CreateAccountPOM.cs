@@ -8,6 +8,7 @@ namespace TestFramework
     /// </summary>
     public class CreateAccountPOM : BasePageObject
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAccountPOM"/> class.
         /// </summary>
@@ -21,6 +22,7 @@ namespace TestFramework
         {
             this.driver = driver;
 
+            AccountHelper.accountDetails.setNewAccountDetails(mailNum);
         }
 
         ///--Web Page Elements--///
@@ -37,10 +39,6 @@ namespace TestFramework
         IWebElement createAccountBackToLogin_Button { get { return driver.FindElement(By.XPath("//*[@id='registration-page']/div/div[2]/a")); } }
         IWebElement createAccount_Link { get { return driver.FindElement(By.LinkText("Create New Account")); } }
 
-       // String _newEmail { get { return "AutoUser@Test.com"; } set { _newEmail = value; } }
-       // String _newPassword { get { return "Cubic!!04"; } set { _newPassword = value; } }
-        //String _newFirstName { get { return "AutoName"; } set { _newFirstName = value; } }
-       // String _newLastName { get { return "AutoLast"; } set { _newLastName = value; } }
 
         /// <summary>
         /// Enters the new account details.
@@ -50,15 +48,15 @@ namespace TestFramework
             try
             {
                 createAccountEmail_InputField.Clear();
-                createAccountEmail_InputField.SendKeys(newEmail);
+                createAccountEmail_InputField.SendKeys(AccountHelper.accountDetails.username);
                 createAccountPassword_InputField.Clear();
-                createAccountPassword_InputField.SendKeys(newPassword);
+                createAccountPassword_InputField.SendKeys(AccountHelper.accountDetails.password);
                 createAccountConfirmPassword_InputField.Clear();
-                createAccountConfirmPassword_InputField.SendKeys(newPassword);
+                createAccountConfirmPassword_InputField.SendKeys(AccountHelper.accountDetails.password);
                 createAccountFirstName_InputField.Clear();
-                createAccountFirstName_InputField.SendKeys(newFName);
+                createAccountFirstName_InputField.SendKeys(AccountHelper.accountDetails.firstName);
                 createAccountLastName_InputField.Clear();
-                createAccountLastName_InputField.SendKeys(newLName);
+                createAccountLastName_InputField.SendKeys(AccountHelper.accountDetails.lastName);
             }
             catch (Exception e)
             {
@@ -66,27 +64,6 @@ namespace TestFramework
             }
         }
 
-        /// <summary>
-        /// Enters the custom account details.
-        /// </summary>
-        /// <param name="email">The email.</param>
-        /// <param name="password">The password.</param>
-        /// <param name="fname">The fname.</param>
-        /// <param name="lname">The lname.</param>
-        public void setCustomAccountDetails(String email, String password, String fname, String lname)
-        {
-            try
-            {
-                newEmail = email;
-                newPassword = password;
-                newFName = fname;
-                newLName = lname;               
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
 
         /// <summary>
         /// Ticks agree to Terms and conditions.
