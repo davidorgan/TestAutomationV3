@@ -118,8 +118,8 @@ namespace TestFramework
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/CreateAccountResults2.png"));
                 
                 //Check to ensure the customer has been added to the Database table
-                Console.WriteLine("NewUser.username = " + AccountHelper.accountDetails.username);
-                CreateAccountPage.assertCustomerAddedtoDB(AccountHelper.accountDetails.username);
+                Console.WriteLine("newAccount.username = " + CreateAccountPage.newAccount.username);
+                CreateAccountPage.assertCustomerAddedtoDB(CreateAccountPage.newAccount.username);
 
                 test.Log(LogStatus.Pass, outputText);
 
@@ -153,7 +153,7 @@ namespace TestFramework
                 outputText = "Activate link worked as intended.";
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/ActivateAccountResults1.png"));
 
-                CreateAccountPage.doLogin();
+                CreateAccountPage.doLogin(CreateAccountPage.newAccount);
 
                 System.Threading.Thread.Sleep(1000);
                 CreateAccountPage.assertPageTitle(Settings.Default.TitleAddVin);
@@ -162,7 +162,7 @@ namespace TestFramework
                 System.Threading.Thread.Sleep(1000);
                 CreateAccountPage.TakeScreenshot(@"" + Settings.Default.ScreenshotPath + "ActivateAccountResults2.png");
 
-                outputText = "Account active for User: " + AccountHelper.accountDetails.username + "";
+                outputText = "Account active for User: " + CreateAccountPage.newAccount.username + "";
                 test.Log(LogStatus.Pass, outputText + "<br />Screenshot below: " + test.AddScreenCapture("Screenshots/ActivateAccountResults2.png"));
 
                 Settings.Default.NewMailCounter = Settings.Default.NewMailCounter + 1;

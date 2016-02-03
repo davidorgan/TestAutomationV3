@@ -9,6 +9,7 @@ namespace TestFramework
         public DeleteAccountPOM(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
         }
 
         ///--Web Page Elements--///

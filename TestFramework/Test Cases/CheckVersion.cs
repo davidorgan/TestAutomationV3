@@ -88,7 +88,7 @@ namespace TestFramework
                 VersionPage.Goto(baseURL);
 
                 //Login
-                VersionPage.doLogin();
+                VersionPage.doLogin(VersionPage.currentAccount);
 
                 //Test Steps go here
                 VersionPage.checkVersion(Settings.Default.SoftwareVersion);

@@ -89,7 +89,7 @@ namespace TestFramework
                 CreditCardManagementPage.Goto(baseURL);
 
                 //Login
-                CreditCardManagementPage.doLogin();
+                CreditCardManagementPage.doLogin(CreditCardManagementPage.currentAccount);
 
                 //Test Steps go here
                 CreditCardManagementPage.waitForSpinnerDashboard();
@@ -125,7 +125,7 @@ namespace TestFramework
                 CreditCardManagementPage.Goto(baseURL);
 
                 //Login
-                CreditCardManagementPage.doLogin();
+                CreditCardManagementPage.doLogin(CreditCardManagementPage.currentAccount);
 
 
                 //Test Steps go here
@@ -162,7 +162,7 @@ namespace TestFramework
                 CreditCardManagementPage.Goto(baseURL);
 
                 //Login
-                CreditCardManagementPage.doLogin();
+                CreditCardManagementPage.doLogin(CreditCardManagementPage.currentAccount);
 
                 //Test Steps go here
                 CreditCardManagementPage.waitForSpinnerDashboard();

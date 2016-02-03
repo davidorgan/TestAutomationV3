@@ -11,6 +11,7 @@ namespace TestFramework
         public UsageHistoryPOM(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
         }
 
         ///--Web Page Elements--///

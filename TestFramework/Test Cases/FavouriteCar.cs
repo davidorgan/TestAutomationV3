@@ -89,7 +89,7 @@ namespace TestFramework
                 FavouriteCarPage.Goto(baseURL);
 
                 //Login
-                FavouriteCarPage.doLogin();
+                FavouriteCarPage.doLogin(FavouriteCarPage.currentAccount);
 
                 //Test Steps go here
                 FavouriteCarPage.waitForSpinnerDashboard();
@@ -145,7 +145,7 @@ namespace TestFramework
                 FavouriteCarPage.Goto(baseURL);
 
                 //Login
-                FavouriteCarPage.doLogin();
+                FavouriteCarPage.doLogin(FavouriteCarPage.currentAccount);
 
                 //Test Steps go here
                 FavouriteCarPage.waitForPlansToLoadDashboard();

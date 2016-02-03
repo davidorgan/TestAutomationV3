@@ -8,7 +8,7 @@ namespace TestFramework
     /// </summary>
     public class AccountDetailsPOM : BasePageObject
     {
-
+        public AccountHelper.accountDetails altAccount;
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountDetailsPOM"/> class.
         /// </summary>
@@ -21,6 +21,15 @@ namespace TestFramework
         public AccountDetailsPOM(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
+            this.altAccount = new AccountHelper.accountDetails(
+                currentAccount.username,
+                Settings.Default.AltPassword,
+                currentAccount.vin,
+                currentAccount.acType,
+                currentAccount.firstName,
+                currentAccount.lastName
+                );
         }
 
         ///--Web Page Elements--///

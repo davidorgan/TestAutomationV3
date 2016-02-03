@@ -93,7 +93,7 @@ namespace TestFramework
                 DashboardPurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                DashboardPurchaseHistoryPage.doLogin();
+                DashboardPurchaseHistoryPage.doLogin(DashboardPurchaseHistoryPage.currentAccount);
 
                 //Test Steps go here
 
@@ -146,7 +146,7 @@ namespace TestFramework
                 DashboardPurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                DashboardPurchaseHistoryPage.doLogin();
+                DashboardPurchaseHistoryPage.doLogin(DashboardPurchaseHistoryPage.currentAccount);
 
                 //Test Steps go here
 

@@ -92,7 +92,7 @@ namespace TestFramework
                 //Test.Log(LogStatus.Info, "Go to Base URL: "+Settings.Default.BaseURL);
                     
                 //Login
-                LoginPage.doLogin();
+                LoginPage.doLogin(LoginPage.currentAccount);
                 //Test.Log(LogStatus.Info, "Login to Account");
 
 
@@ -126,7 +126,7 @@ namespace TestFramework
                 //Test.Log(LogStatus.Info, "Go to Base URL: " + Settings.Default.BaseURL);
 
                 //Login
-                LoginPage.doLogin();
+                LoginPage.doLogin(LoginPage.currentAccount);
                 //Test.Log(LogStatus.Info, "Login to Account");
 
                 //Wait for page title

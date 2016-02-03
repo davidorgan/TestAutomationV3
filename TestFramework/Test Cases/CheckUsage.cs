@@ -87,7 +87,7 @@ namespace TestFramework
                 UsageHistoryPage.Goto(baseURL);
 
                 //Login
-                UsageHistoryPage.doLogin();
+                UsageHistoryPage.doLogin(UsageHistoryPage.currentAccount);
 
                 //Go to Usage Page
                 UsageHistoryPage.waitForSpinnerDashboard();
@@ -133,7 +133,7 @@ namespace TestFramework
                 UsageHistoryPage.Goto(baseURL);
 
                 //Login
-                UsageHistoryPage.doLogin();
+                UsageHistoryPage.doLogin(UsageHistoryPage.currentAccount);
 
                 //Go to Usage Page
                 UsageHistoryPage.waitForSpinnerDashboard();

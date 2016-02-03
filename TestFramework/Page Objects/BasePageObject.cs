@@ -27,8 +27,7 @@ namespace TestFramework
         protected IWebDriver driver;
         protected string PageTitle { get { return driver.Title; } }
         protected string baseURL = Settings.Default.BaseURL;
-
-        protected AccountHelper.paymentDetails _payDetails = new AccountHelper.paymentDetails();
+        public AccountHelper.accountDetails currentAccount;
 
         protected string outputText;
 
@@ -67,6 +66,7 @@ namespace TestFramework
         protected BasePageObject(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
         }
 
         ///--Web Page Elements--///
@@ -390,18 +390,16 @@ namespace TestFramework
         /// <summary>
         /// Does the login.
         /// </summary>
-        /// <param name="User">The user.</param>
-        /// <param name="Pwd">The password.</param>
         /// <exception cref="System.Exception">The login process did not work: +
-        ///                       + e.Message</exception>
-        public void doLogin()
+        /// + e.Message</exception>
+        public void doLogin(AccountHelper.accountDetails currentAc)
         {
             try
             {
                 loginEmail_InputField.Clear();
-                loginEmail_InputField.SendKeys(AccountHelper.accountDetails.username);
+                loginEmail_InputField.SendKeys(currentAc.username);
                 loginPassword_InputField.Clear();
-                loginPassword_InputField.SendKeys(AccountHelper.accountDetails.password);
+                loginPassword_InputField.SendKeys(currentAc.password);
                 loginSubmit_Button.Click();
             }
             catch (Exception e)

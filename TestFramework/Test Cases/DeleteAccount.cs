@@ -88,7 +88,7 @@ namespace TestFramework
                 DeleteAccountPage.Goto(baseURL);
 
                 //Login
-                DeleteAccountPage.doLogin();
+                DeleteAccountPage.doLogin(DeleteAccountPage.currentAccount);
 
                 //Test Steps go here
                 DeleteAccountPage.waitForSpinnerDashboard();
@@ -128,7 +128,7 @@ namespace TestFramework
                 DeleteAccountPage.Goto(baseURL);
 
                 //Login
-                DeleteAccountPage.doLogin();
+                DeleteAccountPage.doLogin(DeleteAccountPage.currentAccount);
 
                 //Test Steps go here
                 DeleteAccountPage.goToDeleteAccount();

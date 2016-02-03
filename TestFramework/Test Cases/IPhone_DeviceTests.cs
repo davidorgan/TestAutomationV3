@@ -58,7 +58,7 @@ namespace TestFramework
                 IPhoneDeviceTestPage.Goto(baseURL);
 
                 //Login
-                IPhoneDeviceTestPage.doLogin();
+                IPhoneDeviceTestPage.doLogin(IPhoneDeviceTestPage.currentAccount);
 
                 //Test Steps go here
                 IPhoneDeviceTestPage.waitForSpinnerDashboard();

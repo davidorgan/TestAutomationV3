@@ -93,7 +93,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -143,7 +143,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -182,7 +182,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -221,7 +221,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -258,7 +258,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -312,7 +312,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -354,7 +354,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();
@@ -411,7 +411,7 @@ namespace TestFramework
                 DashboardPage.Goto(baseURL);
 
                 //Login
-                DashboardPage.doLogin();
+                DashboardPage.doLogin(DashboardPage.currentAccount);
 
                 //Test Steps go here
                 DashboardPage.waitForSpinnerDashboard();

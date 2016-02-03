@@ -24,6 +24,7 @@ namespace TestFramework
         public DashboardPOM(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
         }
 
         ///--Web Page Elements--///
@@ -871,18 +872,18 @@ namespace TestFramework
         public void enterValidCreditCardDetails()
         {
             cardHolderName_InputField.Clear();
-            cardHolderName_InputField.SendKeys(_payDetails.cardHolderName);
+            cardHolderName_InputField.SendKeys(AccountHelper.paymentDetails.cardHolderName);
 
-            new SelectElement(cardType_Dropdown).SelectByText(_payDetails.cardType);
+            new SelectElement(cardType_Dropdown).SelectByText(AccountHelper.paymentDetails.cardType);
 
             cardNumber_InputField.Clear();
-            cardNumber_InputField.SendKeys(_payDetails.cardNumber);
+            cardNumber_InputField.SendKeys(AccountHelper.paymentDetails.cardNumber);
 
             cardVerificationCode_InputField.Clear();
-            cardVerificationCode_InputField.SendKeys(_payDetails.cardCVV);
+            cardVerificationCode_InputField.SendKeys(AccountHelper.paymentDetails.cardCVV);
 
-            new SelectElement(cardExpireMonth_Dropdown).SelectByText(_payDetails.cardExpireMonth);
-            new SelectElement(cardExpireYear_Dropdown).SelectByText(_payDetails.cardExpireYear);
+            new SelectElement(cardExpireMonth_Dropdown).SelectByText(AccountHelper.paymentDetails.cardExpireMonth);
+            new SelectElement(cardExpireYear_Dropdown).SelectByText(AccountHelper.paymentDetails.cardExpireYear);
 
         }
 

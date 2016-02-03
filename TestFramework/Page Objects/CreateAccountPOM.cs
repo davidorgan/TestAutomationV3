@@ -8,7 +8,7 @@ namespace TestFramework
     /// </summary>
     public class CreateAccountPOM : BasePageObject
     {
-
+        public AccountHelper.accountDetails newAccount;
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAccountPOM"/> class.
         /// </summary>
@@ -21,8 +21,15 @@ namespace TestFramework
         public CreateAccountPOM(IWebDriver driver)
         {
             this.driver = driver;
-
-            AccountHelper.accountDetails.setNewAccountDetails(mailNum);
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
+            this.newAccount = new AccountHelper.accountDetails(
+                "autoMail" + mailNum + Settings.Default.DisposableMail,
+                Settings.Default.Password,
+                Settings.Default.CurrentVIN,
+                accountType.Sponsor,
+                "FNameAutoReallast",
+                "LNameAutoReallast"    
+                );
         }
 
         ///--Web Page Elements--///
@@ -48,15 +55,15 @@ namespace TestFramework
             try
             {
                 createAccountEmail_InputField.Clear();
-                createAccountEmail_InputField.SendKeys(AccountHelper.accountDetails.username);
+                createAccountEmail_InputField.SendKeys(this.newAccount.username);
                 createAccountPassword_InputField.Clear();
-                createAccountPassword_InputField.SendKeys(AccountHelper.accountDetails.password);
+                createAccountPassword_InputField.SendKeys(this.newAccount.password);
                 createAccountConfirmPassword_InputField.Clear();
-                createAccountConfirmPassword_InputField.SendKeys(AccountHelper.accountDetails.password);
+                createAccountConfirmPassword_InputField.SendKeys(this.newAccount.password);
                 createAccountFirstName_InputField.Clear();
-                createAccountFirstName_InputField.SendKeys(AccountHelper.accountDetails.firstName);
+                createAccountFirstName_InputField.SendKeys(this.newAccount.firstName);
                 createAccountLastName_InputField.Clear();
-                createAccountLastName_InputField.SendKeys(AccountHelper.accountDetails.lastName);
+                createAccountLastName_InputField.SendKeys(this.newAccount.lastName);
             }
             catch (Exception e)
             {

@@ -21,6 +21,7 @@ namespace TestFramework
         public CreditCardManagementPOM(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
         }
 
         ///--Web Page Elements--///

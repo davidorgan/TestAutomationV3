@@ -14,6 +14,7 @@ namespace TestFramework
         public FAQPOM(IWebDriver driver)
         {
             this.driver = driver;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
 
             allAnswers.Add(Settings.Default.FAQ1);
             allAnswers.Add(Settings.Default.FAQ2);

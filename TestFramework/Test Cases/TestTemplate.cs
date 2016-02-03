@@ -63,7 +63,7 @@ namespace TestFramework
                 TemplatePage.Goto(baseURL);
 
                 //Login
-                TemplatePage.doLogin();
+                TemplatePage.doLogin(TemplatePage.currentAccount);
 
                 //Test Steps go here
 

@@ -72,7 +72,7 @@ namespace TestFramework
                 EdgeDeviceTestPage.Goto(baseURL);
 
                 //Login
-                EdgeDeviceTestPage.doLogin();
+                EdgeDeviceTestPage.doLogin(EdgeDeviceTestPage.currentAccount);
 
                 //Test Steps go here
                 EdgeDeviceTestPage.waitForSpinnerDashboard();

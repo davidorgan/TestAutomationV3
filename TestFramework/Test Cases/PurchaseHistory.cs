@@ -90,7 +90,7 @@ namespace TestFramework
                 PurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                PurchaseHistoryPage.doLogin();
+                PurchaseHistoryPage.doLogin(PurchaseHistoryPage.currentAccount);
 
                 //Go to Usage Page
                 PurchaseHistoryPage.goToPurchaseHistory();
@@ -133,7 +133,7 @@ namespace TestFramework
                 PurchaseHistoryPage.Goto(baseURL);
 
                 //Login
-                PurchaseHistoryPage.doLogin();
+                PurchaseHistoryPage.doLogin(PurchaseHistoryPage.currentAccount);
 
                 //Go to Usage Page
                 PurchaseHistoryPage.goToPurchaseHistory();
