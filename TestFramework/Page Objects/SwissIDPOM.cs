@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
 using OpenQA.Selenium.Remote;
 
 
-namespace TestFramework.Page_Objects
+namespace TestFramework
 {
 
     /// <summary>
@@ -44,12 +44,10 @@ namespace TestFramework.Page_Objects
         public SwissIDPOM(IWebDriver driver)
         {
             this.driver = driver;
-            this.user = Settings.Default.SwissUser;
-            this.password = Settings.Default.Password;
-            this.vin = Settings.Default.VIN2QA;
+            this.currentAccount = AccountHelper.accountDetails.setAccountDetails();
 
-            frontFilePathElementID = "file-front-page-path-" + this.vin;
-            backFilePathElementID = "file-back-page-path-" + this.vin;
+            this.frontFilePathElementID = "file-front-page-path-" + this.currentAccount.vin;
+            this.backFilePathElementID = "file-back-page-path-" + this.currentAccount.vin;
         }
 
 
@@ -57,9 +55,9 @@ namespace TestFramework.Page_Objects
         ///-- ________________ --///
 
         //Upload Doc Elements
-        private IWebElement chooseFileFront_Button { get { return driver.FindElement(By.XPath("//*[@id='upload-form-" + this.vin + "']/div[1]/div[1]/span")); } }
-        private IWebElement chooseFileBack_Button { get { return driver.FindElement(By.XPath("//*[@id='upload-form-" + this.vin + "']/div[2]/div[1]/span")); } }
-        private IWebElement submitImageUpload_Button { get { return driver.FindElement(By.XPath("//*[@id='upload-form-" + this.vin + "']/div[3]/input")); } }
+        private IWebElement chooseFileFront_Button { get { return driver.FindElement(By.XPath("//*[@id='upload-form-" + this.currentAccount.vin + "']/div[1]/div[1]/span")); } }
+        private IWebElement chooseFileBack_Button { get { return driver.FindElement(By.XPath("//*[@id='upload-form-" + this.currentAccount.vin + "']/div[2]/div[1]/span")); } }
+        private IWebElement submitImageUpload_Button { get { return driver.FindElement(By.XPath("//*[@id='upload-form-" + this.currentAccount.vin + "']/div[3]/input")); } }
     
     
         ///-- Web Page Actions --///
@@ -68,12 +66,12 @@ namespace TestFramework.Page_Objects
 
         public void chooseFrontImage()
         {
-            Helpers.FileUploadSelector.FileSelector("//*[@id='upload-form-" + this.vin + "']/div[1]/div[1]/span", frontImgPath, this.driver);
+            Helpers.FileUploadSelector.FileSelector("//*[@id='upload-form-" + this.currentAccount.vin + "']/div[1]/div[1]/span", frontImgPath, this.driver);
         }
 
         public void chooseBackImage()
         {
-            Helpers.FileUploadSelector.FileSelector("//*[@id='upload-form-" + this.vin + "']/div[2]/div[1]/span", backImgPath, this.driver);
+            Helpers.FileUploadSelector.FileSelector("//*[@id='upload-form-" + this.currentAccount.vin + "']/div[2]/div[1]/span", backImgPath, this.driver);
         }
 
         public void submitImageUpload()
