@@ -105,7 +105,7 @@ namespace TestFramework
 
                 //Assert Usage history displayed.
                 UsageHistoryPage.waitForSpinnerDashboard();
-                UsageHistoryPage.assertUsageHistoryDisplayed("01/01/2015", DateVars.todayString);
+                UsageHistoryPage.assertUsageHistoryDisplayed(DateVars.pastDateFromString, DateVars.todayString);
                 outputText = "The expected text was displayed. \rSee screenshot created to confirm Usage History details are correct.";
 
                 //Take screenshot after Test

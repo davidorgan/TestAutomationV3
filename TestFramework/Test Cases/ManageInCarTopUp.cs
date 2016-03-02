@@ -97,7 +97,7 @@ namespace TestFramework
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
                 //Test Steps go here
-                InCarTopUpPage.goToInCarTopUp();
+                InCarTopUpPage.accountLiableAction(goToInCarTopUp);
                 InCarTopUpPage.waitForSpinnerDashboard();
                 //wait for scroll to top
                 Thread.Sleep(1000);
@@ -141,7 +141,7 @@ namespace TestFramework
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
                 //Test Steps go here
-                InCarTopUpPage.goToInCarTopUp();
+                InCarTopUpPage.accountLiableAction(goToInCarTopUp);
                 InCarTopUpPage.waitForSpinnerDashboard();
                 //wait for scroll to top
                 Thread.Sleep(1000);
@@ -185,7 +185,7 @@ namespace TestFramework
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
                 //Test Steps go here
-                InCarTopUpPage.goToInCarTopUp();
+                InCarTopUpPage.accountLiableAction(goToInCarTopUp);
                 InCarTopUpPage.waitForSpinnerDashboard();
                 //wait for scroll to top
                 Thread.Sleep(1000);
@@ -234,7 +234,7 @@ namespace TestFramework
                 InCarTopUpPage.waitForPlansToLoadDashboard();
 
                 //Test Steps go here
-                InCarTopUpPage.goToInCarTopUp();
+                InCarTopUpPage.accountLiableAction(goToInCarTopUp);
                 InCarTopUpPage.waitForSpinnerDashboard();
                 //wait for scroll to top
                 Thread.Sleep(1000);

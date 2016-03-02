@@ -37,7 +37,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-qa.cubictelecom.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://auto-uat.cubictelecom.com/")]
         public string BaseURL {
             get {
                 return ((string)(this["BaseURL"]));
@@ -641,7 +641,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.32")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.35")]
         public string SoftwareVersion {
             get {
                 return ((string)(this["SoftwareVersion"]));
@@ -653,7 +653,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Visa \r\n**** **** **** 0281")]
+        [global::System.Configuration.DefaultSettingValueAttribute("**** **** **** 0281")]
         public string CurrentCreditCardString {
             get {
                 return ((string)(this["CurrentCreditCardString"]));
@@ -859,13 +859,13 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Thank you for purchasing the Germany 1 Day 50MB plan.")]
-        public string PlanPurchaseSuccessLocal {
+        [global::System.Configuration.DefaultSettingValueAttribute("Germany")]
+        public string LocalPlanCountry {
             get {
-                return ((string)(this["PlanPurchaseSuccessLocal"]));
+                return ((string)(this["LocalPlanCountry"]));
             }
             set {
-                this["PlanPurchaseSuccessLocal"] = value;
+                this["LocalPlanCountry"] = value;
             }
         }
         
@@ -1202,13 +1202,14 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string test {
+        [global::System.Configuration.DefaultSettingValueAttribute("We could not find any usage history record in the specified period. If you would " +
+            "like to change the period please use the button below.")]
+        public string NoUsageHistoryText {
             get {
-                return ((string)(this["test"]));
+                return ((string)(this["NoUsageHistoryText"]));
             }
             set {
-                this["test"] = value;
+                this["NoUsageHistoryText"] = value;
             }
         }
     }

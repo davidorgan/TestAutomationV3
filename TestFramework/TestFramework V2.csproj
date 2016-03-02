@@ -115,7 +115,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Helpers\AccountHelper.cs" />
+    <Compile Include="Helpers\ActionHelper.cs" />
     <Compile Include="Helpers\DateVars.cs" />
+    <Compile Include="Helpers\FileUploadSelector.cs" />
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\Wait.cs" />
     <Compile Include="Page Objects\CreditCardManagementPOM.cs" />
@@ -127,6 +129,7 @@
     <Compile Include="Page Objects\DashboardPOM.cs" />
     <Compile Include="Page Objects\PurchaseHistoryPOM.cs" />
     <Compile Include="Page Objects\ContactUsPOM.cs" />
+    <Compile Include="Page Objects\SwissIDPOM.cs" />
     <Compile Include="Page Objects\UsageHistoryPOM.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Settings.Designer.cs">
@@ -158,8 +161,48 @@
     <Compile Include="Test Cases\UpdateAccount.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Libraries\chromedriver.exe" />
+    <Content Include="ChromeDriver\chromedriver.exe" />
+    <Content Include="ChromeDriver\net35\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="ChromeDriver\net35\Selenium.WebDriverBackedSelenium.pdb" />
+    <Content Include="ChromeDriver\net35\Selenium.WebDriverBackedSelenium.xml" />
+    <Content Include="ChromeDriver\net35\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="ChromeDriver\net35\ThoughtWorks.Selenium.Core.pdb" />
+    <Content Include="ChromeDriver\net35\ThoughtWorks.Selenium.Core.xml" />
+    <Content Include="ChromeDriver\net35\WebDriver.dll" />
+    <Content Include="ChromeDriver\net35\WebDriver.pdb" />
+    <Content Include="ChromeDriver\net35\WebDriver.Support.dll" />
+    <Content Include="ChromeDriver\net35\WebDriver.Support.pdb" />
+    <Content Include="ChromeDriver\net35\WebDriver.Support.xml" />
+    <Content Include="ChromeDriver\net35\WebDriver.xml" />
+    <Content Include="ChromeDriver\net40\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="ChromeDriver\net40\Selenium.WebDriverBackedSelenium.pdb" />
+    <Content Include="ChromeDriver\net40\Selenium.WebDriverBackedSelenium.xml" />
+    <Content Include="ChromeDriver\net40\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="ChromeDriver\net40\ThoughtWorks.Selenium.Core.pdb" />
+    <Content Include="ChromeDriver\net40\ThoughtWorks.Selenium.Core.xml" />
+    <Content Include="ChromeDriver\net40\WebDriver.dll" />
+    <Content Include="ChromeDriver\net40\WebDriver.pdb" />
+    <Content Include="ChromeDriver\net40\WebDriver.Support.dll" />
+    <Content Include="ChromeDriver\net40\WebDriver.Support.pdb" />
+    <Content Include="ChromeDriver\net40\WebDriver.Support.xml" />
+    <Content Include="ChromeDriver\net40\WebDriver.xml" />
     <Content Include="Libraries\IEDriverServer.exe" />
+    <Content Include="Libraries\IEDriver\IEDriverServer.exe" />
+    <Content Include="Libraries\WebDriver\Castle.Core.dll" />
+    <Content Include="Libraries\WebDriver\Ionic.Zip.dll" />
+    <Content Include="Libraries\WebDriver\Newtonsoft.Json.dll" />
+    <Content Include="Libraries\WebDriver\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="Libraries\WebDriver\Selenium.WebDriverBackedSelenium.pdb" />
+    <Content Include="Libraries\WebDriver\Selenium.WebDriverBackedSelenium.xml" />
+    <Content Include="Libraries\WebDriver\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="Libraries\WebDriver\ThoughtWorks.Selenium.Core.pdb" />
+    <Content Include="Libraries\WebDriver\ThoughtWorks.Selenium.Core.xml" />
+    <Content Include="Libraries\WebDriver\WebDriver.dll" />
+    <Content Include="Libraries\WebDriver\WebDriver.pdb" />
+    <Content Include="Libraries\WebDriver\Webdriver.Support.dll" />
+    <Content Include="Libraries\WebDriver\Webdriver.Support.pdb" />
+    <Content Include="Libraries\WebDriver\Webdriver.Support.xml" />
+    <Content Include="Libraries\WebDriver\WebDriver.xml" />
     <Content Include="TestReport.html" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ChromeDriver\WebDriver.chm" />
     <None Include="packages.config" />
     <None Include="Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

@@ -31,7 +31,8 @@ namespace TestFramework
         IWebElement contactUsEmail_InputField { get { return driver.FindElement(By.Id("Email")); } }
         IWebElement contactUsMobileNumber_InputField { get { return driver.FindElement(By.Id("mobile-number")); } }
         IWebElement contactUsMessage_InputField { get { return driver.FindElement(By.Id("Message")); } }
-        IWebElement contactUsSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='contact-form']/div/div/div/div[2]/div/input")); } }
+        IWebElement contactUsSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='contact-form']/div/div/div[2]/div/input")); } }
+        
         
 
         //Contact Us Error Validation Elements

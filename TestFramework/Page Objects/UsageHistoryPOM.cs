@@ -105,6 +105,11 @@ namespace TestFramework
             {
                 return true;
             }
+            expected = Settings.Default.NoUsageHistoryText;
+            if (body.Contains(expected))
+            {
+                return true;
+            }
             throw new Exception("Expected text not displayed for usage history.");
         }
         

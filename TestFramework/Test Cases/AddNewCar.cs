@@ -189,6 +189,7 @@ namespace TestFramework
                 DashboardPage.waitForPlansToLoadDashboard();
                 DashboardPage.focusCar(Settings.Default.AddedVIN);
                 Thread.Sleep(1000);
+                DashboardPage.waitForSpinnerDashboard();
                 DashboardPage.removeCar();
                 Thread.Sleep(1000);
                 DashboardPage.doYouWantToRemoveThisVehicle("No");
@@ -228,6 +229,7 @@ namespace TestFramework
                 DashboardPage.waitForPlansToLoadDashboard();
                 DashboardPage.focusCar(Settings.Default.AddedVIN);
                 Thread.Sleep(1000);
+                DashboardPage.waitForSpinnerDashboard();
                 DashboardPage.removeCar();
                 DashboardPage.doYouWantToRemoveThisVehicle("YES");
 
@@ -421,7 +423,7 @@ namespace TestFramework
                 //System.Threading.Thread.Sleep(1000);
                 //DashboardPage.waitForPlansToLoadDashboard(Settings.Default.AddedVIN);
 
-                DashboardPage.removeSimOwner();
+                DashboardPage.accountLiableAction(removeSimOwner);
 
                 //DashboardPage.yesToRemoveSIMOwnerPopUp();
 

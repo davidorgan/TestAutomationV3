@@ -780,7 +780,9 @@ namespace TestFramework
         private static IJavaScriptExecutor IJDriver { get; set; }
 
 
-        //SQL Database connections
+        // SQL Database connections //
+        // ------------------------ //
+
         /// <summary>
         /// Gets the latest customer details database.
         /// </summary>
@@ -900,16 +902,29 @@ namespace TestFramework
         /// </summary>
         public void waitForPlansToLoadDashboard()
         {
-            Thread.Sleep(500);
-            IWebElement spinner = planLoadSpinner_Container(Settings.Default.CurrentVIN);
-            waitUntilElementNotDisplayed(spinner);
+            int attempts = 0;
+            retry:
+            try
+            {
+                waitUntilElementExists("//div[contains(@id, 'plans-placeholder-spinner-" + Settings.Default.CurrentVIN + "')]");
+                IWebElement spinner = planLoadSpinner_Container(Settings.Default.CurrentVIN);
+                waitUntilElementNotDisplayed(spinner);
+            }
+            catch (StaleElementReferenceException e)
+            {
+                attempts++;
+                if (attempts < 3)
+                {
+                    goto retry;
+                }
+                throw e;
+            }
         }
 
         public void waitForPlansToLoadDashboard(string vin)
         {
-            Thread.Sleep(500);
-            IWebElement spinner = planLoadSpinner_Container(vin);
-            waitUntilElementNotDisplayed(spinner);
+            waitUntilElementExists("//div[contains(@id, 'plans-placeholder-spinner-" + vin + "')]");
+            waitUntilElementNotDisplayed(planLoadSpinner_Container(vin));
         }
 
         /// <summary>
@@ -917,8 +932,22 @@ namespace TestFramework
         /// </summary>
         public void waitForSpinnerDashboard()
         {
-            Thread.Sleep(500);
-            waitUntilElementNotDisplayed(pageLoadSpinner_Container);
+            int attempts = 0;
+            retry:
+            try
+            {
+                waitUntilElementExists("//*[@id='progress-indicator']");
+                waitUntilElementNotDisplayed(pageLoadSpinner_Container);
+            }
+            catch (StaleElementReferenceException e)
+            {
+                attempts++;
+                if (attempts < 3)
+                {
+                    goto retry;
+                }
+                throw e;
+            }
         }
 
         /// <summary>

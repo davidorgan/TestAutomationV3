@@ -3,6 +3,7 @@ using OpenQA.Selenium.Interactions;
 using System;
 using System.Threading;
 using OpenQA.Selenium.Support.UI;
+using NUnit.Framework;
 
 namespace TestFramework
 {
@@ -42,8 +43,8 @@ namespace TestFramework
 
         //Remove Car Elements
         private IWebElement removeAddedCar_Link { get { return driver.FindElement(By.XPath("//*[@id='vehicle-dashboard-"+Settings.Default.AddedVIN+"']/div[2]/div/input")); } }
-        private IWebElement removeCarPopUp_Yes_Button { get { return driver.FindElement(By.XPath("//*[@id='form6']/div/div/ul/li[1]/input")); } }
-        private IWebElement removeCarPopUp_No_Button { get { return driver.FindElement(By.XPath("//*[@id='form6']/div/div/ul/li[2]/input")); } }
+        private IWebElement removeCarPopUp_Yes_Button { get { return driver.FindElement(By.XPath("//*[@id='form7']/div/div/ul/li[1]/input")); } }
+        private IWebElement removeCarPopUp_No_Button { get { return driver.FindElement(By.XPath("//*[@id='form7']/div/div/ul/li[2]/input")); } }
         private IWebElement removeSIMOwner_Link(string vin) { return driver.FindElement(By.XPath("//*[@id='vehicle-dashboard-" + vin + "']/div[2]/div/div[8]/input")); }
         private IWebElement removeSIMOwnerPopUp_Yes_Button { get { return driver.FindElement(By.XPath("//*[@id='form4']/div/div/ul/li[1]/input")); } }
         private IWebElement removeSIMOwnerPopUp_Cancel_Button { get { return driver.FindElement(By.XPath("//*[@id='form4']/div/div/ul/li[2]/input")); } }
@@ -331,6 +332,7 @@ namespace TestFramework
         /// </summary>
         public void goToPetName()
         {
+            //ActionHelper.retryingFindClick(changePetName_Link);
             changePetName_Link.Click();
             //wait for scroll to top
             System.Threading.Thread.Sleep(1000);
@@ -465,8 +467,9 @@ namespace TestFramework
         }
 
         /// <summary>
-        /// Dropdowns the purchase history details on dashboard. >>>No Longer used
+        /// Dropdowns the purchase history details on dashboard. &gt;&gt;&gt;No Longer used
         /// </summary>
+        [Obsolete]
         public void dropdownPurchaseHistoryDetailsDashboard()
         {
             driver.FindElement(By.XPath("//*[@id='ui-id-1']")).Click();
@@ -489,15 +492,72 @@ namespace TestFramework
             back_Button.Click();
         }
 
+        /// <summary>
+        /// Method only allows actions for Liable/Sponsor account.
+        /// </summary>
+        /// <param name="doAction">The do action.</param>
+        /// <exception cref="System.Exception">The Account type is not known for the user.</exception>
+        public void accountLiableAction(Action doAction)
+        {
+            switch(this.currentAccount.acType)
+            {
+                case accountType.Sponsor:
+                case accountType.Liable:
+                {
+                    doAction();
+                    break;
+                }
+                case accountType.Standard:
+                {
+                    Assert.Inconclusive("Account is Standard and therefore should not have access to action");
+                    break;
+                }
+                default:
+                {
+                    throw new Exception("The Account type is not known for the user.");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Method only allows actions for Sponsor account.
+        /// </summary>
+        /// <param name="doAction">The do action.</param>
+        /// <exception cref="System.Exception">The Account type is not known for the user.</exception>
+        public void accountSponsorAction(Action doAction)
+        {
+            switch (this.currentAccount.acType)
+            {
+                case accountType.Sponsor:
+                {
+                    doAction();
+                    break;
+                }
+                case accountType.Liable:
+                case accountType.Standard:
+                {
+                    Assert.Inconclusive("Account is Liable/Standard and therefore should not have access to action");
+                    break;
+                }
+                default:
+                {
+                    throw new Exception("The Account type is not known for the user.");
+                }
+            }
+        }
+
         //Manage in Car Top Up
         /// <summary>
         /// Goes to in car top up.
         /// </summary>
         public void goToInCarTopUp()
-        {
+        {             
             manageInCarTopUp_Link.Click();
         }
 
+        /// <summary>
+        /// Enables the in car top up toggle.
+        /// </summary>
         public void enableInCarTopUpToggle()
         {
             if (!manageInCarTopUpToggle_Input.Selected)
@@ -676,11 +736,12 @@ namespace TestFramework
         public bool assertLocalPlanPurchaseSuccess()
         {
             IWebElement bodyTag = driver.FindElement(By.TagName("body"));
-            if (bodyTag.Text.Contains(Settings.Default.PlanPurchaseSuccessLocal))
+            string expected = "Thank you for purchasing the " + Settings.Default.LocalPlanCountry + " 1 Day 50MB plan.";
+            if (bodyTag.Text.Contains(expected))
             {
                 return true;
             }
-            throw new Exception("Expected Success message was not displayed.");
+            throw new Exception("Expected Success message was not displayed. Expected: "+expected);
         }
 
         public bool assertEuropePlanPurchaseSuccess()
@@ -777,6 +838,7 @@ namespace TestFramework
             bool nameError = assertInvalidCardNameError();
             bool numberError = assertInvalidCardNumberError();
             bool cvvError = assertInvalidCVVError();
+            //Not possible to use invalid expire month in january
             //bool monthError = assertInvalidExpireMonthError();
 
             if (nameError && numberError && cvvError /*&& monthError*/)

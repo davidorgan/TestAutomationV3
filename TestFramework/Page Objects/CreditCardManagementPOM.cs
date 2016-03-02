@@ -26,7 +26,8 @@ namespace TestFramework
 
         ///--Web Page Elements--///
         //Create Account Elements
-        IWebElement currentCard_Container { get { return driver.FindElement(By.XPath("//*[@id='creditCardManagement']/div[2]/div")); } }
+        IWebElement currentCard_Container { get { return driver.FindElement(By.XPath("//*[@id='saved-credit-cards']/div/div[2]/div/div[1]/div")); } }
+        
         IWebElement deleteCard_Img { get { return driver.FindElement(By.XPath("//*[@id='creditCardManagement']/div[2]/div/div/div[2]/div/div[2]/a/img")); } }
         IWebElement sponsorWarningPopUpClose_Button { get { return driver.FindElement(By.Id("close-error-button")); } }
         IWebElement sponsorWarningPopUpMessage_Container { get { return driver.FindElement(By.Id("errors-summary")); } }
@@ -51,11 +52,11 @@ namespace TestFramework
         public bool assertCreditCardIsPresent(string expected)
         {
             string currentCCString = currentCard_Container.Text;
-            if (currentCCString.Contains(expected))
+            if (currentCCString.Contains(expected) && currentCCString.Contains("Visa"))
             {
                 return true;
             }
-            throw new Exception("There was an issue finding the credit card details");
+            throw new Exception("There was an issue finding the credit card details. Expected was: "+expected+ " And actual was: "+currentCCString);
         }
 
         /// <summary>

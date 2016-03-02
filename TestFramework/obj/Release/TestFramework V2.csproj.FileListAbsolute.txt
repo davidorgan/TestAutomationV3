@@ -33,7 +33,6 @@ C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Web
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\WebDriverSEd.dll
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\ThoughtWorks.Selenium.Core.dll
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Newtonsoft.Json.dll
-C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\nunit.framework.xml
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Selenium.WebDriverBackedSelenium.pdb
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Selenium.WebDriverBackedSelenium.xml
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\WebDriver.xml
@@ -42,4 +41,7 @@ C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Tho
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\ThoughtWorks.Selenium.Core.xml
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\obj\Release\TestFramework.dll
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\obj\Release\TestFramework.pdb
+C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\WebDriver.pdb
+C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\Webdriver.Support.pdb
+C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\bin\Release\nunit.framework.xml
 C:\Users\DavidO\Documents\General\TestFramework V3\TestFramework\obj\Release\TestFramework V2.csprojResolveAssemblyReference.cache

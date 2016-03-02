@@ -29,12 +29,11 @@ namespace TestFramework
 
         //Purchase History Details Elements
         
-        IWebElement purchaseHistoryFirstInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[1]/div/div/div[1]/div[4]/div[1]/div/a")); } }
-        IWebElement purchaseHistoryFirstDate_Span { get { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[1]/div/div/div[1]/div[4]/div[1]/div/span[1]")); } }
-        //*[@id="purchase-history"]/div[1]/div/div/div[1]/div[4]/div[1]/div/span[1]
-        IWebElement purchaseHistoryFirstPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[1]/div/div/div[1]/div[4]/div[1]/div/span[2]")); } }
-        IWebElement purchaseHistoryFirstPurchasedBy_Span { get { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[1]/div/div/div[1]/div[4]/div[1]/div/span[3]")); } }
-        IWebElement purchaseHistoryFirstPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='purchase-history']/div[1]/div/div/div[1]/div[4]/div[1]/div/span[4]")); } }
+        IWebElement purchaseHistoryFirstInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); } }
+        IWebElement purchaseHistoryFirstDate_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); } }
+        IWebElement purchaseHistoryFirstPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); } }
+        IWebElement purchaseHistoryFirstPurchasedBy_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); } }
+        IWebElement purchaseHistoryFirstPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); } }
 
         public void enterPurchaseHistory(String fromDate, String toDate)
         {

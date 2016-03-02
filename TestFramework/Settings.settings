@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Settings</Value>
     </Setting>
     <Setting Name="BaseURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://auto-qa.cubictelecom.com/</Value>
+      <Value Profile="(Default)">https://auto-uat.cubictelecom.com/</Value>
     </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
       <Value Profile="(Default)">david.organ@cubictelecom.com</Value>
@@ -160,11 +160,10 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">Server=cubicqaserver.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
     </Setting>
     <Setting Name="SoftwareVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0.2.1.32</Value>
+      <Value Profile="(Default)">0.2.1.35</Value>
     </Setting>
     <Setting Name="CurrentCreditCardString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Visa 
-**** **** **** 0281</Value>
+      <Value Profile="(Default)">**** **** **** 0281</Value>
     </Setting>
     <Setting Name="NoCardString" Type="System.String" Scope="User">
       <Value Profile="(Default)">You don't currently have any stored credit cards.</Value>
@@ -215,8 +214,8 @@ Your new Data Inside password has been set. You can now access your account, top
     <Setting Name="AddedVIN" Type="System.String" Scope="User">
       <Value Profile="(Default)">1D4GP45R65B450999</Value>
     </Setting>
-    <Setting Name="PlanPurchaseSuccessLocal" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Thank you for purchasing the Germany 1 Day 50MB plan.</Value>
+    <Setting Name="LocalPlanCountry" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Germany</Value>
     </Setting>
     <Setting Name="AltPassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">Cubic1234!</Value>
@@ -302,8 +301,8 @@ Please verify that the number is correct and try again.
     <Setting Name="UserType" Type="System.String" Scope="User">
       <Value Profile="(Default)">Sponsor</Value>
     </Setting>
-    <Setting Name="test" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="NoUsageHistoryText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">We could not find any usage history record in the specified period. If you would like to change the period please use the button below.</Value>
     </Setting>
   </Settings>
 </SettingsFile>

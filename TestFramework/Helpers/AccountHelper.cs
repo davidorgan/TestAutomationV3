@@ -55,7 +55,7 @@ namespace TestFramework
 
             public static accountDetails setAccountDetails()
             {
-                if (Settings.Default.UserType.Equals(accountType.Standard))
+                if ((accountType) Enum.Parse(typeof(accountType),Settings.Default.UserType) == accountType.Standard)
                 {
                     accountDetails standardAccount = new accountDetails(
                         Settings.Default.StandardUser,
