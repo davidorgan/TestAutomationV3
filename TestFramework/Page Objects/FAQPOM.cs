@@ -37,12 +37,13 @@ namespace TestFramework
             allAnswers.Add(Settings.Default.FAQ19);
             allAnswers.Add(Settings.Default.FAQ20);
             allAnswers.Add(Settings.Default.FAQ21);
-            allAnswers.Add(Settings.Default.FAQ22);
            
         }
 
         List<bool> QandAMatch = new List<bool>();
         bool isAnswer;
+
+        IWebElement FaqAccordion_DIV { get { return driver.FindElement(By.XPath("//*[@id='device-data-details-list']/div[1]/div")); } }
 
         public IList<IWebElement> getAllQuestions()
         {
@@ -52,8 +53,8 @@ namespace TestFramework
             try
             {
                 //Create array of all questions on page
-                qElement = driver.FindElement(By.Id("faq-accordion"));
-                allQuestionElements = qElement.FindElements(By.TagName("strong"));
+                qElement = FaqAccordion_DIV;
+                allQuestionElements = qElement.FindElements(By.ClassName("faq-accordion-header-text"));
                 log = allQuestionElements.ToString();
                 if (allQuestionElements.Equals(null))
                 {
@@ -75,7 +76,7 @@ namespace TestFramework
             try
             {
                 //Create array of all questions on page
-                qElement = driver.FindElement(By.Id("faq-accordion"));
+                qElement = FaqAccordion_DIV;
                 allanswerElements = qElement.FindElements(By.TagName("p"));
                 if (allanswerElements == null)
                 {

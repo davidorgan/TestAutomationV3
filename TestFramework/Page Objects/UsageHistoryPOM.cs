@@ -17,16 +17,45 @@ namespace TestFramework
         ///--Web Page Elements--///
         //Usage History Elements
         private IWebElement usageHistoryFromDate_InputField { get { return driver.FindElement(By.Id("UsageHistoryFrom")); } }
+        private IWebElement usageHistoryFromDateBackMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryFrom_root']/div/div/div/div/div[1]/div[3]"));} }
+        private IWebElement usageHistoryFromDateForwardMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryFrom_root']/div/div/div/div/div[1]/div[4]")); } }
+        private IWebElement usageHistoryFromDateFirstDateDisplayed_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryFrom_table']/tbody/tr[1]/td[1]/div")); } }
+        private IWebElement usageHistoryFromDateToday_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryFrom_root']/div/div/div/div/div[2]/button[1]")); } }
 
         private IWebElement usageHistoryToDate_InputField { get { return driver.FindElement(By.Id("UsageHistoryTo")); } }
+        private IWebElement usageHistoryToDateBackMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryTo_root']/div/div/div/div/div[1]/div[3]")); } }
+        private IWebElement usageHistoryToDateForwardMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryTo_root']/div/div/div/div/div[1]/div[4]")); } }
+        private IWebElement usageHistoryToDateFirstDateDisplayed_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryTo_table']/tbody/tr[1]/td[1]/div")); } }
+        private IWebElement usageHistoryToDateToday_Button { get { return driver.FindElement(By.XPath("//*[@id='UsageHistoryTo_root']/div/div/div/div/div[2]/button[1]")); } }
+        
         private IWebElement usageHistoryVIN_Dropdown { get { return driver.FindElement(By.Id("VehicleIdentificationNumber")); } }
         private IWebElement usageHistorySubmit_Button { get { return driver.FindElement(By.XPath("//input[@value='View']")); } }
         private IWebElement usageHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/span")); } }
-        private IWebElement usageHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/span")); } }
+        private IWebElement usageHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/div[2]/div/span")); } }
+
         private IWebElement usageHistory_Link { get { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/UsageHistory')]")); } }
 
         private IWebElement usageHistoryDashboard_Link { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[4]/div/a")); } }
         private IWebElement usageHistoryBack_Link { get { return driver.FindElement(By.XPath("//*[@id='usage-history']/div/div/div[2]/div/a")); } }
+
+        public void FromDatePickerBackNumMonths(int num)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                usageHistoryFromDateBackMonth_Button.Click();
+            }
+        }
+
+        public void pickToDateInPast()
+        {
+            usageHistoryToDate_InputField.Click();
+            for (int i = 0; i < 7; i++)
+            {
+                System.Threading.Thread.Sleep(300);
+                usageHistoryToDateBackMonth_Button.Click();         
+            }
+            usageHistoryToDateFirstDateDisplayed_Button.Click();
+        }
 
         public void enterCheckUsageDates(String fromDate, String toDate)
         {

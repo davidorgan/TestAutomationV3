@@ -391,7 +391,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("To purchase a data plan please follow the steps below:")]
+        [global::System.Configuration.DefaultSettingValueAttribute("For full details and support on using your HMI please contact myaudi.com")]
         public string FAQ8 {
             get {
                 return ((string)(this["FAQ8"]));
@@ -403,7 +403,11 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"You can choose to purchase a range of local or European plans depending on your needs. Local bundles are available for use in local countries only or Roaming bundles can be purchased which will allow activity in selected countries. See our Rates page for a list of data plans and country coverage.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"To purchase a data plan please follow the steps below:
+1. Log in to your customer account at DataInside.com
+2. On the dashboard you should select the option “Top Up” which will then display all local and European bundles available to you.
+3. Once you have selected the bundle you will be brought to the Checkout where your order can now be viewed. You can either select a pre-saved credit card or add a new credit card to make this purchase.
+4. If you are SIM owner you can avail of “In-Car Top up” which will allow you to recharge your account via the MMI Audi connect service ""Data plans"" in your vehicle. If this option is selected, the credit card being used will be saved and used for all future purchases in car unless changed through the SIM owner's account. A mobile number can also be entered when activating this feature to inform the user of a low balance and purchases.")]
         public string FAQ9 {
             get {
                 return ((string)(this["FAQ9"]));
@@ -415,8 +419,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Depending on the bundle being purchased, the expiration can be 7 days, 1 month or" +
-            " 365 days. There is no carry-over of unused data from period to period.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"You can choose to purchase a range of local or European plans depending on your needs. Local bundles are available for use in local countries only or Roaming bundles can be purchased which will allow activity in selected countries. See our Rates page for a list of data plans and country coverage.")]
         public string FAQ10 {
             get {
                 return ((string)(this["FAQ10"]));
@@ -429,7 +432,7 @@ namespace TestFramework {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Depending on the bundle being purchased, the expiration can be 7 days, 1 month or" +
-            " 365 days or until the allocated data is exhausted.")]
+            " 365 days. There is no carry-over of unused data from period to period.")]
         public string FAQ11 {
             get {
                 return ((string)(this["FAQ11"]));
@@ -441,7 +444,8 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"Pending plans are plans that have been purchased but are not currently being used. They become active when the current plan becomes exhausted or expires or when the vehicle travels to a different country. Should two local plans be added to the same vehicle, the expiration of the second local bundle will not begin until the first has been exhausted or expired. Should a local bundle and a European Plan (Small European or Large European) be added to the same vehicle, the local bundle will activate when using data in the local country, however once the vehicle travels to a roaming country, the roaming bundle will activate.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Depending on the bundle being purchased, the expiration can be 7 days, 1 month or" +
+            " 365 days or until the allocated data is exhausted.")]
         public string FAQ12 {
             get {
                 return ((string)(this["FAQ12"]));
@@ -453,10 +457,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("CubicTelecom will not charge you for a failed transaction. There may be an author" +
-            "ization request that appears on your bank statement, however this will not be co" +
-            "mpleted and the money remains in your account. The authorization will be removed" +
-            " by your bank")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Pending plans are plans that have been purchased but are not currently being used. They become active when the current plan becomes exhausted or expires or when the vehicle travels to a different country. Should two local plans be added to the same vehicle, the expiration of the second local bundle will not begin until the first has been exhausted or expired. Should a local bundle and a European Plan (Small European or Large European) be added to the same vehicle, the local bundle will activate when using data in the local country, however once the vehicle travels to a roaming country, the European plan will activate.")]
         public string FAQ13 {
             get {
                 return ((string)(this["FAQ13"]));
@@ -468,7 +469,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("We currently accept:")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"CubicTelecom will not charge you for a failed transaction. There may be an authorization request that appears on your bank statement, however this will not be completed and the money remains in your account. The authorization will be removed by your bank within 4 to 8 working days. If you need further details about when the funds will be released, please contact your bank directly.")]
         public string FAQ14 {
             get {
                 return ((string)(this["FAQ14"]));
@@ -480,7 +481,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"If you are SIM owner for a car, the currency used will be the currency applied when topping up that car (which is the currency used in the country you chose at registration). If you are a standard user for a car the currency used when topping up that car will be the currency used in the SIM owner's country of registration.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("We currently accept:")]
         public string FAQ15 {
             get {
                 return ((string)(this["FAQ15"]));
@@ -492,10 +493,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("This can be done by visiting your customer account, selecting the account details" +
-            " option and then selecting “Credit Card Management” option. From here you can se" +
-            "lect your favourite card to be used or delete any saved credit cards on the acco" +
-            "unt.")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"If you are SIM owner for a car, the currency used will be the currency applied when topping up that car (which is the currency used in the country you chose at registration). If you are a standard user for a car the currency used when topping up that car will be the currency used in the SIM owner's country of registration.")]
         public string FAQ16 {
             get {
                 return ((string)(this["FAQ16"]));
@@ -507,9 +505,10 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("You can log into your account using your username and password on www.datainside." +
-            "com. Once logged in, you can purchase data plans, check your usage in real time " +
-            "and manage your personal information.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("This can be done by visiting your customer account, selecting the account details" +
+            " option and then selecting “Credit Card Management” option. From here you can se" +
+            "lect your favourite card to be used or delete any saved credit cards on the acco" +
+            "unt.")]
         public string FAQ17 {
             get {
                 return ((string)(this["FAQ17"]));
@@ -521,7 +520,9 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"At each purchase you will be asked if you would like to use a previously saved credit card or if you would like to use a new one. You have the option to save your last used credit card details. To remove a credit card from your account please visit the “Credit Card Management” section on your customer account.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("You can log into your account using your username and password on www.datainside." +
+            "com. Once logged in, you can purchase data plans, check your usage in real time " +
+            "and manage your personal information.")]
         public string FAQ18 {
             get {
                 return ((string)(this["FAQ18"]));
@@ -533,9 +534,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("In exceptional circumstances, such as a country relocation, you may change the ho" +
-            "me country where you would like data plans to be available for purchase. This ca" +
-            "n be done by contacting us at info@datainside.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"At each purchase you will be asked if you would like to use a previously saved credit card or if you would like to use a new one. You have the option to save your last used credit card details. To remove a credit card from your account please visit the “Credit Card Management” section on your customer account.")]
         public string FAQ19 {
             get {
                 return ((string)(this["FAQ19"]));
@@ -547,7 +546,9 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the SIM owner account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as SIM owner when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the MMI of the vehicle by selecting the “Data plans” option from the Audi connect menu and selecting the ""Delete SIM owner"" option.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("In exceptional circumstances, such as a country relocation, you may change the ho" +
+            "me country where you would like to purches local data plans. This can be done by" +
+            " contacting us at info@datainside.com")]
         public string FAQ20 {
             get {
                 return ((string)(this["FAQ20"]));
@@ -559,7 +560,7 @@ namespace TestFramework {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("For full details and support on using your MMI please contact myaudi.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the SIM owner account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as SIM owner when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the MMI of the vehicle by selecting the “Data plans” option from the Audi connect menu and selecting the ""Delete SIM owner"" option.")]
         public string FAQ21 {
             get {
                 return ((string)(this["FAQ21"]));
@@ -641,7 +642,7 @@ Cubic Telecom Support Team")]
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.35")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2.1.36")]
         public string SoftwareVersion {
             get {
                 return ((string)(this["SoftwareVersion"]));

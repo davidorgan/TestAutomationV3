@@ -134,6 +134,7 @@ namespace TestFramework
                 AccountDetailsPage.waitForPlansToLoadDashboard();
 
                 AccountDetailsPage.goToAccountDetails();
+                AccountDetailsPage.goToPasswordTab();
                 AccountDetailsPage.accountEnterCurrentPassword(Settings.Default.Password);
                 AccountDetailsPage.accountEnterNewPassword(Settings.Default.AltPassword);
                 AccountDetailsPage.accountEnterConfirmNewPassword(Settings.Default.AltPassword);
@@ -178,6 +179,7 @@ namespace TestFramework
                 AccountDetailsPage.waitForPlansToLoadDashboard();
 
                 AccountDetailsPage.goToAccountDetails();
+                AccountDetailsPage.goToPasswordTab();
                 AccountDetailsPage.accountEnterCurrentPassword(Settings.Default.AltPassword);
                 AccountDetailsPage.accountEnterNewPassword(Settings.Default.Password);
                 AccountDetailsPage.accountEnterConfirmNewPassword(Settings.Default.Password);

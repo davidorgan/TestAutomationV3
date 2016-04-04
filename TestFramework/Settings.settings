@@ -96,46 +96,50 @@
       <Value Profile="(Default)">This feature will be available through the Audi connect service "Data plans" of your vehicle providing the SIM owner of the vehicle has activated the “In-Car Top up” feature. All users in the vehicle can top up via the Audi connect service and all payment will be deducted from the payment card linked to the vehicle by the SIM owner. This card can be changed via the SIM owner’s account, by visiting the “Manage In-Car Top up” section on the dashboard and selecting an alternative saved card. If there is only one saved card on the account, another credit card will need to be saved before the current card can be changed. A purchase will need to be made in order to save any credit card. You can set a maximum top up limit per 7 days for In-Car Top ups.</Value>
     </Setting>
     <Setting Name="FAQ8" Type="System.String" Scope="User">
-      <Value Profile="(Default)">To purchase a data plan please follow the steps below:</Value>
+      <Value Profile="(Default)">For full details and support on using your HMI please contact myaudi.com</Value>
     </Setting>
     <Setting Name="FAQ9" Type="System.String" Scope="User">
-      <Value Profile="(Default)">You can choose to purchase a range of local or European plans depending on your needs. Local bundles are available for use in local countries only or Roaming bundles can be purchased which will allow activity in selected countries. See our Rates page for a list of data plans and country coverage.</Value>
+      <Value Profile="(Default)">To purchase a data plan please follow the steps below:
+1. Log in to your customer account at DataInside.com
+2. On the dashboard you should select the option “Top Up” which will then display all local and European bundles available to you.
+3. Once you have selected the bundle you will be brought to the Checkout where your order can now be viewed. You can either select a pre-saved credit card or add a new credit card to make this purchase.
+4. If you are SIM owner you can avail of “In-Car Top up” which will allow you to recharge your account via the MMI Audi connect service "Data plans" in your vehicle. If this option is selected, the credit card being used will be saved and used for all future purchases in car unless changed through the SIM owner's account. A mobile number can also be entered when activating this feature to inform the user of a low balance and purchases.</Value>
     </Setting>
     <Setting Name="FAQ10" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Depending on the bundle being purchased, the expiration can be 7 days, 1 month or 365 days. There is no carry-over of unused data from period to period.</Value>
+      <Value Profile="(Default)">You can choose to purchase a range of local or European plans depending on your needs. Local bundles are available for use in local countries only or Roaming bundles can be purchased which will allow activity in selected countries. See our Rates page for a list of data plans and country coverage.</Value>
     </Setting>
     <Setting Name="FAQ11" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Depending on the bundle being purchased, the expiration can be 7 days, 1 month or 365 days or until the allocated data is exhausted.</Value>
+      <Value Profile="(Default)">Depending on the bundle being purchased, the expiration can be 7 days, 1 month or 365 days. There is no carry-over of unused data from period to period.</Value>
     </Setting>
     <Setting Name="FAQ12" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Pending plans are plans that have been purchased but are not currently being used. They become active when the current plan becomes exhausted or expires or when the vehicle travels to a different country. Should two local plans be added to the same vehicle, the expiration of the second local bundle will not begin until the first has been exhausted or expired. Should a local bundle and a European Plan (Small European or Large European) be added to the same vehicle, the local bundle will activate when using data in the local country, however once the vehicle travels to a roaming country, the roaming bundle will activate.</Value>
+      <Value Profile="(Default)">Depending on the bundle being purchased, the expiration can be 7 days, 1 month or 365 days or until the allocated data is exhausted.</Value>
     </Setting>
     <Setting Name="FAQ13" Type="System.String" Scope="User">
-      <Value Profile="(Default)">CubicTelecom will not charge you for a failed transaction. There may be an authorization request that appears on your bank statement, however this will not be completed and the money remains in your account. The authorization will be removed by your bank</Value>
+      <Value Profile="(Default)">Pending plans are plans that have been purchased but are not currently being used. They become active when the current plan becomes exhausted or expires or when the vehicle travels to a different country. Should two local plans be added to the same vehicle, the expiration of the second local bundle will not begin until the first has been exhausted or expired. Should a local bundle and a European Plan (Small European or Large European) be added to the same vehicle, the local bundle will activate when using data in the local country, however once the vehicle travels to a roaming country, the European plan will activate.</Value>
     </Setting>
     <Setting Name="FAQ14" Type="System.String" Scope="User">
-      <Value Profile="(Default)">We currently accept:</Value>
+      <Value Profile="(Default)">CubicTelecom will not charge you for a failed transaction. There may be an authorization request that appears on your bank statement, however this will not be completed and the money remains in your account. The authorization will be removed by your bank within 4 to 8 working days. If you need further details about when the funds will be released, please contact your bank directly.</Value>
     </Setting>
     <Setting Name="FAQ15" Type="System.String" Scope="User">
-      <Value Profile="(Default)">If you are SIM owner for a car, the currency used will be the currency applied when topping up that car (which is the currency used in the country you chose at registration). If you are a standard user for a car the currency used when topping up that car will be the currency used in the SIM owner's country of registration.</Value>
+      <Value Profile="(Default)">We currently accept:</Value>
     </Setting>
     <Setting Name="FAQ16" Type="System.String" Scope="User">
-      <Value Profile="(Default)">This can be done by visiting your customer account, selecting the account details option and then selecting “Credit Card Management” option. From here you can select your favourite card to be used or delete any saved credit cards on the account.</Value>
+      <Value Profile="(Default)">If you are SIM owner for a car, the currency used will be the currency applied when topping up that car (which is the currency used in the country you chose at registration). If you are a standard user for a car the currency used when topping up that car will be the currency used in the SIM owner's country of registration.</Value>
     </Setting>
     <Setting Name="FAQ17" Type="System.String" Scope="User">
-      <Value Profile="(Default)">You can log into your account using your username and password on www.datainside.com. Once logged in, you can purchase data plans, check your usage in real time and manage your personal information.</Value>
+      <Value Profile="(Default)">This can be done by visiting your customer account, selecting the account details option and then selecting “Credit Card Management” option. From here you can select your favourite card to be used or delete any saved credit cards on the account.</Value>
     </Setting>
     <Setting Name="FAQ18" Type="System.String" Scope="User">
-      <Value Profile="(Default)">At each purchase you will be asked if you would like to use a previously saved credit card or if you would like to use a new one. You have the option to save your last used credit card details. To remove a credit card from your account please visit the “Credit Card Management” section on your customer account.</Value>
+      <Value Profile="(Default)">You can log into your account using your username and password on www.datainside.com. Once logged in, you can purchase data plans, check your usage in real time and manage your personal information.</Value>
     </Setting>
     <Setting Name="FAQ19" Type="System.String" Scope="User">
-      <Value Profile="(Default)">In exceptional circumstances, such as a country relocation, you may change the home country where you would like data plans to be available for purchase. This can be done by contacting us at info@datainside.com</Value>
+      <Value Profile="(Default)">At each purchase you will be asked if you would like to use a previously saved credit card or if you would like to use a new one. You have the option to save your last used credit card details. To remove a credit card from your account please visit the “Credit Card Management” section on your customer account.</Value>
     </Setting>
     <Setting Name="FAQ20" Type="System.String" Scope="User">
-      <Value Profile="(Default)">A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the SIM owner account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as SIM owner when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the MMI of the vehicle by selecting the “Data plans” option from the Audi connect menu and selecting the "Delete SIM owner" option.</Value>
+      <Value Profile="(Default)">In exceptional circumstances, such as a country relocation, you may change the home country where you would like to purches local data plans. This can be done by contacting us at info@datainside.com</Value>
     </Setting>
     <Setting Name="FAQ21" Type="System.String" Scope="User">
-      <Value Profile="(Default)">For full details and support on using your MMI please contact myaudi.com</Value>
+      <Value Profile="(Default)">A customer can delete their account at any time by visiting their customer account, selecting the Account Details and choosing the “Delete Account” option. If the account being deleted is the SIM owner account this will prevent all other users from topping up and will deactivate in car top up. Any standard user associated with this account can register as SIM owner when accessing their own account at this stage and can re-instate these privileges and features. Deleting the Liable account can also be done from the MMI of the vehicle by selecting the “Data plans” option from the Audi connect menu and selecting the "Delete SIM owner" option.</Value>
     </Setting>
     <Setting Name="FAQ22" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data plans are live as soon as they are purchased. Subsequent plans purchased for the same geographical region will be queued and marked as ‘pending’ until the current plan is fully consumed, or expires. A pending plan will then become the current plan, with no noticeable changeover to the user.
@@ -160,7 +164,7 @@ Cubic Telecom Support Team</Value>
       <Value Profile="(Default)">Server=cubicqaserver.cloudapp.net;Database=dbMAXroamResellersV12;User Id=cubic-dorgan;Password=pass123-;</Value>
     </Setting>
     <Setting Name="SoftwareVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0.2.1.35</Value>
+      <Value Profile="(Default)">0.2.1.36</Value>
     </Setting>
     <Setting Name="CurrentCreditCardString" Type="System.String" Scope="User">
       <Value Profile="(Default)">**** **** **** 0281</Value>

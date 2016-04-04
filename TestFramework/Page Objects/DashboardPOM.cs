@@ -99,9 +99,16 @@ namespace TestFramework
         private IWebElement purchaseHistory_Link { get { return driver.FindElement(By.XPath("//*[@id='form1']/label/span")); } }
         private IWebElement purchaseHistoryFromDate_InputField { get { return driver.FindElement(By.Id("PurchaseHistoryFrom")); } }
         private IWebElement purchaseHistoryToDate_InputField { get { return driver.FindElement(By.Id("PurchaseHistoryTo")); } }
+        IWebElement purchaseHistoryToDateBackMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_root']/div/div/div/div/div[1]/div[3]")); } }
+        IWebElement purchaseHistoryToDateForwardMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_root']/div/div/div/div/div[1]/div[4]")); } }
+        IWebElement purchaseHistoryToDateFirstDateDisplayed_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_table']/tbody/tr[1]/td[1]/div")); } }
+        IWebElement purchaseHistoryToDateToday_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_root']/div/div/div/div/div[2]/button[1]")); } }
+
+
         private IWebElement purchaseHistorySubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/input")); } }
         private IWebElement purchaseHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[1]/div/span")); } }
-        private IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[2]/div/span")); } }
+        private IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div[3]/div/span")); } }
+        //*[@id="form0"]/div[2]/div/div[3]/div/span
         private IWebElement purchaseHistoryFirstEntryInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); } }
         private IWebElement purchaseHistoryFirstEntryDate_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); } }
         private IWebElement purchaseHistoryFirstEntryPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); } }
@@ -401,6 +408,17 @@ namespace TestFramework
             purchaseHistoryToDate_InputField.SendKeys(to);
         }
 
+        public void pickToDateInPast()
+        {
+            purchaseHistoryToDate_InputField.Click();
+            for (int i = 0; i < 7; i++)
+            {
+                System.Threading.Thread.Sleep(300);
+                purchaseHistoryToDateBackMonth_Button.Click();
+            }
+            purchaseHistoryToDateFirstDateDisplayed_Button.Click();
+        }
+
         /// <summary>
         /// Views the purchase history on dashboard.
         /// </summary>
@@ -444,7 +462,7 @@ namespace TestFramework
                 throw new Exception("Expected Date format not displayed: " + date);
             }
 
-            if (!planName.Equals(Settings.Default.AccountLocale + " 1 Day 50MB") && !planName.Equals("EU Roaming 1 Day 50MB") && !planName.Equals("Europe Border 1 Day 50MB"))
+            if (!planName.Equals(Settings.Default.AccountLocale + " 1 Day 50 MB") && !planName.Equals("EU Roaming 1 Day 50 MB") && !planName.Equals("Europe Border 1 Day 50 MB"))
             {
                 throw new Exception("Expected Plan Name not displayed. " + planName + " displayed instead");
             }

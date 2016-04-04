@@ -102,7 +102,9 @@ namespace TestFramework
 
                 DashboardPurchaseHistoryPage.goToPurchaseHistoryDashboard();
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
-                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(DateVars.pastDateFromString, DateVars.todayString);
+                ///Commenting out due to change in date picker. 
+                ///No longer possible to manually enter dates so will need to find new method to choose specific dates
+                //DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(DateVars.pastDateFromString, DateVars.todayString);
                 DashboardPurchaseHistoryPage.viewPurchaseHistoryDashboard();
 
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
@@ -155,11 +157,13 @@ namespace TestFramework
 
                 DashboardPurchaseHistoryPage.goToPurchaseHistoryDashboard();
                 DashboardPurchaseHistoryPage.waitForSpinnerDashboard();
-                DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(DateVars.futureDateFromString, DateVars.futureDateToString);
+                //DashboardPurchaseHistoryPage.enterPurchaseHistoryDatesDashboard(DateVars.futureDateFromString, DateVars.futureDateToString);
+                DashboardPurchaseHistoryPage.pickToDateInPast();
+                
                 DashboardPurchaseHistoryPage.viewPurchaseHistoryDashboard();
 
 
-                DashboardPurchaseHistoryPage.assertFromDateErrorPurchaseHistoryDash();
+                //DashboardPurchaseHistoryPage.assertFromDateErrorPurchaseHistoryDash();
                 DashboardPurchaseHistoryPage.assertToDateErrorPurchaseHistoryDash();
                 outputText = "Purchase history error validation message displayed correctly.";
 

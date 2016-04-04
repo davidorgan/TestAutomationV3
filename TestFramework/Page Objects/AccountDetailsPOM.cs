@@ -48,6 +48,7 @@ namespace TestFramework
         IWebElement accountDetails_Link { get { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/AccountDetails')]")); } }
 
         //Update Password
+        IWebElement updatePasswordTab_Span { get { return driver.FindElement(By.XPath("//*[@id='device-triggers-list']/div[2]/div/div/div/span")); } }
         IWebElement updatePasswordCurrent_InputField { get { return driver.FindElement(By.Id("CurrentPassword")); } }
         IWebElement updatePasswordNew_InputField { get { return driver.FindElement(By.Id("NewPassword")); } }
         IWebElement updatePasswordConfirmNew_InputField { get { return driver.FindElement(By.Id("NewPasswordConfirm")); } }
@@ -121,6 +122,10 @@ namespace TestFramework
             JavaScriptClick(usageLink);
         }
 
+        public void goToPasswordTab()
+        {
+            updatePasswordTab_Span.Click();
+        }
 
         public void accountEnterCurrentPassword(string currentPW)
         {

@@ -95,8 +95,14 @@ namespace TestFramework
                 //Go to Usage Page
                 PurchaseHistoryPage.goToPurchaseHistory();
 
+                PurchaseHistoryPage.selectActiveVIN();
+
                 //Enter dates
-                PurchaseHistoryPage.enterPurchaseHistory(DateVars.pastDateFromString, DateVars.todayString);
+                ///Commenting out due to change in date picker. 
+                ///No longer possible to manually enter dates so will need to find new method to choose specific dates
+                //PurchaseHistoryPage.enterPurchaseHistory(DateVars.pastDateFromString, DateVars.todayString);
+
+
 
                 //Submit
                 PurchaseHistoryPage.submitPurchaseHistory();
@@ -139,7 +145,8 @@ namespace TestFramework
                 PurchaseHistoryPage.goToPurchaseHistory();
 
                 //Enter dates
-                PurchaseHistoryPage.enterPurchaseHistory(DateVars.futureDateFromString, DateVars.futureDateToString);
+                //PurchaseHistoryPage.enterPurchaseHistory(DateVars.futureDateFromString, DateVars.futureDateToString);
+                PurchaseHistoryPage.pickToDateInPast();
 
                 //Submit
                 PurchaseHistoryPage.submitPurchaseHistory();
@@ -148,8 +155,8 @@ namespace TestFramework
                 //Wait error message
                 System.Threading.Thread.Sleep(2000);
 
-                PurchaseHistoryPage.assertFromDateErrorPurchaseHistory();
-                outputText = "Validation message displayed correctly for From date.";
+                //PurchaseHistoryPage.assertFromDateErrorPurchaseHistory();
+                //outputText = "Validation message displayed correctly for From date.";
                 PurchaseHistoryPage.assertToDateErrorPurchaseHistory();
                 outputText += "<br />Validation message displayed correctly for To date.";
 

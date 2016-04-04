@@ -21,3 +21,28 @@ C:\Users\DavidO\Documents\General\TestFramework V2\TestFramework\obj\Debug\TestF
 C:\Users\DavidO\Documents\General\TestFramework V2\TestFramework\bin\Debug\TestFramework.exe.config
 C:\Users\DavidO\Documents\General\TestFramework V2\TestFramework\bin\Debug\TestFramework.exe
 C:\Users\DavidO\Documents\General\TestFramework V2\TestFramework\obj\Debug\TestFramework.exe
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\TestFramework.dll.config
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\TestFramework.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\TestFramework.pdb
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\ExtentReports.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\nunit.framework.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\Selenium.WebDriver.Extensions.Core.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\Selenium.WebDriver.Extensions.JQuery.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriver.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriver.Support.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriverSEd.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\nunit.framework.xml
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\Selenium.WebDriverBackedSelenium.pdb
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriver.pdb
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriver.xml
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriver.Support.pdb
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\WebDriver.Support.xml
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\obj\Debug\TestFramework.dll
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\obj\Debug\TestFramework.pdb
+C:\Users\DavidO\Documents\General\Automation Projects\TestFramework V3\TestFramework\obj\Debug\TestFramework V2.csprojResolveAssemblyReference.cache

@@ -17,11 +17,18 @@ namespace TestFramework
         //Purchase History Elements
         IWebElement purchaseHistoryFromDate_InputField { get { return driver.FindElement(By.Id("PurchaseHistoryFrom")); } }
         IWebElement purchaseHistoryToDate_InputField { get { return driver.FindElement(By.Id("PurchaseHistoryTo")); } }
-        IWebElement purchaseHistoryVIN_Dropdown { get { return driver.FindElement(By.Id("VehicleIdentificationNumber")); } } 
+        IWebElement purchaseHistoryToDateBackMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_root']/div/div/div/div/div[1]/div[3]")); } }
+        IWebElement purchaseHistoryToDateForwardMonth_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_root']/div/div/div/div/div[1]/div[4]")); } }
+        IWebElement purchaseHistoryToDateFirstDateDisplayed_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_table']/tbody/tr[1]/td[1]/div")); } }
+        IWebElement purchaseHistoryToDateToday_Button { get { return driver.FindElement(By.XPath("//*[@id='PurchaseHistoryTo_root']/div/div/div/div/div[2]/button[1]")); } }
+
+        IWebElement purchaseHistoryVIN_Dropdown { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/div")); } }
+        IWebElement purchaseHistoryActiveVIN_Select { get { return driver.FindElement(By.XPath("//*[@id='VehicleIdentificationNumber_child']/ul/li[2]/span[2]")); } }
+        //*[@id="form0"]/div[3]/div/div/div
         IWebElement purchaseHistorySubmit_Button { get { return driver.FindElement(By.XPath("//input[@value='View']")); } }
         IWebElement purchaseHistoryEdit_Button { get { return driver.FindElement(By.LinkText("Edit Details")); } }
         IWebElement purchaseHistoryFromError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/span")); } }
-        IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[3]/div/div/span")); } }
+        IWebElement purchaseHistoryToError_Span { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[2]/div/div/div[2]/div/span")); } }
         IWebElement purchaseHistory_Link { get { return driver.FindElement(By.XPath("//a[contains(@href, '/Account/PurchaseHistory')]")); } }
 
         IWebElement purchaseHistoryDashboard_Link { get { return driver.FindElement(By.XPath("//*[@id='form0']/div[4]/div/a")); } }
@@ -31,6 +38,8 @@ namespace TestFramework
         
         IWebElement purchaseHistoryFirstInvoice_Link { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/a")); } }
         IWebElement purchaseHistoryFirstDate_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[1]")); } }
+        //*[@id="purchase-history"]/div[1]/div/div/div[1]/div[4]/div/div/span[1]
+        //*[@id="p0"]/div[1]/div/span[1]
         IWebElement purchaseHistoryFirstPlanName_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[2]")); } }
         IWebElement purchaseHistoryFirstPurchasedBy_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[3]")); } }
         IWebElement purchaseHistoryFirstPrice_Span { get { return driver.FindElement(By.XPath("//*[@id='p0']/div[1]/div/span[4]")); } }
@@ -41,7 +50,7 @@ namespace TestFramework
             {
                 enterPurchaseHistoryFrom(fromDate);
                 enterPurchaseHistoryTo(toDate);
-                //selectVIN(Settings.Default.CurrentVIN);
+             
             }
             catch (Exception e)
             {
@@ -54,6 +63,8 @@ namespace TestFramework
             purchaseHistoryFromDate_InputField.Click();
             purchaseHistoryFromDate_InputField.Clear();
             purchaseHistoryFromDate_InputField.SendKeys(fromDate);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("document.getElementById('UsageHistoryFrom').setAttribute('value', '" + fromDate + "')");
         }
 
         private void enterPurchaseHistoryTo(String toDate)
@@ -61,11 +72,31 @@ namespace TestFramework
             purchaseHistoryToDate_InputField.Click();
             purchaseHistoryToDate_InputField.Clear();
             purchaseHistoryToDate_InputField.SendKeys(toDate);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("document.getElementById('UsageHistoryTo').setAttribute('value', '" + toDate + "')");
+        }
+
+        public void pickToDateInPast()
+        {
+            purchaseHistoryToDate_InputField.Click();
+            for (int i = 0; i < 7; i++)
+            {
+                System.Threading.Thread.Sleep(300);
+                purchaseHistoryToDateBackMonth_Button.Click();
+            }
+            purchaseHistoryToDateFirstDateDisplayed_Button.Click();
         }
 
         private void selectVIN(String VIN)
         {
             new SelectElement(purchaseHistoryVIN_Dropdown).SelectByText(VIN);
+        }
+
+        public void selectActiveVIN()
+        {
+            purchaseHistoryVIN_Dropdown.Click();
+            System.Threading.Thread.Sleep(1000);
+            purchaseHistoryActiveVIN_Select.Click();
         }
 
         public void submitPurchaseHistory()
@@ -138,9 +169,9 @@ namespace TestFramework
                 throw new Exception("Expected Date format not displayed: " + date);
             }
 
-            if (!planName.Equals(Settings.Default.AccountLocale + " 1 Day 50MB") && !planName.Equals("EU Roaming 1 Day 50MB") && !planName.Equals("Europe Border 1 Day 50MB"))
+            if (!planName.Equals(Settings.Default.AccountLocale + " 1 Day 50 MB") && !planName.Equals("EU Roaming 1 Day 50 MB") && !planName.Equals("Europe Border 1 Day 50 MB"))
             {
-                throw new Exception("Expected Plan Name not displayed. "+ planName +" displayed instead");
+                throw new Exception("Expected Plan Name not displayed: " + Settings.Default.AccountLocale + " 1 Day 50MB ;" + planName + " displayed instead");
             }
 
             if (!purchasedBy.Contains(getCurrentFullName()))

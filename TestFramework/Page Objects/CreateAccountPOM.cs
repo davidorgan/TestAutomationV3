@@ -39,7 +39,7 @@ namespace TestFramework
         IWebElement createAccountConfirmPassword_InputField { get { return driver.FindElement(By.Id("ConfirmPassword")); } }
         IWebElement createAccountFirstName_InputField { get { return driver.FindElement(By.Id("FirstName")); } }
         IWebElement createAccountLastName_InputField { get { return driver.FindElement(By.Id("LastName")); } }
-        IWebElement createAccountTerms_Checkbox { get { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[2]/div/div/label")); } }
+        IWebElement createAccountTerms_Checkbox { get { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[2]/div/div/label/span")); } }
         IWebElement createAccountSubmit_Button { get { return driver.FindElement(By.XPath("//*[@id='registration-form']/div[3]/div/input")); } }
         IWebElement createAccountSuccess_P { get { return driver.FindElement(By.XPath("//*[@id='registration-page']/div/div[1]/p")); } }
 
